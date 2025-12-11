@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Governance — Sleepo Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sleepo Foundation governance, board of directors, financial accountability, and nonprofit policies." />
+  <style>
+    :root {
+      --teal: #08636b;
+      --teal-soft: #0c7c86;
+      --bg: #f7fafb;
+      --text-main: #1f2933;
+      --text-muted: #6b7b8c;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
+      background: radial-gradient(circle at top left, #e8f5f5 0, #f9fbfc 45%, #fdf7f1 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal-soft); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      flex: 1 0 auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .brand-text span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 600;
+      margin-left: 12px;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover { border-color: var(--teal-soft); }
+    nav a.active { border-color: var(--accent); }
+    main {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 32px 24px 28px;
+    }
+    @media (min-width: 768px) {
+      main { padding: 40px 40px 32px; }
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--teal);
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { color: var(--teal-soft); margin-top: 1.5rem; }
+    h4 { color: var(--text-main); margin: 1rem 0 0.5rem; }
+    p {
+      line-height: 1.7;
+      font-size: 1.02rem;
+      margin: 0 0 14px;
+    }
+    .muted { color: var(--text-muted); font-size: 0.96rem; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ecf5f6;
+      color: var(--teal-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .bullets { list-style: none; padding-left: 0; margin: 10px 0 0; }
+    .bullets li::before { content: "•"; margin-right: 8px; color: var(--accent); font-weight: bold; }
+    .bullets li { margin-bottom: 6px; font-size: 0.96rem; }
+    .section { margin-top: 26px; padding-top: 18px; border-top: 1px solid #e0e7ec; }
+    .value-card {
+      padding: 14px 14px 10px;
+      border-radius: 14px;
+      background: #f6fafb;
+      border: 1px solid #e1edf0;
+      margin: 12px 0;
+    }
+    .value-card h4 { margin: 0 0 6px; font-size: 1.02rem; }
+    .value-card p { font-size: 0.96rem; margin-bottom: 4px; }
+    @media (max-width: 640px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      padding: 10px 16px 24px;
+    }
+    .info-box {
+      background: #f6fafb;
+      border: 1px solid #e1edf0;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .info-box p { margin-bottom: 8px; }
+    .info-box p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <img src="assets/sleepo-logo.png" alt="Sleepo Foundation logo" />
+        <div class="brand-text">
+          <h1>Sleepo Foundation</h1>
+          <span>Free educational stories that build emotional resilience in children (ages 2-12).</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="governance.html" class="active">Governance</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+
+    <div class="pill">Governance & Accountability</div>
+    <h2>How we hold responsibility for this work.</h2>
+    <p>
+      Sleepo Foundation is being built slowly and deliberately. Even in this early phase, we take governance, ethics, and accountability seriously. This page summarizes our leadership structure, financial stewardship, and core policies that guide our decisions.
+    </p>
+
+    <section class="section">
+      <h3>Legal Information</h3>
+      <div class="info-box">
+        <p><strong>Legal Name:</strong> Sleepo Foundation</p>
+        <p><strong>Type:</strong> Nonprofit Corporation</p>
+        <p><strong>State of Incorporation:</strong> Washington</p>
+        <p><strong>Date of Incorporation:</strong> [Your incorporation date]</p>
+        <p><strong>EIN:</strong> [Your EIN number]</p>
+        <p><strong>Physical Address:</strong> [Your address - required for IRS]</p>
+        <p><strong>Tax-Exempt Status:</strong> 501(c)(3) application filed December 2024 / pending IRS determination</p>
+      </div>
+      <p class="muted">
+        Sleepo Foundation has applied for recognition as a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code. Once approved, donations will be tax-deductible to the extent permitted by law. Determination typically takes 2-6 weeks for streamlined applications.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Board of Directors</h3>
+      <p>
+        Sleepo Foundation is governed by an independent board of directors committed to our charitable mission and responsible stewardship of organizational resources.
+      </p>
+      
+      <div class="value-card">
+        <h4>Amit Goyal — Founder & President</h4>
+        <p><strong>Background:</strong> Technology leader with [X] years experience in large-scale software systems. Founded Sleepo Foundation to address the need for accessible emotional support tools for children and families.</p>
+        <p><strong>Role:</strong> Strategic direction, program oversight, external partnerships</p>
+      </div>
+      
+      <div class="value-card">
+        <h4>[Board Member 2 Name] — Secretary</h4>
+        <p><strong>Background:</strong> [Brief bio highlighting education, child development, or relevant experience]</p>
+        <p><strong>Role:</strong> Meeting documentation, governance compliance, policy development</p>
+      </div>
+      
+      <div class="value-card">
+        <h4>[Board Member 3 Name] — Treasurer</h4>
+        <p><strong>Background:</strong> [Brief bio highlighting financial, accounting, or nonprofit experience]</p>
+        <p><strong>Role:</strong> Financial oversight, budget review, fiscal accountability</p>
+      </div>
+      
+      <p style="margin-top: 1rem;"><strong>Board Independence:</strong></p>
+      <ul class="bullets">
+        <li>Board members serve without compensation for board service</li>
+        <li>Board members are not related to each other</li>
+        <li>All board members have signed conflict of interest statements</li>
+        <li>Board members are committed to acting in the best interest of the organization and its charitable mission</li>
+      </ul>
+      
+      <p><strong>Board Meetings:</strong></p>
+      <p>
+        The board meets quarterly to review programs, finances, and strategic direction. Meeting minutes are maintained and available to funders, partners, and regulatory authorities upon request.
+      </p>
+      
+      <p class="muted">
+        A more detailed listing of directors and advisors can be provided to funders, partners, and software vendors upon request as part of due diligence or verification.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Financial Accountability & Stewardship</h3>
+      
+      <h4>Fiscal Year</h4>
+      <p>Calendar year (January 1 — December 31)</p>
+      
+      <h4>Current Funding</h4>
+      <p>
+        Sleepo Foundation is currently in its startup phase, funded by the founder's personal contributions. We project annual gross receipts of less than $50,000 for our first three years of operation, with all funds dedicated to program development and charitable service delivery.
+      </p>
+      
+      <h4>Use of Funds (Budget Allocation)</h4>
+      <p>Our budget prioritizes direct program services:</p>
+      <ul class="bullets">
+        <li><strong>70% Program Expenses:</strong> Story development, pilot programs with families, educational materials, research and evaluation</li>
+        <li><strong>20% Administrative:</strong> Filing fees, insurance, website/technology infrastructure, professional services (legal, accounting)</li>
+        <li><strong>10% Fundraising & Development:</strong> Grant writing, donor communications, partnership development (future)</li>
+      </ul>
+      
+      <h4>Financial Policies & Controls</h4>
+      <p>
+        Sleepo Foundation maintains strict financial controls to ensure responsible stewardship:
+      </p>
+      <ul class="bullets">
+        <li><strong>No private inurement:</strong> No individual receives private benefit from organizational assets</li>
+        <li><strong>Board approval required:</strong> Expenditures over $1,000 require board vote</li>
+        <li><strong>Independent review:</strong> Treasurer conducts quarterly financial review</li>
+        <li><strong>Compliance:</strong> We comply with all federal and state reporting requirements</li>
+        <li><strong>Transparency:</strong> Financial information available to funders and partners upon request</li>
+      </ul>
+      
+      <h4>Future Financial Reporting</h4>
+      <p class="muted">
+        Once our 501(c)(3) status is approved and our gross receipts exceed $50,000 annually, we will file Form 990 returns which will be publicly available via GuideStar and the IRS. Organizations with gross receipts under $50,000 file Form 990-N (e-Postcard). All filings demonstrate our commitment to financial transparency and accountability.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Equal Access & Non-Discrimination</h3>
+      <p>
+        <strong>Sleepo Foundation does not and will not discriminate</strong> on the basis of race, color, religion, creed, gender, gender identity or expression, sexual orientation, age, national origin, ancestry, disability, marital status, military status, or any other characteristic protected by applicable law.
+      </p>
+      <p>
+        This commitment applies to:
+      </p>
+      <ul class="bullets">
+        <li>Selection of families and children served by our programs</li>
+        <li>Recruitment and selection of volunteers, advisors, and (future) employees</li>
+        <li>Selection of board members and organizational partners</li>
+        <li>All aspects of our operations, programs, and services</li>
+      </ul>
+      <p>
+        <strong>Language Access:</strong> We are committed to serving families whose primary language is not English and will work to provide materials in multiple languages as resources allow.
+      </p>
+      <p>
+        <strong>Accessibility:</strong> We design programs with diverse abilities in mind and welcome input from families with accessibility needs.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Key Organizational Policies</h3>
+      
+      <h4>Conflict of Interest Policy</h4>
+      <p>
+        All board members, officers, and key employees must annually disclose any potential conflicts of interest. When a conflict exists, the interested party must recuse themselves from discussion and voting on the matter. This ensures all decisions serve the organization's charitable mission, not private interests.
+      </p>
+      
+      <h4>Whistleblower Policy</h4>
+      <p>
+        Sleepo Foundation is committed to lawful and ethical behavior. We maintain a whistleblower policy that protects individuals who report suspected violations of law or policy from retaliation.
+      </p>
+      
+      <h4>Document Retention Policy</h4>
+      <p>
+        We maintain appropriate records including articles of incorporation, bylaws, board minutes, financial records, tax returns, and program documentation in accordance with legal requirements and nonprofit best practices.
+      </p>
+      
+      <h4>Gift Acceptance Policy</h4>
+      <p>
+        We accept donations that further our charitable mission. We do not accept gifts with restrictions that conflict with our mission, compromise our independence, or create undue administrative burden. All donations are acknowledged in writing for tax purposes (once 501(c)(3) status is approved).
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Privacy & Data Protection</h3>
+      <p>
+        During this early phase, we minimize the amount of personal information we collect. When families choose to share information with us as part of a pilot, we use it only for the purposes that have been clearly explained, such as crafting personalized stories or understanding patterns that inform our program design.
+      </p>
+      <p>
+        <strong>Our commitments:</strong>
+      </p>
+      <ul class="bullets">
+        <li>We do not sell or share personal data with third parties</li>
+        <li>We collect only information necessary for program delivery</li>
+        <li>Families provide informed consent before participating in pilots</li>
+        <li>Data is stored securely and retained only as long as necessary</li>
+        <li>Families can request deletion of their data at any time</li>
+      </ul>
+      <p class="muted">
+        A more detailed privacy notice will be published before any large-scale public offering is launched. We are committed to evolving our privacy practices as our work grows while maintaining the highest standards of data protection.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Vendor & Partner Verification</h3>
+      <p>
+        This website and domain exist in part to help software vendors, nonprofit programs, and potential partners verify that Sleepo Foundation is a real, mission-driven organization operating for charitable purposes.
+      </p>
+      <p>
+        <strong>If you are evaluating Sleepo Foundation for nonprofit eligibility, discounts, or credits,</strong> you may use this website as a point of verification for our mission and activities. We are happy to provide additional documentation such as:
+      </p>
+      <ul class="bullets">
+        <li>Articles of Incorporation (certified copy)</li>
+        <li>Bylaws and governance policies</li>
+        <li>IRS determination letter (once received)</li>
+        <li>Board roster and meeting minutes</li>
+        <li>Financial statements and budget</li>
+        <li>Program descriptions and impact data</li>
+      </ul>
+      <p>
+        Please reach out via the contact information on this site, and we will respond promptly with the documentation you need.
+      </p>
+      <p class="muted">
+        We are grateful for programs that reduce operational costs for nonprofits; they allow us to keep our focus on thoughtful, child-centered work rather than infrastructure spend.
+      </p>
+    </section>
+
+    </main>
+  </div>
+  <footer>
+    © Sleepo Foundation — a 501(c)(3) nonprofit in early development. <br>
+    This site is for information and verification only and does not currently solicit public donations.
+  </footer>
+</body>
+</html>

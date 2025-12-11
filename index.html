@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sleepo Foundation - Free Educational Stories for Children's Emotional Well-Being</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sleepo Foundation provides free educational storytelling resources that promote emotional well-being in children ages 2-12." />
+  <style>
+    :root {
+      --teal: #08636b;
+      --teal-soft: #0c7c86;
+      --bg: #f7fafb;
+      --text-main: #1f2933;
+      --text-muted: #6b7b8c;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
+      background: radial-gradient(circle at top left, #e8f5f5 0, #f9fbfc 45%, #fdf7f1 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal-soft); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      flex: 1 0 auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .brand-text span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 600;
+      margin-left: 12px;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover { border-color: var(--teal-soft); }
+    nav a.active { border-color: var(--accent); }
+    main {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 32px 24px 28px;
+    }
+    @media (min-width: 768px) {
+      main { padding: 40px 40px 32px; }
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--teal);
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { color: var(--teal-soft); margin-top: 1.5rem; }
+    h4 { color: var(--text-main); margin: 1rem 0 0.5rem; }
+    p {
+      line-height: 1.7;
+      font-size: 1.02rem;
+      margin: 0 0 14px;
+    }
+    .muted { color: var(--text-muted); font-size: 0.96rem; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ecf5f6;
+      color: var(--teal-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .hero {
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 780px) {
+      .hero { grid-template-columns: 3fr 2fr; align-items: center; }
+    }
+    .hero-heading { font-size: 1.9rem; margin-bottom: 6px; }
+    .hero-highlight { color: var(--accent); font-weight: 600; }
+    .side-card {
+      background: linear-gradient(140deg, #0b6b75, #0f8b95);
+      color: white;
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 0.96rem;
+      box-shadow: 0 14px 30px rgba(8, 99, 107, 0.35);
+    }
+    .side-card h3 { margin-top: 0; font-size: 1.05rem; color: white; }
+    .side-card p { color: #e0f4f6; font-size: 0.94rem; }
+    .bullets { list-style: none; padding-left: 0; margin: 10px 0 0; }
+    .bullets li::before { content: "•"; margin-right: 8px; color: var(--accent); font-weight: bold; }
+    .bullets li { margin-bottom: 6px; font-size: 0.96rem; }
+    .section { margin-top: 26px; padding-top: 18px; border-top: 1px solid #e0e7ec; }
+    .section-grid { display: grid; gap: 16px 26px; }
+    @media (min-width: 720px) {
+      .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .value-card {
+      padding: 14px 14px 10px;
+      border-radius: 14px;
+      background: #f6fafb;
+      border: 1px solid #e1edf0;
+    }
+    .value-card h4 { margin: 0 0 6px; font-size: 1.02rem; }
+    .value-card p { font-size: 0.96rem; margin-bottom: 8px; }
+    .founder-block {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    .founder-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+    }
+    .founder-photo img { width: 100%; height: 100%; object-fit: cover; }
+    @media (max-width: 640px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .founder-block { grid-template-columns: 1fr; }
+      .founder-photo { margin: 0 auto; }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      padding: 10px 16px 24px;
+    }
+    .highlight-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <img src="assets/sleepo-logo.png" alt="Sleepo Foundation logo" />
+        <div class="brand-text">
+          <h1>Sleepo Foundation</h1>
+          <span>Free educational stories that build emotional resilience in children (ages 2-12).</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="governance.html">Governance</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+
+    <div class="pill">501(c)(3) Nonprofit • Family-centered • Research-informed</div>
+    <div class="hero">
+      <div>
+        <h2 class="hero-heading">
+          Helping children build emotional resilience through
+          <span class="hero-highlight">gentle, educational stories.</span>
+        </h2>
+        <p>
+          Sleepo Foundation is a nonprofit organization that provides <strong>free educational storytelling resources</strong> to promote emotional well-being and mental health in children ages 2-12—especially around bedtime, when feelings often surface most strongly.
+        </p>
+        <p>
+          We serve families who may lack access to specialized mental health support due to geographic, financial, or cultural barriers. All programs are provided at no cost or nominal fee to ensure accessibility for every family.
+        </p>
+        <div class="highlight-box">
+          <p style="margin: 0;"><strong>Tax-Exempt Status:</strong> Sleepo Foundation has applied for recognition as a 501(c)(3) tax-exempt organization. We are organized exclusively for charitable and educational purposes under Section 501(c)(3) of the Internal Revenue Code.</p>
+        </div>
+      </div>
+      <aside class="side-card">
+        <h3>What a "Sleepo moment" can look like</h3>
+        <p>A child, a caregiver, a short story that:</p>
+        <ul class="bullets">
+          <li>Names big feelings in a kind, age-appropriate way.</li>
+          <li>Ends the day with reassurance instead of pressure.</li>
+          <li>Gives families repeatable language for tricky moments.</li>
+          <li>Helps children feel safe, seen, and loved.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="section">
+      <h3>Our Charitable Mission</h3>
+      <p>
+        Sleepo Foundation operates as a <strong>public charity</strong> organized exclusively for educational and charitable purposes. We believe that emotional well-being is not a luxury but a fundamental need, and that simple, evidence-informed tools can make a meaningful difference in children's lives.
+      </p>
+      
+      <div class="section-grid two-col">
+        <div class="value-card">
+          <h4>Always Free or Low-Cost</h4>
+          <p>
+            All programs are provided at no cost or nominal fee to ensure that financial barriers never prevent a family from accessing support. This is central to our charitable mission.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Evidence-Informed</h4>
+          <p>
+            Our storytelling methods are grounded in research on child development, attachment theory, and emotional regulation, informed by practitioners in psychology and education.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Culturally Responsive</h4>
+          <p>
+            We design with diverse families in mind, honoring different cultural contexts, family structures, and lived experiences without imposing a single "right way."
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Community-Centered</h4>
+          <p>
+            We listen deeply to families, educators, and practitioners, co-creating resources that truly meet needs rather than imposing predetermined solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Who we serve</h3>
+      <p><strong>Primary Beneficiaries:</strong> Children ages 2-12 and their families</p>
+      <p><strong>Particular Focus:</strong></p>
+      <ul class="bullets">
+        <li>Families in rural or underserved areas with limited access to mental health resources</li>
+        <li>Children experiencing anxiety, transitions, or emotional challenges</li>
+        <li>Families seeking culturally responsive emotional support tools</li>
+        <li>Parents who want to build emotional literacy but lack specialized knowledge</li>
+      </ul>
+      <p><strong>Geographic Service Area:</strong> Currently serving families in Washington State, with plans to expand regionally as resources allow.</p>
+      <p><strong>Cost to Families:</strong> All programs provided free or at nominal cost (under $5) to ensure accessibility regardless of family income.</p>
+    </section>
+
+    <section class="section">
+      <h3>Charitable Impact</h3>
+      <p>By providing free educational storytelling resources, we aim to:</p>
+      <ul class="bullets">
+        <li>Reduce childhood anxiety and emotional distress</li>
+        <li>Strengthen parent-child communication and emotional bonds</li>
+        <li>Increase emotional vocabulary and regulation skills in children</li>
+        <li>Provide preventive support that reduces need for crisis intervention</li>
+        <li>Serve families who cannot afford private therapy or counseling</li>
+        <li>Advance knowledge in childhood emotional health education through research</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Current Stage</h3>
+      <p>
+        We are currently in a quiet, research-focused phase. Instead of launching a large public platform, we work closely with a small circle of families, educators, and practitioners to understand what truly helps in everyday family life.
+      </p>
+      <p class="muted">
+        This website exists to describe our charitable purpose, share our early work, and provide a verifiable public presence for partners, vendors, and organizations that support nonprofit work.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Founder</h3>
+      <div class="founder-block">
+        <div class="founder-photo">
+          <img src="assets/founder-amit-goyal.jpg" alt="Portrait of Amit Goyal, Founder of Sleepo Foundation" />
+        </div>
+        <div>
+          <p>
+            Sleepo Foundation was founded by <strong>Amit Goyal</strong>, a technology leader and parent who has spent many years building large-scale software systems, while also practicing a simple nightly ritual with children in his life: stories that honor their feelings and gently reinforce their strengths.
+          </p>
+          <p class="muted">
+            Sleepo is his attempt to combine careful engineering, deep respect for families, and a belief that small, well-designed moments can make a meaningful difference over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    </main>
+  </div>
+  <footer>
+    © Sleepo Foundation — a 501(c)(3) nonprofit in early development. <br>
+    This site is for information and verification only and does not currently solicit public donations.
+  </footer>
+</body>
+</html>
