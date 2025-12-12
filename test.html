@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact — SLEEPO Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Sleepo Foundation for program information, partnership opportunities, or nonprofit verification." />
+  <style>
+    :root {
+      --teal: #08636b;
+      --teal-soft: #0c7c86;
+      --bg: #f7fafb;
+      --text-main: #1f2933;
+      --text-muted: #6b7b8c;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
+      background: radial-gradient(circle at top left, #e8f5f5 0, #f9fbfc 45%, #fdf7f1 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal-soft); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      flex: 1 0 auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .brand-text span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 600;
+      margin-left: 12px;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover { border-color: var(--teal-soft); }
+    nav a.active { border-color: var(--accent); }
+    main {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 32px 24px 28px;
+    }
+    @media (min-width: 768px) {
+      main { padding: 40px 40px 32px; }
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--teal);
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { color: var(--teal-soft); margin-top: 1.5rem; }
+    p {
+      line-height: 1.7;
+      font-size: 1.02rem;
+      margin: 0 0 14px;
+    }
+    .muted { color: var(--text-muted); font-size: 0.96rem; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ecf5f6;
+      color: var(--teal-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .bullets { list-style: none; padding-left: 0; margin: 10px 0 0; }
+    .bullets li::before { content: "•"; margin-right: 8px; color: var(--accent); font-weight: bold; }
+    .bullets li { margin-bottom: 6px; font-size: 0.96rem; }
+    .section { margin-top: 26px; padding-top: 18px; border-top: 1px solid #e0e7ec; }
+    .contact-box {
+      background: linear-gradient(140deg, #0b6b75, #0f8b95);
+      color: white;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      box-shadow: 0 14px 30px rgba(8, 99, 107, 0.35);
+    }
+    .contact-box p { color: #e0f4f6; margin-bottom: 8px; }
+    .contact-box a { color: white; text-decoration: underline; font-weight: 600; }
+    @media (max-width: 640px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      padding: 10px 16px 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <img src="assets/sleepo-logo.png" alt="Sleepo Foundation logo" />
+        <div class="brand-text">
+          <h1>Sleepo Foundation</h1>
+          <span>Free educational stories that build emotional resilience in children (ages 2-12).</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/programs.html">Programs</a>
+        <a href="/governance.html">Governance</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+
+    <div class="pill">Get in Touch</div>
+    <h2>A gentle way to reach us.</h2>
+    <p>
+      Sleepo Foundation is not yet running open public programs, but we welcome thoughtful outreach from families, practitioners, funders, and organizations who resonate with this work.
+    </p>
+    
+    <div class="contact-box">
+      <p><strong>Email:</strong> <a href="mailto:contact@sleepofoundation.org">contact@sleepofoundation.org</a></p>
+      <p><strong>Mailing Address:</strong><br>
+      Sleepo Foundation<br>
+      [Your complete mailing address]<br>
+      [City, State ZIP]</p>
+    </div>
+    
+    <p class="muted">
+      Please note that responses may be slower than a typical company, as much of our time is devoted to deep work, listening, and pilot design. We typically respond within 3-5 business days.
+    </p>
+
+    <section class="section">
+      <h3>If you are a software or nonprofit program vendor</h3>
+      <p>
+        If you are evaluating Sleepo Foundation for nonprofit eligibility, discounts, or credits (such as Google for Nonprofits, Microsoft Nonprofit Programs, or other technology providers), you may use this website as a point of verification for our mission and activities.
+      </p>
+      <p><strong>We can provide the following documentation upon request:</strong></p>
+      <ul class="bullets">
+        <li>Articles of Incorporation (certified copy from Washington Secretary of State)</li>
+        <li>Bylaws and governance policies</li>
+        <li>IRS determination letter (once 501(c)(3) status is approved)</li>
+        <li>EIN confirmation letter</li>
+        <li>Board roster and officer information</li>
+        <li>Program descriptions and impact data</li>
+        <li>Financial statements and budget</li>
+      </ul>
+      <p>
+        Please reach out via email with your specific verification requirements, and we will respond promptly with the documentation you need.
+      </p>
+      <p class="muted">
+        We are grateful for programs that reduce operational costs for nonprofits; they allow us to keep our focus on thoughtful, child-centered work rather than infrastructure spend.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>If you are a family or practitioner</h3>
+      <p>
+        From time to time, we invite a limited number of families and practitioners to take part in quiet pilots and feedback circles. These activities are always:
+      </p>
+      <ul class="bullets">
+        <li><strong>Voluntary</strong> — no obligation to participate</li>
+        <li><strong>No-cost</strong> — all services provided free</li>
+        <li><strong>Designed with care</strong> — thoughtful, research-informed approaches</li>
+        <li><strong>Privacy-protective</strong> — minimal data collection, families control their information</li>
+      </ul>
+      <p>
+        If you would like to be considered for future opportunities, you are welcome to introduce yourself briefly by email. Please share:
+      </p>
+      <ul class="bullets">
+        <li>Your name and location (city/state)</li>
+        <li>Ages of children in your household (if applicable)</li>
+        <li>What drew you to Sleepo Foundation</li>
+        <li>Any specific challenges or interests related to children's emotional well-being</li>
+      </ul>
+      <p class="muted">
+        We keep a waitlist and will reach out when we have capacity for new pilot participants. Due to our small size, we may not be able to accommodate everyone immediately.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>If you are a potential funder or partner organization</h3>
+      <p>
+        We welcome conversations with:
+      </p>
+      <ul class="bullets">
+        <li><strong>Foundation program officers</strong> interested in children's mental health or preventive interventions</li>
+        <li><strong>School districts or community organizations</strong> seeking partnerships to serve children and families</li>
+        <li><strong>Researchers or academics</strong> interested in collaboration on emotional health education</li>
+        <li><strong>Individual donors</strong> aligned with our mission (once 501(c)(3) status is approved, donations will be tax-deductible)</li>
+      </ul>
+      <p>
+        Please reach out via email with information about your organization or interests, and we will schedule a time to connect.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Media inquiries</h3>
+      <p>
+        For media inquiries about our work, approach, or findings from our pilot programs, please email <a href="mailto:contact@sleepofoundation.org">contact@sleepofoundation.org</a> with "Media Inquiry" in the subject line.
+      </p>
+      <p class="muted">
+        We aim to be thoughtful in how we represent our work publicly and may not be able to accommodate all media requests during our early development phase.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>We do not currently accept</h3>
+      <p>To set clear expectations, please note that we are <strong>not currently accepting</strong>:</p>
+      <ul class="bullets">
+        <li>Unsolicited business proposals or vendor pitches</li>
+        <li>Public donations (until 501(c)(3) status is approved and we establish proper donation infrastructure)</li>
+        <li>Intern or volunteer applications (we have no capacity for volunteer management at this stage)</li>
+        <li>Speaking engagements or conference presentations (not yet ready for public speaking)</li>
+      </ul>
+      <p>We appreciate your understanding as we focus on building our programs thoughtfully.</p>
+    </section>
+
+    </main>
+  </div>
+  <footer>
+    © Sleepo Foundation — a 501(c)(3) nonprofit in early development. <br>
+    This site is for information and verification only and does not currently solicit public donations.
+  </footer>
+</body>
+</html>
