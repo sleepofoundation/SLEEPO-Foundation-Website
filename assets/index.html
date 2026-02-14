@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLEEPO Foundation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 700px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 30px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2d3748;
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      color: #718096;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .mission {
+      background: #f7fafc;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border-left: 4px solid #667eea;
+    }
+    .mission p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #2d3748;
+      margin-bottom: 15px;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #667eea;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .contact-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px solid #e2e8f0;
+    }
+    .contact-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #2d3748;
+    }
+    .contact-info {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .cta {
+      background: #667eea;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      background: #5568d3;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #a0aec0;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 30px 25px; }
+      h1 { font-size: 2rem; }
+      .stats { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/sleepo-logo.png" alt="SLEEPO Foundation" class="logo">
+    
+    <h1>SLEEPO Foundation</h1>
+    <p class="tagline">Helping children develop EQ (Emotional Intelligence) and saty connected to their Cultural Roots</p>
+    
+    <div class="mission">
+      <p><strong>We help parents support their children (2 to 12 years old) with Focus, Discipline, Confidence, and Emotional Regulation challenges.</strong></p>
+      <p>Our approach is unusual: it requires <strong>zero time from your child</strong> and is <strong>completely free</strong> (we're a nonprofit).</p>
+      <p>Parents working with SLEEPO report noticeable gains in concentration, confidence, behavior, and emotional balance, along with a deeper connection to cultural values.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">122</span>
+        <span class="stat-label">Families Enrolled</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">1+</span>
+        <span class="stat-label">Year Running</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Free</span>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>Learn More</h2>
+      <p style="margin-bottom: 20px; color: #4a5568;">SLEEPO is highly personalized. The best way to understand if it's right for your family is a 30-minute conversation.</p>
+      
+      <div class="contact-info">
+        <strong>Amit Goyal</strong> | Founder
+      </div>
+      <div class="contact-info">
+        📧 <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a>
+      </div>
+      <div class="contact-info">
+        ☎️ <a href="tel:4252231361">425-223-1361</a>
+      </div>
+      
+      <a href="mailto:amit@sleepofoundation.org" class="cta">Get in Touch</a>
+    </div>
+
+    <div class="footer">
+      <p>SLEEPO Foundation is a Registered Nonprofit Organization.<br>
+      Based in Redmond, Washington</p>
+    </div>
+  </div>
+</body>
+</html>
