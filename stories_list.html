@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SLEEPO Stories</title>
+
+<style>
+
+
+body{
+font-family:"Segoe UI",Arial,sans-serif;
+background:#f5efe6;
+margin:0;
+padding:0;
+color:#183a54;
+}
+
+.header{
+text-align:center;
+padding:40px 20px 30px 20px;
+background:linear-gradient(180deg,#0f4c5c,#1b6b7a);
+color:white;
+}
+
+.logo{
+width:130px;
+margin-bottom:10px;
+}
+
+.title{
+font-size:30px;
+font-weight:700;
+}
+
+.subtitle{
+font-size:16px;
+margin-top:6px;
+opacity:.9;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:25px;
+}
+
+.footer{
+text-align:center;
+margin-top:30px;
+font-size:13px;
+color:#6b7f8d;
+}
+
+
+.storyTableCard{
+background:white;
+border-radius:14px;
+box-shadow:0 4px 14px rgba(0,0,0,0.08);
+overflow:auto;
+max-height:560px;
+}
+
+.storyTable{
+width:100%;
+border-collapse:collapse;
+table-layout:fixed;
+}
+
+.storyTable thead th{
+position:sticky;
+top:0;
+z-index:1;
+background:#f7f7f7;
+color:#183a54;
+font-size:12px;
+font-weight:700;
+padding:10px 12px;
+border-bottom:1px solid #e6e6e6;
+text-align:left;
+}
+
+.storyTable tbody td{
+padding:8px 12px;
+border-bottom:1px solid #f0f0f0;
+font-size:13px;
+vertical-align:middle;
+}
+
+.colDate{
+width:130px;
+}
+
+.colPlay{
+width:90px;
+}
+
+.cellTitle{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.cellDate{
+color:#6b7f8d;
+white-space:nowrap;
+}
+
+.playBtn{
+border:none;
+cursor:pointer;
+font-size:12px;
+padding:7px 10px;
+border-radius:10px;
+background:#0f4c5c;
+color:white;
+}
+
+.playBtn:hover{
+opacity:.92;
+}
+
+#sleepOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+pointer-events:none;
+transition:opacity 10s ease;
+z-index:999;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="sleepOverlay"></div>
+
+<div class="header">
+
+<img src="sleepo-assets/logo/SLEEPO Foundation Logo.png" class="logo">
+
+<div class="title">
+Personalized SLEEPO Stories for <span id="kidName">Kid Name</span>
+</div>
+
+<div class="subtitle">
+Press play and let the magic begin ✨
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="storyTableCard">
+<table class="storyTable">
+<thead>
+<tr>
+<th class="colTitle">Story Title</th>
+<th class="colDate">Date</th>
+<th class="colPlay">Play</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="cellTitle" title="The Brave Little Star">The Brave Little Star</td>
+<td class="cellDate">Jun 1, 2026</td>
+<td class="cellPlay"><button class="playBtn" onclick="playStory('/audio/star-story.m4a')">▶ Play</button></td>
+</tr>
+<tr>
+<td class="cellTitle" title="Dreams of the Forest">Dreams of the Forest</td>
+<td class="cellDate">May 25, 2026</td>
+<td class="cellPlay"><button class="playBtn" onclick="playStory('/audio/forest-story.m4a')">▶ Play</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="footer">
+© SLEEPO Foundation
+</div>
+
+<audio id="player"></audio>
+
+<script>
+
+const player=document.getElementById("player")
+const overlay=document.getElementById("sleepOverlay")
+
+function playStory(url){
+
+player.src=url
+player.play()
+
+startSleepMode()
+
+}
+
+function startSleepMode(){
+
+setTimeout(()=>{
+overlay.style.opacity=.5
+},30000)
+
+player.onended=()=>{
+fadeToSleep()
+}
+
+}
+
+function fadeToSleep(){
+
+overlay.style.opacity=.85
+
+setTimeout(()=>{
+overlay.style.opacity=1
+},180000)
+
+}
+
+</script>
+
+</body>
+</html>
