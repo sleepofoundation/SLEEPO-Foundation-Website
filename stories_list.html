@@ -8,106 +8,113 @@
 <title>SLEEPO Stories</title>
 
 <style>
-  body{
-    font-family:"Segoe UI",Arial,sans-serif;
-    background:#f5efe6;
-    margin:0;
-    padding:0;
-    color:#183a54;
-  }
 
-  .header{
-    text-align:center;
-    padding:34px 16px 26px 16px;
-    background:linear-gradient(180deg,#0f4c5c,#1b6b7a);
-    color:white;
-  }
+body{
+font-family:"Segoe UI",Arial,sans-serif;
+background:#f5efe6;
+margin:0;
+padding:0;
+color:#183a54;
+}
 
-  .logo{
-    width:120px;
-    margin-bottom:10px;
-  }
+.header{
+text-align:center;
+padding:34px 16px 24px 16px;
+background:linear-gradient(180deg,#0f4c5c,#1b6b7a);
+color:white;
+}
 
-  .title{
-    font-size:26px;
-    font-weight:700;
-    line-height:1.2;
-  }
+.logo{
+width:120px;
+margin-bottom:10px;
+}
 
-  .subtitle{
-    font-size:15px;
-    margin-top:6px;
-    opacity:.9;
-  }
+.title{
+font-size:26px;
+font-weight:700;
+line-height:1.2;
+}
 
-  /* More usable width on mobile */
-  .container{
-    max-width:920px;
-    margin:0 auto;
-    padding:14px 12px 22px 12px;
-  }
+.subtitle{
+font-size:15px;
+margin-top:6px;
+opacity:.9;
+}
 
-  /* Story card gives max space to title, button stays compact */
-  .storyCard{
-    background:white;
-    border-radius:14px;
-    padding:16px 14px;
-    margin-bottom:12px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-  }
+.container{
+max-width:920px;
+margin:0 auto;
+padding:10px 10px 14px 10px;
+}
 
-  .storyTitle{
-    flex:1 1 auto;         /* take as much space as possible */
-    min-width:0;           /* critical so wrapping works in flex */
-    font-size:17px;
-    font-weight:650;
-    line-height:1.25;
-    white-space:normal;    /* allow wrap */
-    overflow-wrap:anywhere;/* wrap long words */
-    word-break:break-word; /* safe fallback */
-  }
+.storyCard{
+background:white;
+border-radius:10px;
+padding:10px 12px;
+margin-bottom:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+display:flex;
+align-items:center;
+gap:10px;
+border-bottom:1px solid #f0f0f0;
+}
 
-  button{
-    flex:0 0 auto;         /* do not steal space from title */
-    border:none;
-    cursor:pointer;
-    font-size:14px;
-    padding:10px 14px;
-    border-radius:10px;
-    background:#0f4c5c;
-    color:white;
-    white-space:nowrap;
-  }
+.storyTitle{
+flex:1 1 auto;
+min-width:0;
+font-size:16px;
+font-weight:600;
+line-height:1.25;
+white-space:normal;
+overflow-wrap:anywhere;
+word-break:break-word;
+}
 
-  .footer{
-    text-align:center;
-    margin:18px 0 22px 0;
-    font-size:13px;
-    color:#6b7f8d;
-  }
+button{
+flex:0 0 auto;
+border:none;
+cursor:pointer;
+font-size:14px;
+padding:8px 12px;
+border-radius:8px;
+background:#0f4c5c;
+color:white;
+white-space:nowrap;
+transition:background .2s ease;
+}
 
-  #sleepOverlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:black;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity 10s ease;
-    z-index:999;
-  }
+button:hover{
+background:#156272;
+}
 
-  /* Small screens: even more title room, slightly smaller button */
-  @media (max-width: 420px){
-    .storyCard{ padding:14px 12px; }
-    .storyTitle{ font-size:16px; }
-    button{ font-size:13px; padding:9px 12px; border-radius:10px; }
-  }
+button:active{
+transform:scale(.97);
+}
+
+button.playing{
+background:#2e8b57;
+}
+
+.footer{
+text-align:center;
+margin:16px 0 20px 0;
+font-size:13px;
+color:#6b7f8d;
+}
+
+#sleepOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+pointer-events:none;
+transition:opacity 10s ease;
+z-index:999;
+}
+
 </style>
 
 </head>
@@ -117,68 +124,120 @@
 <div id="sleepOverlay"></div>
 
 <div class="header">
-  <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Logo">
-  <div class="title">
-    Personalized SLEEPO Stories for <span id="kidName">Kid Name</span>
-  </div>
-  <div class="subtitle">
-    Press play and let the magic begin ✨
-  </div>
+
+<img src="/assets/sleepo-logo.png" class="logo">
+
+<div class="title">
+Personalized SLEEPO Stories for <span id="kidName">Kid Name</span>
+</div>
+
+<div class="subtitle">
+Press play and let the magic begin ✨
+</div>
+
 </div>
 
 <div class="container">
 
-  <!-- Example story cards (Worker will inject real list) -->
-  <div class="storyCard">
-    <div class="storyTitle">The Brave Little Star and the Moonlight Adventure</div>
-    <button onclick="playStory('/audio/star-story.m4a')">▶ Play</button>
-  </div>
+<div class="storyCard">
 
-  <div class="storyCard">
-    <div class="storyTitle">Dreams of the Forest</div>
-    <button onclick="playStory('/audio/forest-story.m4a')">▶ Play</button>
-  </div>
+<div class="storyTitle">
+The Brave Little Star and the Moonlight Adventure
+</div>
 
-   <div class="storyCard">
-    <div class="storyTitle">कहाँ से आया ये राजकुमार  of the Forest</div>
-    <button onclick="playStory('/audio/forest-story.m4a')">▶ Play</button>
-  </div>
+<button onclick="playStory(this,'/audio/star-story.m4a')">
+▶ Play
+</button>
 
-   <div class="storyCard">
-    <div class="storyTitle">Dreams of the Forest</div>
-    <button onclick="playStory('/audio/forest-story.m4a')">▶ Play</button>
-  </div>
-  
+</div>
+
+<div class="storyCard">
+
+<div class="storyTitle">
+Dreams of the Forest
+</div>
+
+<button onclick="playStory(this,'/audio/forest-story.m4a')">
+▶ Play
+</button>
+
+</div>
+
+<div class="storyCard">
+
+<div class="storyTitle">
+The Curious Tiger Who Loved the Stars
+</div>
+
+<button onclick="playStory(this,'/audio/tiger-story.m4a')">
+▶ Play
+</button>
+
+</div>
+
 </div>
 
 <div class="footer">
-  © SLEEPO Foundation
+© SLEEPO Foundation
 </div>
 
 <audio id="player"></audio>
 
 <script>
-  const player = document.getElementById("player");
-  const overlay = document.getElementById("sleepOverlay");
 
-  function playStory(url){
-    player.src = url;
-    player.play();
-    startSleepMode();
-  }
+const player=document.getElementById("player")
+const overlay=document.getElementById("sleepOverlay")
 
-  function startSleepMode(){
-    // Dim after 30 seconds to keep bedtime-friendly
-    setTimeout(()=>{ overlay.style.opacity = 0.5; }, 30000);
+let currentButton=null
 
-    // Fade further after story ends
-    player.onended = ()=>{ fadeToSleep(); };
-  }
+function playStory(button,url){
 
-  function fadeToSleep(){
-    overlay.style.opacity = 0.85;
-    setTimeout(()=>{ overlay.style.opacity = 1; }, 180000); // 3 minutes
-  }
+if(currentButton){
+currentButton.classList.remove("playing")
+currentButton.innerText="▶ Play"
+}
+
+currentButton=button
+
+button.innerText="Loading..."
+button.disabled=true
+
+player.src=url
+
+player.play().then(()=>{
+
+button.innerText="Playing..."
+button.classList.add("playing")
+button.disabled=false
+
+startSleepMode()
+
+})
+
+}
+
+function startSleepMode(){
+
+setTimeout(()=>{
+overlay.style.opacity=.5
+},30000)
+
+player.onended=()=>{
+fadeToSleep()
+}
+
+}
+
+function fadeToSleep(){
+
+overlay.style.opacity=.85
+
+setTimeout(()=>{
+overlay.style.opacity=1
+},180000)
+
+}
+
 </script>
 
 </body>
