@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,51 +32,42 @@
     h1 {
       font-size: 2.5rem;
       color: #2d3748;
-      margin-bottom: 15px;
-      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .mini-line {
+      font-size: 0.9rem;
+      color: #a0aec0;
+      margin-bottom: 18px;
     }
     .tagline {
-      font-size: 1.1rem;
-      color: #718096;
+      font-size: 1.15rem;
+      color: #4a5568;
       margin-bottom: 18px;
       line-height: 1.6;
     }
     .subtagline {
       font-size: 1rem;
-      color: #4a5568;
+      color: #718096;
       margin-bottom: 30px;
       line-height: 1.7;
     }
-
-    .mini-line {
-      font-size: 0.9rem;
-      color: #a0aec0;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
     .panel {
       background: #f7fafc;
-      padding: 26px 28px;
-      border-radius: 15px;
-      margin: 18px 0;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
       border-left: 4px solid #667eea;
       text-align: left;
     }
     .panel h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
       color: #2d3748;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
     }
     .panel p {
-      font-size: 1.03rem;
       line-height: 1.8;
       color: #2d3748;
-      margin-bottom: 12px;
     }
-    .panel p:last-child { margin-bottom: 0; }
-
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -84,19 +75,13 @@
       margin-top: 12px;
     }
     .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: #ffffff;
+      background: #fff;
       border: 1px solid #e2e8f0;
-      color: #2d3748;
-      font-size: 0.95rem;
-      line-height: 1.2;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      font-size: 0.9rem;
     }
-    .pill span.dot {
+     .pill span.dot {
       width: 8px;
       height: 8px;
       border-radius: 999px;
@@ -104,7 +89,6 @@
       display: inline-block;
       flex: 0 0 auto;
     }
-
     .stats {
       display: flex;
       justify-content: space-around;
@@ -112,129 +96,68 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-    .stat {
-      text-align: center;
-      min-width: 160px;
-    }
     .stat-number {
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 2rem;
       color: #667eea;
-      display: block;
+      font-weight: bold;
     }
     .stat-label {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #718096;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
-
     .contact-section {
       margin-top: 40px;
+      border-top: 1px solid #e2e8f0;
       padding-top: 30px;
-      border-top: 2px solid #e2e8f0;
-    }
-    .contact-section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 14px;
-      color: #2d3748;
-    }
-    .contact-section p.lead {
-      margin-bottom: 20px;
-      color: #4a5568;
-      line-height: 1.7;
-      font-size: 1.03rem;
-    }
-    .contact-info {
-      font-size: 1.08rem;
-      margin: 10px 0;
-      color: #2d3748;
-    }
-    .contact-info a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
     }
     .cta {
       background: #667eea;
       color: white;
-      padding: 15px 30px;
-      border-radius: 10px;
+      padding: 14px 26px;
+      border-radius: 8px;
       display: inline-block;
-      margin-top: 18px;
-      font-size: 1.1rem;
-      font-weight: 600;
+      margin-top: 16px;
       text-decoration: none;
-      transition: transform 0.2s, background 0.2s;
-    }
-    .cta:hover {
-      transform: translateY(-2px);
-      background: #5568d3;
-    }
-    .footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #a0aec0;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      .container { padding: 30px 22px; text-align: center; }
-      h1 { font-size: 2rem; }
-      .panel { text-align: left; padding: 22px 18px; }
-      .stats { flex-direction: column; align-items: center; }
-      .stat { min-width: auto; }
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="assets/sleepo-logo.png" alt="SLEEPO Foundation" class="logo">
+
+    <img src="assets/sleepo-logo.png" class="logo">
 
     <h1>SLEEPO Foundation</h1>
 
-    <p class="mini-line">
+    <div class="mini-line">
       Personalized for every child • Free for every family
-    </p>
+    </div>
 
     <p class="tagline">
-      Helping children build emotional intelligence and stay deeply connected to their cultural roots through personalized stories
+      Helping children build emotional intelligence and stay deeply connected to their cultural roots through personalized audio stories, experienced every night
     </p>
 
     <p class="subtagline">
-      Thoughtfully crafted for each child, our stories are built around what they love, gently nurturing confidence, focus, and strong values in a natural and meaningful way.
+      Each audio story is thoughtfully crafted around your child’s interests, experiences, and roots — quietly building confidence, focus, and strong values over time, making them future ready
     </p>
 
     <div class="panel">
       <h2>Our Mission</h2>
       <p>
-        SLEEPO Foundation helps children ages 2–12 grow into confident, emotionally aware individuals with strong character and cultural grounding, through deeply personalized stories built around each child’s unique world.
-      </p>
-    </div>
-
-    <div class="panel">
-      <h2>What We Do</h2>
-      <p>
-        We create meaningful, personalized stories for every child, shaped around their interests, experiences, and the things they naturally connect with.
-      </p>
-      <p>
-        Each story is designed to feel engaging and familiar, while quietly building emotional intelligence, confidence, and positive habits over time.
+        SLEEPO helps children ages 2–12 build emotional strength, cultural connection, and positive values, through simple, consistent nightly experiences.
       </p>
     </div>
 
     <div class="panel">
       <h2>What Children Gain</h2>
       <p>
-        Our personalized stories blend seamlessly into a child’s routine, making growth effortless and enjoyable, while requiring <strong>zero additional effort</strong> from the child.
+        Our personalized audio stories fit naturally into your family’s evening routine — no disruption, no extra effort, just something your child will look forward to every night, naturally becoming part of their routine
       </p>
       <div class="pill-row">
-        <div class="pill"><span class="dot"></span> Emotional intelligence</div>
-        <div class="pill"><span class="dot"></span> Cultural connection</div>
-        <div class="pill"><span class="dot"></span> Confidence & resilience</div>
-        <div class="pill"><span class="dot"></span> Character & values</div>
+         <div class="pill"><span class="dot"></span> <b>Emotional intelligence</b></div>
+        <div class="pill"><span class="dot"></span> <b>Cultural connection</b></div>
+         <div class="pill"><span class="dot"></span> <b>Confidence & resilience</b></div>
+         <div class="pill"><span class="dot"></span> <b>Character & values</b></div>
       </div>
     </div>
 
@@ -247,67 +170,52 @@
 
     <div class="panel">
       <h2>What Families Experience</h2>
-      <p>
-        Families often notice subtle but meaningful shifts as children engage with these personalized stories, improved focus, stronger confidence, calmer behavior, and a deeper connection to family and cultural values.
+      <p style="margin-bottom:12px;">
+        Families often notice meaningful shifts as children engage with their stories — improved focus, stronger confidence, calmer behaviour, and a deeper connection to family and cultural values.
       </p>
-      <p>
-        Our approach is simple to adopt, fits naturally into everyday life, and is designed to create lasting impact over time.
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;Our daughter started asking questions about India, our festivals, her grandparents. Things she never showed interest in before. SLEEPO quietly opened that door.&rdquo;
       </p>
-      <p>
-        Small, consistent moments lead to meaningful long-term change.
+      <p style="font-size:0.9rem; color:#718096; margin-top:6px;">— Parent of a 6-year-old, New Jersey</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;He used to resist every night. Now he asks for his story on his own. That shift alone was worth everything.&rdquo;
       </p>
+      <p style="font-size:0.9rem; color:#718096; margin-top:6px;">— Parent of a 4-year-old, Houston</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;My 9-year-old has always struggled with confidence — especially at school. About two months in, his teacher pulled me aside to say he had started volunteering answers in class. I hadn’t said a word to her about SLEEPO.&rdquo;
+      </p>
+      <p style="font-size:0.9rem; color:#718096; margin-top:6px;">— Parent of a 9-year-old, Seattle</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;Our daughter is 11 and was going through a tough phase — anxious, easily overwhelmed, constantly comparing herself to others. The stories didn’t fix everything, but something shifted. She started talking about her feelings instead of shutting down. She seems more settled in who she is.&rdquo;
+      </p>
+      <p style="font-size:0.9rem; color:#718096; margin-top:6px;">— Parent of an 11-year-old, Redmond</p>
     </div>
 
     <div class="stats">
-      <div class="stat">
-        <span class="stat-number">167</span>
-        <span class="stat-label">Families Enrolled</span>
+      <div>
+        <div class="stat-number">137</div>
+        <div class="stat-label">Families</div>
       </div>
-      <div class="stat">
-        <span class="stat-number">1+</span>
-        <span class="stat-label">Year Running</span>
+      <div>
+        <div class="stat-number">2–12</div>
+        <div class="stat-label">Ages Served</div>
       </div>
-      <div class="stat">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Free</span>
+      <div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Free</div>
       </div>
     </div>
 
     <div class="contact-section">
-      <h2>Connect With Us</h2>
-      <p class="lead">
+      <h2>Start a Conversation About Your Child</h2>
+            <br>
+      <p>
         SLEEPO is deeply personalized. The best way to explore if it’s right for your child is a short conversation with us.
       </p>
+  <br>
+       <p><strong>Amit Goyal</strong> &nbsp;|&nbsp; Founder</p>
 
-      <div class="contact-info">
-        <strong>Amit Goyal</strong> | Founder
-      </div>
-      <div class="contact-info">
-        📧
-        <a href="/cdn-cgi/l/email-protection#6405090d102417080101140b020b110a0005100d0b0a4a0b1603">
-          <span class="__cf_email__" data-cfemail="95f4f8fce1d5e6f9f0f0e5faf3fae0fbf1f4e1fcfafbbbfae7f2">[email&#160;protected]</span>
-        </a>
-      </div>
-      <div class="contact-info">
-        ☎️ <a href="tel:4252231361">425-223-1361</a>
-      </div>
 
-      <a href="/cdn-cgi/l/email-protection#27464a4e5367544b42425748414852494346534e484909485540" class="cta">
-        Start a Conversation
-      </a>
-    </div>
+          <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4c7d8d1d1c4db9ad9ddc7c7dddbdaf4d3d9d5ddd89ad7dbd9">[email&#160;protected]</a></p>
+      <p>☎️ 425-223-1361</p>
 
-    <div class="footer">
-      <p>
-        SLEEPO Foundation is a registered nonprofit organization based in Redmond, Washington, USA.
-      </p>
-    </div>
-  </div>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
-    integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
-    data-cf-beacon='{"version":"2024.11.0","token":"2925fea1464c4d8ab097fa875c50b95f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
-    crossorigin="anonymous"></script>
-</body>
-</html>
