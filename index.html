@@ -175,6 +175,81 @@
   color: #CFCBEA;
   margin: 0 6px;
 }
+
+    /* Childhood Is Changing Fast section */
+    .childhood-panel {
+      background: linear-gradient(135deg, #f0ecff 0%, #e8e4f8 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #9f8fd6;
+      padding: 28px 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+    .childhood-panel h2 {
+      font-size: 1.2rem;
+      color: #3b2f6e;
+      margin-bottom: 14px;
+    }
+    .childhood-panel p {
+      color: #4a4070;
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+    .childhood-icons {
+      display: flex;
+      gap: 14px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .childhood-icon-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.65);
+      border: 1px solid #d6cef5;
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 0.88rem;
+      color: #4a4070;
+      font-weight: 500;
+    }
+    .childhood-icon-item .icon {
+      font-size: 1.1rem;
+    }
+
+    /* Revised What Children Gain */
+    .gain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 520px) {
+      .gain-grid { grid-template-columns: 1fr; }
+    }
+    .gain-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+    .gain-item .gain-icon {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    .gain-item h3 {
+      font-size: 0.95rem;
+      color: #2d3748;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+    .gain-item p {
+      font-size: 0.83rem;
+      color: #718096;
+      line-height: 1.5;
+    }
    .contact-actions a:first-child {
   font-weight: 600;
 }
@@ -215,6 +290,20 @@
       Each audio story is thoughtfully crafted around your child’s interests, experiences, and roots — quietly building confidence, focus, and strong values over time, making them future ready
     </p>
 
+    <div class="childhood-panel">
+      <h2>Childhood Is Changing Fast</h2>
+      <p>
+        Children today are growing up in a world of constant stimulation, shorter attention spans, rising emotional stress, and less meaningful quiet connection.<br><br>
+        Yet emotional intelligence, resilience, empathy, and confidence — these are becoming more important than ever.<br><br>
+        SLEEPO helps families intentionally nurture these qualities through calm, deeply personalized bedtime storytelling.
+      </p>
+      <div class="childhood-icons">
+        <div class="childhood-icon-item"><span class="icon">📱</span> Screens &amp; distraction</div>
+        <div class="childhood-icon-item"><span class="icon">💛</span> Emotional wellbeing</div>
+        <div class="childhood-icon-item"><span class="icon">🌙</span> Bedtime bonding</div>
+      </div>
+    </div>
+
     <div class="panel">
       <h2>Our Mission</h2>
       <p>
@@ -225,13 +314,29 @@
     <div class="panel">
       <h2>What Children Gain</h2>
       <p>
-        Our personalized audio stories fit naturally into your family’s evening routine — no disruption, no extra effort, just something your child will look forward to every night, naturally becoming part of their routine
+        Our personalized audio stories fit naturally into your family’s evening routine — no disruption, no extra effort, just something your child will look forward to every night.
       </p>
-      <div class="pill-row">
-         <div class="pill"><span class="dot"></span> <b>Emotional intelligence</b></div>
-        <div class="pill"><span class="dot"></span> <b>Cultural connection</b></div>
-         <div class="pill"><span class="dot"></span> <b>Confidence & resilience</b></div>
-         <div class="pill"><span class="dot"></span> <b>Character & values</b></div>
+      <div class="gain-grid">
+        <div class="gain-item">
+          <div class="gain-icon">🧠</div>
+          <h3>Build Emotional Intelligence (EQ)</h3>
+          <p>Confidence, empathy, emotional awareness</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🤝</div>
+          <h3>Strengthen Parent-Child Bonding</h3>
+          <p>Meaningful nightly connection and calm bedtime moments</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🌱</div>
+          <h3>Build Resilience &amp; Positive Thinking</h3>
+          <p>Helping children grow through challenges with confidence</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🪔</div>
+          <h3>Preserve Cultural Roots &amp; Values</h3>
+          <p>Helping children stay connected to identity and traditions</p>
+        </div>
       </div>
     </div>
 
