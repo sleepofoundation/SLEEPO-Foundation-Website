@@ -308,6 +308,94 @@
       text-decoration: none;
       font-weight: 600;
     }
+
+    /* P1 – Brand identity lines */
+    .brand-line {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #667eea;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+    .brand-support-line {
+      font-size: 1rem;
+      color: #667eea;
+      font-style: italic;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      opacity: 0.85;
+    }
+
+    /* P3 – How SLEEPO Works */
+    .how-panel {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #667eea;
+      padding: 32px 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+    .how-panel h2 {
+      font-size: 1.2rem;
+      color: #2d3748;
+      margin-bottom: 20px;
+    }
+    .how-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .how-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .how-step-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .how-step-text {
+      font-size: 0.95rem;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    .how-arrow {
+      text-align: center;
+      color: #a0aec0;
+      font-size: 1.1rem;
+      padding: 2px 0;
+      margin-left: 20px;
+    }
+
+    /* P5 – Trusted-by line */
+    .trusted-line {
+      font-size: 0.92rem;
+      color: #718096;
+      text-align: center;
+      margin: 8px 0 4px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* P6 – Typography refinements */
+    .panel p {
+      line-height: 1.9;
+    }
+    .panel h2 {
+      margin-top: 2px;
+      margin-bottom: 14px;
+    }
+    .panel p[style*="italic"] {
+      font-size: 1.01rem !important;
+      line-height: 1.85 !important;
+    }
+
   </style>
 </head>
 <body>
@@ -316,6 +404,8 @@
     <img src="assets/sleepo-logo.png" class="logo">
 
     <h1>SLEEPO Foundation</h1>
+
+    <div class="brand-line">Stories That Shape</div>
 
     <div class="mini-line">
       Personalized for every child • A Story only theirs
@@ -326,7 +416,11 @@
     </p>
 
     <p class="subtagline">
-      Each audio story is thoughtfully crafted around your child’s interests, experiences, and roots — quietly building confidence, focus, and strong values over time, making them future ready
+      Each audio story is thoughtfully crafted around your child’s interests, experiences, and roots — quietly shaping confidence, emotional resilience, and strong values over time.
+    </p>
+
+    <p class="brand-support-line">
+      Tonight’s story can quietly shape tomorrow’s confidence, empathy, resilience, and self-belief.
     </p>
 
     <div class="childhood-panel">
@@ -387,6 +481,26 @@
       <p class="bedtime-closing">That is why SLEEPO is built entirely around this one quiet, powerful moment.</p>
     </div>
 
+    <div class="how-panel">
+      <h2>How SLEEPO Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-icon">👨‍👩‍👧</div>
+          <div class="how-step-text">Parents share about their child — their personality, interests, and hopes</div>
+        </div>
+        <div class="how-arrow">↓</div>
+        <div class="how-step">
+          <div class="how-step-icon">✨</div>
+          <div class="how-step-text">SLEEPO crafts a story made entirely for your child</div>
+        </div>
+        <div class="how-arrow">↓</div>
+        <div class="how-step">
+          <div class="how-step-icon">🌙</div>
+          <div class="how-step-text">Children experience calm, meaningful bedtime moments night after night</div>
+        </div>
+      </div>
+    </div>
+
     <div class="panel">
       <h2>Our Vision</h2>
       <p>
@@ -417,6 +531,8 @@
       <p style="font-size:0.9rem; color:#718096; margin-top:6px;">— Parent of an 11-year-old, Redmond</p>
     </div>
 
+    <p class="trusted-line">137 families across the United States have made SLEEPO part of their bedtime routine.</p>
+
     <div class="stats">
       <div>
         <div class="stat-number">137</div>
@@ -437,7 +553,7 @@
   <h2>Start a Conversation About Your Child</h2>
 
   <p class="contact-subtext">
-    SLEEPO is deeply personalized. The best way to explore if it feels right for your child is a short, thoughtful conversation with us.
+    Every child is different. The best way to explore whether SLEEPO feels right for your child is a short, thoughtful conversation with us.
   </p>
 
   <div class="contact-actions">
