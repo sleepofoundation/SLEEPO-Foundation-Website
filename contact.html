@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SLEEPO Foundation</title>
+  <meta property="og:title" content="Contact Us | SLEEPO Foundation" />
+  <meta property="og:description" content="Get in touch with SLEEPO Foundation. We'd love to hear from you." />
+  <meta property="og:url" content="https://sleepofoundation.org/contact" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.88rem;
+      color: #667eea;
+      text-decoration: none;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #2d3748;
+      margin-bottom: 12px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #718096;
+      line-height: 1.8;
+      margin-top: 10px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .divider-line {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    /* Reason cards */
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 560px) {
+      .reasons-grid { grid-template-columns: 1fr; }
+    }
+
+    .reason-card {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px 18px;
+      text-align: left;
+    }
+
+    .reason-icon {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .reason-card h3 {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .reason-card p {
+      font-size: 0.85rem;
+      color: #718096;
+      line-height: 1.6;
+    }
+
+    .reason-card .channel {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #667eea;
+      background: #eef2ff;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    /* Panel — matches privacy/terms */
+    .panel {
+      background: #f7fafc;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    .panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 14px;
+    }
+
+    .panel p {
+      font-size: 0.97rem;
+      color: #4a5568;
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+
+    .panel p:last-child { margin-bottom: 0; }
+
+    /* Response note — amber callout */
+    .note-callout {
+      background: linear-gradient(135deg, #fffbf2 0%, #fff5e0 100%);
+      border: 1px solid #f0e0bc;
+      border-left: 4px solid #e8a84a;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    .note-callout p {
+      color: #6b4f1e;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* WhatsApp CTA — matches homepage premium-contact */
+    .whatsapp-block {
+      text-align: center;
+      margin-top: 32px;
+      padding: 44px 20px;
+      background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+      border-radius: 18px;
+    }
+
+    .whatsapp-block h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-subtext {
+      color: #CFCBEA;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 460px;
+      margin: 0 auto 26px;
+    }
+
+    .whatsapp-actions {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .whatsapp-actions a {
+      color: #EFB46A;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 14px;
+      text-shadow: 0 0 6px rgba(239,180,106,0.18);
+    }
+
+    .whatsapp-actions a:hover { text-decoration: underline; }
+
+    .whatsapp-actions .divider {
+      color: #CFCBEA;
+      margin: 0 4px;
+    }
+
+    .contact-number {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .contact-meta {
+      color: #CFCBEA;
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
+    .contact-meta a {
+      color: #CFCBEA;
+      text-decoration: none;
+    }
+
+    .contact-meta a:hover { text-decoration: underline; }
+
+    .contact-meta span { font-style: italic; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.83rem;
+      color: #a8a4c8;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #CFCBEA;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-links .sep { color: #6b5ea8; }
+
+    @media (max-width: 480px) {
+      .container { padding: 36px 20px; }
+      h1 { font-size: 1.7rem; }
+      .whatsapp-block { padding: 36px 16px; }
+      .whatsapp-actions { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <a href="/" class="back-link">← Back to SLEEPO Foundation</a>
+      <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
+      <h1>Get in Touch</h1>
+      <p class="intro-text">
+        Every child is different. If you have a question, want to learn more, or simply want to learn more about SLEEPO and whether it feels like a good fit for your family — we'd love to hear from you.
+      </p>
+    </div>
+
+    <hr class="divider-line">
+
+    <!-- Reason cards -->
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-icon">🌙</div>
+        <h3>Learn about the program or enroll</h3>
+        <p>Start a conversation about your child and how SLEEPO works.</p>
+        <span class="channel">WhatsApp or call</span>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">📖</div>
+        <h3>Question about your child's stories</h3>
+        <p>Feedback, updates, or anything about your child's experience.</p>
+        <span class="channel">Email</span>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">🔒</div>
+        <h3>Privacy or data request</h3>
+        <p>To review, update, or delete your family's information.</p>
+        <span class="channel">Email with subject: "Privacy Request"</span>
+      </div>
+    </div>
+
+    <!-- Response time -->
+    <div class="note-callout">
+      <p>
+        💬 &nbsp;We typically respond within <strong>1–2 business days.</strong> SLEEPO is a small, founder-led nonprofit — when you reach out, you will hear directly from our founder.
+      </p>
+    </div>
+
+    <!-- Email & address panel -->
+    <div class="panel">
+      <h2>Email & Address</h2>
+      <p>
+        Email: <a href="mailto:amit@sleepofoundation.org" style="color: #667eea; text-decoration: none; font-weight: 500;">amit@sleepofoundation.org</a>
+      </p>
+      <p>
+        Mailing Address: SLEEPO Foundation, Redmond, WA 98073
+      </p>
+      <p style="margin-top: 6px; font-size: 0.92rem; color: #718096;">
+        SLEEPO Foundation is an IRS-recognized 501(c)(3) nonprofit organization.
+      </p>
+    </div>
+
+    <!-- WhatsApp CTA -->
+    <div class="whatsapp-block">
+
+      <h2>Start a Conversation About Your Child</h2>
+
+      <p class="whatsapp-subtext">
+        The best way to explore whether SLEEPO feels right for your family is a short, thoughtful conversation. No forms, no pressure.
+      </p>
+
+      <div class="whatsapp-actions">
+        <a href="https://wa.me/14252231361?text=Hi%20Amit%2C%20I%20wanted%20to%20know%20more%20about%20SLEEPO" target="_blank">
+          💬 WhatsApp
+        </a>
+        <span class="divider">|</span>
+        <a href="tel:+14252231361">
+          📞 Call
+        </a>
+      </div>
+
+      <p class="contact-number">425-223-1361</p>
+
+      <p class="contact-meta">
+        Amit Goyal<br>
+        <span>Founder, SLEEPO Foundation</span><br>
+        <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a>
+      </p>
+
+      <div class="footer">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <span class="sep">•</span>
+          <a href="/privacy">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="/terms">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="/contact">Contact</a>
+        </div>
+        <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity.<br>
+          Donations may be tax deductible as permitted by law.<br>
+          © 2026 SLEEPO Foundation. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
