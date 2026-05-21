@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use | SLEEPO Foundation</title>
+  <meta property="og:title" content="Terms of Use | SLEEPO Foundation" />
+  <meta property="og:description" content="Terms and conditions for using SLEEPO Foundation's personalized bedtime audio story program." />
+  <meta property="og:url" content="https://sleepofoundation.org/terms" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.88rem;
+      color: #667eea;
+      text-decoration: none;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 0.88rem;
+      color: #a0aec0;
+      margin-top: 6px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #718096;
+      line-height: 1.75;
+      margin-top: 14px;
+    }
+
+    .divider-line {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    .panel {
+      background: #f7fafc;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    .panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 14px;
+      margin-top: 2px;
+    }
+
+    .panel p {
+      line-height: 1.9;
+      color: #4a5568;
+      font-size: 0.97rem;
+      margin-bottom: 10px;
+    }
+
+    .panel p:last-child { margin-bottom: 0; }
+
+    .panel ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .panel ul li {
+      color: #4a5568;
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 4px;
+    }
+
+    .panel ul li strong {
+      color: #2d3748;
+    }
+
+    /* Amber note callout — matches privacy.html voice callout */
+    .note-callout {
+      background: linear-gradient(135deg, #fffbf2 0%, #fff5e0 100%);
+      border: 1px solid #f0e0bc;
+      border-left: 4px solid #e8a84a;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-top: 14px;
+    }
+
+    .note-callout p {
+      color: #6b4f1e !important;
+      font-size: 0.95rem !important;
+      line-height: 1.75 !important;
+      margin: 0 !important;
+    }
+
+    .note-callout strong {
+      color: #5a3e10;
+    }
+
+    /* Purple panel — matches privacy.html coppa-panel */
+    .highlight-panel {
+      background: linear-gradient(135deg, #f0ecff 0%, #e8e4f8 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #9f8fd6;
+      padding: 28px 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+
+    .highlight-panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3b2f6e;
+      margin-bottom: 14px;
+    }
+
+    .highlight-panel p {
+      color: #4a4070;
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+
+    .highlight-panel p:last-child { margin-bottom: 0; }
+
+    /* Contact block — matches homepage premium-contact */
+    .contact-block {
+      text-align: center;
+      margin-top: 32px;
+      padding: 44px 20px;
+      background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+      border-radius: 18px;
+    }
+
+    .contact-block h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtext {
+      color: #CFCBEA;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-details {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: #CFCBEA;
+    }
+
+    .contact-details strong {
+      color: #fff;
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .contact-details a {
+      color: #EFB46A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.83rem;
+      color: #a8a4c8;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #CFCBEA;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-links .sep { color: #6b5ea8; }
+
+    @media (max-width: 480px) {
+      .container { padding: 36px 20px; }
+      h1 { font-size: 1.7rem; }
+      .panel, .highlight-panel { padding: 20px 18px; }
+      .contact-block { padding: 36px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <a href="/" class="back-link">← Back to SLEEPO Foundation</a>
+      <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
+      <h1>Terms of Use</h1>
+      <p class="last-updated">Last Updated: May 2026</p>
+      <p class="intro-text">
+        By using SLEEPO Foundation's websites and program, you agree to these terms.<br>
+        Please read them carefully — they are written to be clear and straightforward.
+      </p>
+    </div>
+
+    <hr class="divider-line">
+
+    <!-- About These Terms -->
+    <div class="panel">
+      <h2>About These Terms</h2>
+      <p>
+        These Terms of Use govern your access to and use of the SLEEPO Foundation websites at sleepofoundation.org, sleepo.org, and app.sleepokids.org, as well as our personalized audio story program (collectively, "the Service").
+      </p>
+      <p>
+        SLEEPO Foundation is an IRS-recognized 501(c)(3) nonprofit organization based in Redmond, Washington, USA. By accessing or using the Service, you confirm that you are a parent or legal guardian and that you agree to these terms on behalf of yourself and your family.
+      </p>
+    </div>
+
+    <!-- Who May Use the Service -->
+    <div class="highlight-panel">
+      <h2>Who May Use the Service</h2>
+      <p>
+        Our program is designed for <strong>parents and legal guardians of children ages 2–12</strong>. To use the Service, you must:
+      </p>
+      <ul style="padding-left: 18px; margin-top: 8px;">
+        <li style="color: #4a4070; font-size: 0.97rem; line-height: 1.85; margin-bottom: 4px;">Be at least 18 years of age</li>
+        <li style="color: #4a4070; font-size: 0.97rem; line-height: 1.85; margin-bottom: 4px;">Be the parent or legal guardian of the child enrolled in the program</li>
+        <li style="color: #4a4070; font-size: 0.97rem; line-height: 1.85; margin-bottom: 4px;">Provide accurate and complete information about yourself and your child</li>
+        <li style="color: #4a4070; font-size: 0.97rem; line-height: 1.85; margin-bottom: 4px;">Have the legal authority to agree to these terms</li>
+      </ul>
+      <p style="margin-top: 14px;">
+        Children do not create accounts or interact with the Service directly. All enrollment and communication is handled by parents or guardians.
+      </p>
+    </div>
+
+    <!-- The Program -->
+    <div class="panel">
+      <h2>The Program</h2>
+      <p>
+        SLEEPO creates personalized bedtime audio stories for your child based on information you provide, including your child's interests, preferences, and goals. Stories are delivered digitally and are intended for private, personal, non-commercial family use only.
+      </p>
+      <p>
+        The content and format of stories may vary and may be updated over time as we improve the program. SLEEPO does not guarantee a specific delivery schedule, story length, or number of stories.
+      </p>
+    </div>
+
+    <!-- Your Responsibilities -->
+    <div class="panel">
+      <h2>Your Responsibilities</h2>
+      <p>When using the Service, you agree to:</p>
+      <ul>
+        <li>Provide truthful, accurate information about yourself and your child</li>
+        <li>Use the Service only for personal, non-commercial family purposes</li>
+        <li>Not share, resell, or redistribute stories or program content</li>
+        <li>Not attempt to reverse-engineer, copy, or replicate our story generation process</li>
+        <li>Notify us promptly if your contact information changes</li>
+        <li>Contact us if you have questions or concerns about the Service.</li>
+      </ul>
+    </div>
+
+    <!-- Voice Features -->
+    <div class="panel">
+      <h2>Voice Features</h2>
+      <p>
+        If you choose to enable voice personalization, you grant SLEEPO Foundation a limited, non-exclusive license to process a recording of your voice solely for the purpose of narrating your child's personalized stories.
+      </p>
+      <div class="note-callout">
+        <p>
+          <strong>Please note:</strong> Voice features require your explicit consent before activation. You may withdraw consent and request deletion of your voice recording at any time by contacting us. Withdrawal will disable the voice narration feature for your child's stories.
+        </p>
+      </div>
+    </div>
+
+    <!-- Intellectual Property -->
+    <div class="panel">
+      <h2>Intellectual Property</h2>
+      <p>
+        Story content, audio content, website content, and program materials remain the property of SLEEPO Foundation unless otherwise stated. Stories are intended primarily for personal family use and may not be resold, redistributed at scale, or used commercially.
+      </p>
+      <p>
+        The SLEEPO name, logo, and branding are the property of SLEEPO Foundation and may not be used without written permission.
+      </p>
+    </div>
+
+    <!-- Disclaimer of Warranties -->
+    <div class="panel">
+      <h2>Disclaimer</h2>
+      <p>
+        SLEEPO Foundation provides the Service on an "as is" basis. We are a small nonprofit and do our best to deliver a high-quality, consistent experience. However, we do not guarantee uninterrupted access to the Service or specific outcomes for your child.
+      </p>
+      <p>
+        Our program is designed for storytelling, reflection, and family bedtime routines. It is not a substitute for professional medical, psychological, or therapeutic services.
+      </p>
+    </div>
+
+    <!-- Limitation of Liability -->
+    <div class="panel">
+      <h2>Limitation of Liability</h2>
+      <p>
+        To the extent permitted by applicable law, SLEEPO Foundation shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Service. Our total liability in any matter related to the Service shall not exceed the amount you paid to participate in the program, if any.
+      </p>
+    </div>
+
+    <!-- Privacy -->
+    <div class="panel">
+      <h2>Privacy</h2>
+      <p>
+        Your use of the Service is also governed by our <a href="/privacy" style="color: #667eea; text-decoration: none; font-weight: 500;">Privacy Policy</a>, which is incorporated into these Terms by reference. The Privacy Policy explains how we collect, use, and protect information about your family, including your rights under COPPA.
+      </p>
+    </div>
+
+    <!-- Changes to the Service -->
+    <div class="panel">
+      <h2>Changes to the Service or These Terms</h2>
+      <p>
+        We may update these Terms from time to time. The date at the top of this page reflects the most recent version. Continued use of the Service after changes are posted constitutes your acceptance of the updated Terms.
+      </p>
+      <p>
+        We may also modify, pause, or discontinue aspects of the Service at any time. We will make reasonable efforts to notify enrolled families of any significant changes.
+      </p>
+    </div>
+
+    <!-- Governing Law -->
+    <div class="panel">
+      <h2>Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of the State of Washington, USA. Any disputes arising under these Terms shall be resolved in courts located in King County, Washington.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-block">
+      <h2>Questions About These Terms?</h2>
+      <p class="contact-subtext">
+        We're happy to clarify anything here. Reach out any time.
+      </p>
+      <div class="contact-details">
+        <strong>SLEEPO Foundation</strong>
+        Email: <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a><br>
+        Phone: <a href="tel:+14252231361">425-223-1361</a><br>
+        10716 243rd Ave NE, Redmond, WA 98053
+      </div>
+
+      <div class="footer">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <span class="sep">•</span>
+          <a href="/privacy">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="/terms">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="/contact">Contact</a>
+        </div>
+        <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity.<br>
+          Donations may be tax deductible as permitted by law.<br>
+          © 2026 SLEEPO Foundation. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
