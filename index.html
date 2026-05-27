@@ -398,6 +398,48 @@
     }
 
 
+    /* Visible page-links bar */
+    .page-links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 6px 4px;
+      margin: 32px 0 8px;
+      padding: 18px 20px;
+      background: #f7f5ff;
+      border: 1px solid #e0d8f8;
+      border-radius: 14px;
+    }
+    .page-links-bar a {
+      color: #5b4dbf;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #d6cef5;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .page-links-bar a:hover {
+      background: #667eea;
+      color: #fff;
+      border-color: #667eea;
+    }
+    .page-links-bar .bar-label {
+      font-size: 0.78rem;
+      color: #9f8fd6;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-right: 4px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
     /* Mobile responsiveness */
     @media (max-width: 480px) {
       .container {
@@ -601,6 +643,16 @@
       </div>
     </div>
 
+    <!-- Visible page links — placed here so they're always seen above the fold -->
+    <div class="page-links-bar">
+      <span class="bar-label">Quick Links</span>
+      <a href="/about">About Us</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Use</a>
+      <a href="/contact">Contact</a>
+      <a href="mailto:amit@sleepofoundation.org">Email Us</a>
+    </div>
+
     <div class="contact-section premium-contact">
 
   <h2>Start a Conversation About Your Child</h2>
@@ -629,13 +681,13 @@
 
   <div class="footer">
   <p style="margin-bottom: 10px;">
-    <a href="/about" style="color:#CFCBEA; text-decoration:none; margin: 0 8px;">About</a>
-    <span style="color:#6b5ea8;">•</span>
-    <a href="/privacy" style="color:#CFCBEA; text-decoration:none; margin: 0 8px;">Privacy Policy</a>
-    <span style="color:#6b5ea8;">•</span>
-    <a href="/terms" style="color:#CFCBEA; text-decoration:none; margin: 0 8px;">Terms of Use</a>
-    <span style="color:#6b5ea8;">•</span>
-    <a href="/contact" style="color:#CFCBEA; text-decoration:none; margin: 0 8px;">Contact</a>
+    <a href="/about" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">About</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/privacy" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Privacy Policy</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/terms" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Terms of Use</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/contact" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Contact</a>
   </p>
   <p>
     SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity. EIN: 39-4188744. <br>
