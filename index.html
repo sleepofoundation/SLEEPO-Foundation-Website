@@ -440,6 +440,118 @@
       margin-bottom: 4px;
     }
 
+    /* Hero signup CTA */
+    .hero-cta-wrap {
+      margin: 4px 0 22px;
+    }
+    .hero-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      font-size: 1.12rem;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(102,126,234,0.4);
+      letter-spacing: 0.01em;
+    }
+    .hero-cta:hover {
+      box-shadow: 0 12px 28px rgba(102,126,234,0.5);
+    }
+    .hero-cta-sub {
+      font-size: 0.85rem;
+      color: #a0aec0;
+      margin-top: 10px;
+    }
+
+    /* Photo duo — two lifestyle images side by side */
+    .photo-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 26px 0;
+    }
+    .photo-duo figure {
+      margin: 0;
+    }
+    .photo-duo img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+    .photo-duo figcaption {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #a0aec0;
+      font-style: italic;
+      margin-top: 8px;
+    }
+    @media (max-width: 520px) {
+      .photo-duo { grid-template-columns: 1fr; }
+    }
+
+    /* How Your Child Benefits — colorful cards */
+    .benefits-panel {
+      margin: 16px 0 24px;
+    }
+    .benefits-panel h2 {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 18px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 620px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .benefit-card {
+      border-radius: 16px;
+      padding: 22px 12px;
+      text-align: center;
+    }
+    .benefit-card .benefit-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .benefit-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2d3748;
+      line-height: 1.35;
+    }
+    .benefit-card.confidence { background: #e7f4de; }
+    .benefit-card.confidence .benefit-circle { background: #6aa84f; color: #fff; }
+    .benefit-card.lifeskills { background: #fce3ee; }
+    .benefit-card.lifeskills .benefit-circle { background: #e85f9b; color: #fff; }
+    .benefit-card.emotional { background: #ece3fb; }
+    .benefit-card.emotional .benefit-circle { background: #7c4fd6; color: #fff; }
+    .benefit-card.cultural { background: #fdf1d6; }
+    .benefit-card.cultural .benefit-circle { background: #f0ad2b; color: #fff; }
+
+    /* Prominent signup pill in quick links bar */
+    .page-links-bar a.signup-pill {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border-color: transparent;
+      font-weight: 700;
+    }
+    .page-links-bar a.signup-pill:hover {
+      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
+    }
+
     /* Mobile responsiveness */
     @media (max-width: 480px) {
       .container {
@@ -483,6 +595,16 @@
       .stat-number {
         font-size: 1.6rem;
       }
+      .hero-cta {
+        padding: 14px 30px;
+        font-size: 1rem;
+      }
+      .benefits-panel h2 {
+        font-size: 1.1rem;
+      }
+      .benefit-card {
+        padding: 18px 10px;
+      }
     }
 
   </style>
@@ -500,8 +622,24 @@
       Tonight’s story can quietly shape tomorrow’s confidence, empathy, positive values, and self-belief.
     </p>
 
+    <div class="hero-cta-wrap">
+      <a href="https://register.sleepo.org" class="hero-cta">✨ Sign Up Your Child — It's Free</a>
+      <div class="hero-cta-sub">Takes about 2 minutes • Join families already using SLEEPO every night</div>
+    </div>
+
     <div class="mini-line">
       Personalized for every child • A Story uniquely theirs
+    </div>
+
+    <div class="photo-duo">
+      <figure>
+        <img src="assets/sleepo-girl-bedtime.png" alt="Girl falling asleep listening to her personalized SLEEPO story">
+        <figcaption>A story made just for her, every night</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sleepo-boy-bedtime.png" alt="Boy hugging a teddy bear while his SLEEPO bedtime story plays">
+        <figcaption>Comfort, calm, and connection at bedtime</figcaption>
+      </figure>
     </div>
 
    
@@ -524,6 +662,28 @@
         <div class="childhood-icon-item"><span class="icon">📱</span> Screens &amp; distraction</div>
         <div class="childhood-icon-item"><span class="icon">💛</span> Confidence & Values</div>
         <div class="childhood-icon-item"><span class="icon">🌙</span> Bedtime bonding</div>
+      </div>
+    </div>
+
+    <div class="benefits-panel">
+      <h2>✦ How Your Child Benefits ✦</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card confidence">
+          <div class="benefit-circle">★</div>
+          <h3>Confidence &amp; Character</h3>
+        </div>
+        <div class="benefit-card lifeskills">
+          <div class="benefit-circle">🧭</div>
+          <h3>Life Skills</h3>
+        </div>
+        <div class="benefit-card emotional">
+          <div class="benefit-circle">⚓</div>
+          <h3>Emotional Strength</h3>
+        </div>
+        <div class="benefit-card cultural">
+          <div class="benefit-circle">🌳</div>
+          <h3>Cultural Roots &amp; Values</h3>
+        </div>
       </div>
     </div>
 
@@ -646,6 +806,7 @@
     <!-- Visible page links — placed here so they're always seen above the fold -->
     <div class="page-links-bar">
       <span class="bar-label">Quick Links</span>
+      <a href="https://register.sleepo.org" class="signup-pill">✨ Sign Up</a>
       <a href="/about">About Us</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Use</a>
@@ -660,6 +821,10 @@
   <p class="contact-subtext">
     Every child is different. The best way to explore whether SLEEPO feels right for your child is through a short, thoughtful conversation with us.
   </p>
+
+  <div class="hero-cta-wrap">
+    <a href="https://register.sleepo.org" class="hero-cta">✨ Sign Up Your Child — It's Free</a>
+  </div>
 
   <div class="contact-actions">
   <a href="https://wa.me/14252231361?text=Hi%20Amit%2C%20I%20wanted%20to%20know%20more%20about%20SLEEPO" target="_blank">
