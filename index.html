@@ -513,6 +513,815 @@
     }
     .benefit-card {
       border-radius: 16px;
+      padding: 26px 12px;
+      text-align: center;
+    }
+    .benefit-card .benefit-circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.3rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .benefit-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2d3748;
+      line-height: 1.35;
+    }
+    .benefit-card.confidence { background: #e7f4de; }
+    .benefit-card.confidence .benefit-circle { background: #6aa84f; color: #fff; }
+    .benefit-card.lifeskills { background: #fce3ee; }
+    .benefit-card.lifeskills .benefit-circle { background: #e85f9b; color: #fff; }
+    .benefit-card.emotional { background: #ece3fb; }
+    .benefit-card.emotional .benefit-circle { background: #7c4fd6; color: #fff; }
+    .benefit-card.cultural { background: #fdf1d6; }
+    .benefit-card.cultural .benefit-circle { background: #f0ad2b; color: #fff; }
+
+    /* Prominent signup pill in quick links bar */
+    .page-links-bar a.signup-pill {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border-color: transparent;
+      font-weight: 700;
+    }
+    .page-links-bar a.signup-pill:hover {
+      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 480px) {
+      .container {
+        padding: 36px 22px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .brand-line {
+        font-size: 1.25rem;
+      }
+      .brand-support-line {
+        font-size: 0.93rem;
+        line-height: 1.75;
+      }
+      .tagline {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+      .subtagline {
+        font-size: 0.93rem;
+        line-height: 1.8;
+      }
+      .gain-grid {
+        grid-template-columns: 1fr;
+      }
+      .childhood-panel,
+      .bedtime-panel {
+        padding: 28px 20px;
+      }
+      .childhood-panel p,
+      .bedtime-panel p {
+        max-width: 100%;
+      }
+      .how-panel {
+        padding: 24px 18px;
+      }
+      .stats {
+        gap: 14px;
+      }
+      .stat-number {
+        font-size: 1.6rem;
+      }
+      .hero-cta {
+        padding: 14px 30px;
+        font-size: 1rem;
+      }
+      .benefits-panel h2 {
+        font-size: 1.1rem;
+      }
+      .benefit-card {
+        padding: 20px 10px;
+      }
+      .benefit-card .benefit-circle {
+        width: 64px;
+        height: 64px;
+        font-size: 1.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <img src="assets/sleepo-logo.png" class="logo">
+
+    <h1>SLEEPO Foundation</h1>
+
+    <div class="brand-line">Stories That Shape</div>
+
+    <p class="brand-support-line">
+      Tonight’s story can quietly shape tomorrow’s confidence, empathy, positive values, and self-belief.
+    </p>
+
+    <div class="hero-cta-wrap">
+      <a href="https://register.sleepo.org" class="hero-cta">✨ Sign Up Your Child</a>
+      <div class="hero-cta-sub">Takes just 2 minutes • Start your child's SLEEPO journey</div>
+    </div>
+
+    <div class="mini-line">
+      Personalized bedtime stories • Crafted just for your child
+    </div>
+
+    <div class="photo-duo">
+      <figure>
+        <img src="assets/sleepo-girl-bedtime.png" alt="Girl falling asleep listening to her personalized SLEEPO story">
+        <figcaption>A story made just for her, every night</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sleepo-boy-bedtime.png" alt="Boy hugging a teddy bear while his SLEEPO bedtime story plays">
+        <figcaption>Comfort, calm, and connection at bedtime</figcaption>
+      </figure>
+    </div>
+
+   
+   <p class="tagline">
+  Helping children build confidence, positive values, and cultural connection through personalized audio stories, experienced every night
+   </p>
+
+    <p class="subtagline">
+      Each audio story is thoughtfully crafted around your child’s interests, experiences, and roots — quietly shaping confidence, positive growth, and strong values over time.
+    </p>
+
+    <div class="childhood-panel">
+      <h2>Childhood Is Changing Fast</h2>
+      <p>
+        Children today are growing up in a world of constant stimulation, shorter attention spans, busy schedules, digital distractions, and fewer quiet family moments.<br><br>
+        Yet kindness, curiosity, empathy, and confidence are becoming more important than ever.<br><br>
+        SLEEPO helps families intentionally nurture these qualities through calm, deeply personalized bedtime storytelling.
+      </p>
+      <div class="childhood-icons">
+        <div class="childhood-icon-item"><span class="icon">📱</span> Screens &amp; distraction</div>
+        <div class="childhood-icon-item"><span class="icon">💛</span> Confidence & Values</div>
+        <div class="childhood-icon-item"><span class="icon">🌙</span> Bedtime bonding</div>
+      </div>
+    </div>
+
+    <div class="benefits-panel">
+      <h2>✦ How Your Child Benefits ✦</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card confidence">
+          <div class="benefit-circle">★</div>
+          <h3>Confidence &amp; Character</h3>
+        </div>
+        <div class="benefit-card lifeskills">
+          <div class="benefit-circle">🧭</div>
+          <h3>Life Skills</h3>
+        </div>
+        <div class="benefit-card emotional">
+          <div class="benefit-circle">⚓</div>
+          <h3>Emotional Strength</h3>
+        </div>
+        <div class="benefit-card cultural">
+          <div class="benefit-circle">🌳</div>
+          <h3>Cultural Roots &amp; Values</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Our Mission</h2>
+      <p>
+        SLEEPO Foundation is a 501(c)(3) nonprofit that helps children ages 2–12 build confidence, positive values, and cultural connection through personalized bedtime audio stories. Through child-centered storytelling, we support personal growth and strong values, strengthen family connections, and encourage long-term character development.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>What Children Gain</h2>
+      <p>
+        Our personalized audio stories fit naturally into your family’s evening routine — no disruption, no extra effort, just something your child will look forward to every night.
+      </p>
+      <div class="gain-grid">
+        <div class="gain-item">
+          <div class="gain-icon">🧠</div>
+          <h3>Build Confidence & Character</h3>
+          <p>Confidence, empathy, self-expression</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🤝</div>
+          <h3>Strengthen Parent-Child Bonding</h3>
+          <p>Meaningful nightly connection and calm bedtime moments</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🌱</div>
+          <h3>Build Grit &amp; Optimism</h3>
+          <p>Helping children grow through challenges with confidence</p>
+        </div>
+        <div class="gain-item">
+          <div class="gain-icon">🪔</div>
+          <h3>Preserve Cultural Roots &amp; Values</h3>
+          <p>Helping children stay connected to identity and traditions</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bedtime-panel">
+      <div class="bedtime-icon">🌙</div>
+      <h2>Why Bedtime Matters</h2>
+      <p>Children are most calm, receptive, and ready for connection — a moment unlike any other in their day.</p>
+      <p>Stories and affirmations heard repeatedly in this safe, connected space can gradually strengthen confidence, empathy, positive values, and a child's belief in themselves.</p>
+      <p class="bedtime-closing">That is why SLEEPO is built entirely around this one quiet, powerful moment.</p>
+    </div>
+
+    <div class="how-panel">
+      <h2>How SLEEPO Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-icon">1️⃣</div>
+          <div class="how-step-text">Parents share about their child — their personality, interests, and hopes</div>
+        </div>
+        <div class="how-arrow">↓</div>
+        <div class="how-step">
+          <div class="how-step-icon">2️⃣</div>
+          <div class="how-step-text">SLEEPO thoughtfully crafts stories made entirely for your child</div>
+        </div>
+        <div class="how-arrow">↓</div>
+        <div class="how-step">
+          <div class="how-step-icon">3️⃣</div>
+          <div class="how-step-text">Children experience calm, meaningful bedtime moments night after night</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Our Vision</h2>
+      <p>
+        A world where every child grows up confident, grounded in strong values, and ready to navigate life with clarity and purpose.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>What Families Experience</h2>
+      <p style="margin-bottom:12px;">
+        Families often share that stories become a meaningful part of bedtime, helping children feel more connected, confident, and engaged.
+      </p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;Our daughter started asking questions about India, our festivals, her grandparents. Things she never showed interest in before. SLEEPO quietly opened that door.&rdquo;
+      </p>
+      <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Parent of a 6-year-old, New Jersey</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;He used to resist every night. Now he asks for his story on his own. That shift alone was worth everything.&rdquo;
+      </p>
+      <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Parent of a 4-year-old, Houston</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo;My 9-year-old had always been quieter and hesitant. About two months in, his teacher mentioned he seemed more engaged and confident in class. I hadn't said a word to her about SLEEPO.&rdquo;
+      </p>
+      <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Parent of a 9-year-old, Seattle</p>
+      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
+        &ldquo; Our daughter is 11 and bedtime had become rushed and disconnected. The stories gave us a calmer way to end the day. She started opening up more and our evenings felt more meaningful.&rdquo;
+      </p>
+      <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Parent of an 11-year-old, Redmond</p>
+
+     
+    </div>
+
+    <p style="text-align: center; font-size: 13px; color: #888888; margin: 16px auto 24px auto; max-width: 600px; line-height: 1.6;">
+  SLEEPO stories are designed for bedtime enrichment and family connection. They are not a substitute for professional medical, psychological, or therapeutic services.
+</p>
+   <p class="trusted-line">137 families across the United States have welcomed SLEEPO into their nightly routine.</p>
+
+    <div class="stats">
+      <div>
+        <div class="stat-number">137</div>
+        <div class="stat-label">Families</div>
+      </div>
+      <div>
+        <div class="stat-number">2–12</div>
+        <div class="stat-label">Ages Served</div>
+      </div>
+      <div>
+        <div class="stat-number">501(c)(3)</div>
+        <div class="stat-label">Nonprofit</div>
+      </div>
+    </div>
+
+    <!-- Visible page links — placed here so they're always seen above the fold -->
+    <div class="page-links-bar">
+      <span class="bar-label">Quick Links</span>
+      <a href="https://register.sleepo.org" class="signup-pill">✨ Sign Up</a>
+      <a href="/about">About Us</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Use</a>
+      <a href="/contact">Contact</a>
+      <a href="mailto:amit@sleepofoundation.org">Email Us</a>
+    </div>
+
+    <div class="contact-section premium-contact">
+
+  <h2>Start a Conversation About Your Child</h2>
+
+  <p class="contact-subtext">
+    Every child is different. The best way to explore whether SLEEPO feels right for your child is through a short, thoughtful conversation with us.
+  </p>
+
+  <div class="hero-cta-wrap">
+    <a href="https://register.sleepo.org" class="hero-cta">✨ Sign Up Your Child</a>
+  </div>
+
+  <div class="contact-actions">
+  <a href="https://wa.me/14252231361?text=Hi%20Amit%2C%20I%20wanted%20to%20know%20more%20about%20SLEEPO" target="_blank">
+    💬 WhatsApp
+  </a>
+  <span class="divider">|</span>
+  <a href="tel:+14252231361">
+    📞 Call
+  </a>
+</div>
+
+  <p class="contact-number">425-223-1361</p>
+
+  <p class="contact-meta">
+    Amit Goyal<br/>
+    <span>Founder</span><br/>
+    <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a>
+  </p>
+
+  <div class="footer">
+  <p style="margin-bottom: 10px;">
+    <a href="/about" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">About</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/privacy" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Privacy Policy</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/terms" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Terms of Use</a>
+    <span style="color:#8b7fc0;">•</span>
+    <a href="/contact" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Contact</a>
+  </p>
+  <p>
+    SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity. EIN: 39-4188744. <br>
+   7241 185th Ave NE #2814, Redmond, WA 98073 <br>
+   Donations may be tax deductible as permitted by law. <br>
+   Redmond, Washington, USA · © 2026 SLEEPO Foundation. All rights reserved.
+  </p>
+</div>
+
+</div>
+
+  </div>
+</body>
+</html>      text-align: left;
+    }
+    .panel h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #2d3748;
+    }
+    .panel p {
+      line-height: 1.8;
+      color: #2d3748;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+    }
+     .pill span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #667eea;
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .stat-number {
+      font-size: 2rem;
+      color: #667eea;
+      font-weight: bold;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #718096;
+    }
+   .premium-contact {
+  text-align: center;
+  margin-top: 60px;
+  padding: 44px 20px;
+  background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+  border-radius: 18px;
+}
+
+.premium-contact h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.contact-subtext {
+  max-width: 520px;
+  margin: 14px auto;
+  color: #CFCBEA;
+  line-height: 1.7;
+}
+
+.contact-actions {
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+.contact-actions a {
+  color: #EFB46A;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 12px;
+  text-shadow: 0 0 6px rgba(239,180,106,0.18);
+}
+
+.contact-number {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #FFFFFF;
+}
+
+.contact-meta {
+  margin-top: 18px;
+  color: #CFCBEA;
+  line-height: 1.6;
+}
+
+.contact-meta span {
+  font-style: italic;
+}
+
+.contact-meta a {
+  color: #CFCBEA;
+  text-decoration: none;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: #a8a4c8;
+  margin-top: 20px;
+} 
+   .contact-actions .divider {
+  color: #CFCBEA;
+  margin: 0 6px;
+}
+
+    /* Childhood Is Changing Fast section */
+    .childhood-panel {
+      background: linear-gradient(135deg, #f0ecff 0%, #e8e4f8 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #9f8fd6;
+      padding: 38px 32px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+    .childhood-panel h2 {
+      font-size: 1.2rem;
+      color: #3b2f6e;
+      margin-bottom: 14px;
+    }
+    .childhood-panel p {
+      color: #4a4070;
+      line-height: 1.8;
+      font-size: 0.98rem;
+      max-width: 88%;
+    }
+    .childhood-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .childhood-icon-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid #e0d8f8;
+      border-radius: 999px;
+      padding: 6px 13px;
+      font-size: 0.85rem;
+      color: #6b5ea8;
+      font-weight: 400;
+    }
+    .childhood-icon-item .icon {
+      font-size: 0.95rem;
+      opacity: 0.75;
+    }
+
+    /* Why Bedtime Matters section */
+    .bedtime-panel {
+      background: linear-gradient(135deg, #fffbf2 0%, #fff5e0 100%);
+      border: 1px solid #f0e0bc;
+      border-left: 4px solid #e8a84a;
+      padding: 38px 32px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+    .bedtime-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .bedtime-panel h2 {
+      font-size: 1.2rem;
+      color: #5a3e10;
+      margin-bottom: 16px;
+    }
+    .bedtime-panel p {
+      color: #6b4f1e;
+      line-height: 1.8;
+      font-size: 0.98rem;
+      max-width: 88%;
+      margin-bottom: 12px;
+    }
+    .bedtime-panel p:last-child {
+      margin-bottom: 0;
+    }
+    .bedtime-closing {
+      font-style: italic;
+      color: #8a6030 !important;
+      font-size: 1.02rem !important;
+      margin-top: 6px;
+    }
+
+    /* Revised What Children Gain */
+    .gain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 520px) {
+      .gain-grid { grid-template-columns: 1fr; }
+    }
+    .gain-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+    .gain-item .gain-icon {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    .gain-item h3 {
+      font-size: 0.95rem;
+      color: #2d3748;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+    .gain-item p {
+      font-size: 0.83rem;
+      color: #718096;
+      line-height: 1.5;
+    }
+   .contact-actions a:first-child {
+  font-weight: 600;
+}
+   
+   .contact-section {
+      margin-top: 40px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 30px;
+    }
+    .cta {
+      background: #667eea;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* P1 – Brand identity lines */
+    .brand-line {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #667eea;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+    .brand-support-line {
+      font-size: 1rem;
+      color: #667eea;
+      font-style: italic;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      opacity: 0.85;
+    }
+
+    /* P3 – How SLEEPO Works */
+    .how-panel {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #667eea;
+      padding: 32px 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+    .how-panel h2 {
+      font-size: 1.2rem;
+      color: #2d3748;
+      margin-bottom: 20px;
+    }
+    .how-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .how-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .how-step-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .how-step-text {
+      font-size: 0.95rem;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    .how-arrow {
+      text-align: center;
+      color: #a0aec0;
+      font-size: 1.1rem;
+      padding: 2px 0;
+      margin-left: 20px;
+    }
+
+    /* P5 – Trusted-by line */
+    .trusted-line {
+      font-size: 0.92rem;
+      color: #718096;
+      text-align: center;
+      margin: 8px 0 4px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* P6 – Typography refinements */
+    .panel p {
+      line-height: 1.9;
+    }
+    .panel h2 {
+      margin-top: 2px;
+      margin-bottom: 14px;
+    }
+    .panel p[style*="italic"] {
+      font-size: 1.01rem !important;
+      line-height: 1.85 !important;
+    }
+
+
+    /* Visible page-links bar */
+    .page-links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 6px 4px;
+      margin: 32px 0 8px;
+      padding: 18px 20px;
+      background: #f7f5ff;
+      border: 1px solid #e0d8f8;
+      border-radius: 14px;
+    }
+    .page-links-bar a {
+      color: #5b4dbf;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #d6cef5;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .page-links-bar a:hover {
+      background: #667eea;
+      color: #fff;
+      border-color: #667eea;
+    }
+    .page-links-bar .bar-label {
+      font-size: 0.78rem;
+      color: #9f8fd6;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-right: 4px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    /* Hero signup CTA */
+    .hero-cta-wrap {
+      margin: 4px 0 22px;
+    }
+    .hero-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      font-size: 1.12rem;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(102,126,234,0.4);
+      letter-spacing: 0.01em;
+    }
+    .hero-cta:hover {
+      box-shadow: 0 12px 28px rgba(102,126,234,0.5);
+    }
+    .hero-cta-sub {
+      font-size: 0.85rem;
+      color: #a0aec0;
+      margin-top: 10px;
+    }
+
+    /* Photo duo — two lifestyle images side by side */
+    .photo-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 26px 0;
+    }
+    .photo-duo figure {
+      margin: 0;
+    }
+    .photo-duo img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+    .photo-duo figcaption {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #a0aec0;
+      font-style: italic;
+      margin-top: 8px;
+    }
+    @media (max-width: 520px) {
+      .photo-duo { grid-template-columns: 1fr; }
+    }
+
+    /* How Your Child Benefits — colorful cards */
+    .benefits-panel {
+      margin: 16px 0 24px;
+    }
+    .benefits-panel h2 {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 18px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 620px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .benefit-card {
+      border-radius: 16px;
       padding: 22px 12px;
       text-align: center;
     }
