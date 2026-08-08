@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | SLEEPO Foundation</title>
+  <meta property="og:title" content="Frequently Asked Questions | SLEEPO Foundation" />
+  <meta property="og:description" content="Answers to the questions parents ask us most about SLEEPO Foundation's personalized bedtime audio stories." />
+  <meta property="og:url" content="https://sleepofoundation.org/faq" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.88rem;
+      color: #667eea;
+      text-decoration: none;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #718096;
+      line-height: 1.75;
+      margin-top: 14px;
+    }
+
+    .divider-line {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    /* Quick jump nav */
+    .jump-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .jump-nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #667eea;
+      background: #eef2ff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    .jump-nav a:hover { background: #e0e7ff; }
+
+    /* Section label — matches homepage/about.html */
+    .section-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 14px;
+      scroll-margin-top: 20px;
+    }
+
+    /* Standard panel — matches other pages */
+    .panel {
+      background: #f7fafc;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    /* Purple highlight panel — matches other pages */
+    .highlight-panel {
+      background: linear-gradient(135deg, #f0ecff 0%, #e8e4f8 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #9f8fd6;
+      padding: 28px 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+
+    .panel h3, .highlight-panel h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 18px 0 6px;
+    }
+
+    .highlight-panel h3 { color: #3b2f6e; }
+
+    .panel h3:first-child, .highlight-panel h3:first-child { margin-top: 2px; }
+
+    .panel p, .highlight-panel p {
+      line-height: 1.85;
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .highlight-panel p { color: #4a4070; }
+
+    .panel p:last-child, .highlight-panel p:last-child { margin-bottom: 0; }
+
+    .panel ul, .panel ol, .highlight-panel ul, .highlight-panel ol {
+      padding-left: 20px;
+      margin: 6px 0 14px;
+    }
+
+    .panel ul li, .panel ol li, .highlight-panel ul li, .highlight-panel ol li {
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 4px;
+    }
+
+    .highlight-panel ul li, .highlight-panel ol li { color: #4a4070; }
+
+    .panel a, .highlight-panel a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .panel a:hover, .highlight-panel a:hover { text-decoration: underline; }
+
+    /* Fee table */
+    .fee-table {
+      width: 100%;
+      margin: 10px 0 14px;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+
+    .fee-table th, .fee-table td {
+      padding: 9px 10px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      color: #4a5568;
+    }
+
+    .fee-table th {
+      color: #2d3748;
+      font-weight: 600;
+    }
+
+    .fee-table th:last-child, .fee-table td:last-child { text-align: right; }
+
+    /* Contact block — matches other pages */
+    .contact-block {
+      text-align: center;
+      margin-top: 32px;
+      padding: 44px 20px;
+      background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+      border-radius: 18px;
+    }
+
+    .contact-block h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtext {
+      color: #CFCBEA;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-details {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: #CFCBEA;
+    }
+
+    .contact-details strong {
+      color: #fff;
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .contact-details a {
+      color: #EFB46A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.83rem;
+      color: #a8a4c8;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #CFCBEA;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-links .sep { color: #6b5ea8; }
+
+    @media (max-width: 480px) {
+      .container { padding: 36px 20px; }
+      h1 { font-size: 1.7rem; }
+      .panel, .highlight-panel { padding: 20px 18px; }
+      .contact-block { padding: 36px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <a href="/" class="back-link">← Back to SLEEPO Foundation</a>
+      <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
+      <h1>FAQ</h1>
+      <p class="intro-text">
+        Questions parents ask us most.<br>
+        Everything you'd want to know before your child's first story.
+      </p>
+    </div>
+
+    <hr class="divider-line">
+
+    <div class="jump-nav">
+      <a href="#getting-started">Getting Started</a>
+      <a href="#participation-fee">Participation Fee</a>
+      <a href="#personalization">Personalization</a>
+      <a href="#children-siblings">Children &amp; Siblings</a>
+      <a href="#privacy-trust">Privacy &amp; Trust</a>
+      <a href="#listening-support">Listening &amp; Parent Support</a>
+    </div>
+
+    <!-- GETTING STARTED -->
+    <div class="section-label" id="getting-started">Getting Started</div>
+    <div class="panel">
+      <h3>What is SLEEPO?</h3>
+      <p>SLEEPO is a nonprofit personalized storytelling program for children and families. We create bedtime stories inspired by each child's age, interests, strengths, culture, experiences, and growth goals. The stories are designed to support confidence, character, healthy habits, emotional awareness, cultural connection, and meaningful family time.</p>
+
+      <h3>What makes SLEEPO different from ordinary children's stories?</h3>
+      <p>Instead of giving every child the same story, SLEEPO builds stories around an individual child. A story may reflect the child's name, favorite activities, family traditions, talents, challenges, or a life lesson selected by the parent. The goal is for children to recognize their own world in the story and connect more deeply with its message.</p>
+
+      <h3>How does the program work?</h3>
+      <ol>
+        <li>A parent or legal guardian enrolls the child.</li>
+        <li>The parent completes the SLEEPO Success Matrix.</li>
+        <li>SLEEPO creates personalized stories using the family's responses.</li>
+        <li>The family receives and listens to the stories.</li>
+        <li>Parents can share feedback and update preferences as the child grows.</li>
+      </ol>
+
+      <h3>How do I sign up?</h3>
+      <p>Create your child's profile at <a href="https://register.sleepo.org">register.sleepo.org</a>. You will share a few basics and complete the SLEEPO Success Matrix so we understand what to build the stories around.</p>
+
+      <h3>How long until our first story arrives?</h3>
+      <p>Most families receive their first personalized story within a day or two after completing the Success Matrix.</p>
+
+      <h3>What ages is SLEEPO built for?</h3>
+      <p>SLEEPO stories are designed for children roughly ages 2–12, with story tone and complexity adjusted to your child's age.</p>
+
+      <h3>Is SLEEPO only for bedtime?</h3>
+      <p>No. Bedtime is a natural time for calm listening and family connection, but stories can also be enjoyed during quiet time, car rides, travel, or other family moments.</p>
+
+      <h3>Are the stories audio or written?</h3>
+      <p>SLEEPO focuses on a personalized listening experience. We will craft personalized stories for your child, and after your approval, they will be recorded as audio stories to be played at bedtime.</p>
+
+      <h3>How often will my child receive stories?</h3>
+      <p>A minimum of 3 stories per week is suggested for your child to benefit from the SLEEPO program. If you desire more stories, feel free to ask the SLEEPO team.</p>
+
+      <h3>Can we listen to a story more than once?</h3>
+      <p>Yes. Children often enjoy returning to familiar stories, and repeated listening can reinforce positive messages and make the story part of a comforting routine.</p>
+    </div>
+
+    <!-- PARTICIPATION FEE -->
+    <div class="section-label" id="participation-fee">Participation Fee</div>
+    <div class="highlight-panel">
+      <h3>How much does SLEEPO cost?</h3>
+      <p>Your first month is free, with no credit card required. After that, the monthly participation fee is <strong>$50 for the first child</strong> and <strong>$40 for each additional sibling from the same family</strong>.</p>
+      <table class="fee-table">
+        <thead><tr><th>Children enrolled</th><th>Monthly fee</th></tr></thead>
+        <tbody>
+          <tr><td>One child</td><td>$50</td></tr>
+          <tr><td>Two children</td><td>$90</td></tr>
+          <tr><td>Three children</td><td>$130</td></tr>
+          <tr><td>Four children</td><td>$170</td></tr>
+        </tbody>
+      </table>
+      <p>Each enrolled child has an individual profile and personalized story experience.</p>
+
+      <h3>Why is it called a participation fee?</h3>
+      <p>SLEEPO is a nonprofit family program, not a commercial story subscription. The heavily subsidized price is for families' ongoing involvement &amp; commitment to the program.</p>
+
+      <h3>Who qualifies for the additional-sibling rate?</h3>
+      <p>The $40 rate applies to each additional sibling enrolled as part of the same family. Contact us if you have questions about a particular family arrangement.</p>
+
+      <h3>Can I cancel anytime?</h3>
+      <p>Yes. There's no long-term contract — you can pause or cancel whenever it makes sense for your family.</p>
+
+      <h3>Where do participation fees go?</h3>
+      <p>As a 501(c)(3) nonprofit, SLEEPO uses participation fees and donations together to sustain the program and fund access for families who need additional support.</p>
+
+      <h3>Is financial assistance available?</h3>
+      <p>Sponsored participation or financial assistance may be available depending on current donations and program resources. Families who need support are encouraged to contact SLEEPO privately at <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a>.</p>
+
+      <h3>Are participation fees tax-deductible?</h3>
+      <p>A fee paid in exchange for program participation is generally different from a charitable donation. Please consult a qualified tax professional about your situation. Separate donations to SLEEPO Foundation may be tax-deductible as permitted by law.</p>
+    </div>
+
+    <!-- PERSONALIZATION -->
+    <div class="section-label" id="personalization">Personalization</div>
+    <div class="panel">
+      <h3>What information do you use in stories?</h3>
+      <p>Your child's name, interests, and the strengths, growth areas, life skills and values, and passions you share through the Success Matrix — details that make each story feel written specifically for them.</p>
+
+      <h3>Do I have to answer every profile question?</h3>
+      <p>No. Share only what you are comfortable providing. More detail can make a story feel more personal, but please do not submit highly sensitive information such as passwords, financial information, government identification numbers, medical records, or exact daily schedules.</p>
+
+      <h3>Can I update my child's profile?</h3>
+      <p>Yes. Children's interests and needs change. Parents can provide new preferences, goals, or feedback so future stories continue to feel relevant.</p>
+
+      <h3>Can parents choose a lesson or theme?</h3>
+      <p>Yes. Parents can suggest a skill, habit, family value, or situation for a story to explore — such as confidence, friendship, kindness, perseverance, organization, healthy habits, cultural traditions, school experiences, or trying something new. We aim to communicate lessons through an enjoyable story rather than shame, fear, or lecturing.</p>
+
+      <h3>Can stories reflect our family's culture and language?</h3>
+      <p>Yes — we design with diverse families in mind and personalize stories to reflect your family's traditions and values wherever possible.</p>
+
+      <h3>Are stories available in different languages?</h3>
+      <p>Language availability depends on SLEEPO's current capabilities. Share your preferred language during enrollment, and the team will confirm what is available.</p>
+
+      <h3>Can siblings or other family members appear in a story?</h3>
+      <p>Yes, when requested by a parent or guardian. Siblings, parents, grandparents, and other important people can be included using appropriate details supplied by the family. Families may also request a shared sibling story.</p>
+
+      <h3>Can a story use my child's favorite copyrighted character?</h3>
+      <p>You may tell us what kinds of characters your child enjoys. To respect intellectual-property rights, SLEEPO may create an original character with similar positive qualities instead of reproducing a protected character, brand, or story world.</p>
+
+      <h3>Can I request a story about a difficult situation?</h3>
+      <p>Parents may request age-appropriate stories about experiences such as starting school, making friends, moving, sibling disagreements, performance nerves, or developing a new habit. SLEEPO can support family conversations, but it is not a substitute for medical, psychological, educational, or legal care.</p>
+
+      <h3>What if my child does not connect with a story?</h3>
+      <p>Tell us what did and did not work — the topic, pace, style, characters, language, or personalization. Parent feedback helps SLEEPO better understand your child's preferences and improve future stories.</p>
+
+      <h3>In whose voice can the story be recorded?</h3>
+      <p>For the strongest personal connection, SLEEPO suggests considering voices in this order:</p>
+      <ol>
+        <li>A parent or guardian</li>
+        <li>Extended family, such as grandparents, aunts, uncles, or cousins</li>
+        <li>A family friend the child knows</li>
+        <li>An AI-assisted cloned voice or voice artist, when available and used with appropriate consent</li>
+      </ol>
+    </div>
+
+    <!-- CHILDREN AND SIBLINGS -->
+    <div class="section-label" id="children-siblings">Children &amp; Siblings</div>
+    <div class="highlight-panel">
+      <h3>Can I enroll more than one child?</h3>
+      <p>Yes. Each enrolled child will have an individual Success Matrix and stories personalized to their age, interests, and goals.</p>
+
+      <h3>Will siblings receive the same story?</h3>
+      <p>No. Each child will receive stories tailored to their profile. Parents may request a shared sibling story when appropriate.</p>
+
+      <h3>What if my children are different ages?</h3>
+      <p>That is completely fine. Vocabulary, story structure, themes, and length are adjusted for each child's age and developmental level.</p>
+    </div>
+
+    <!-- PRIVACY & TRUST -->
+    <div class="section-label" id="privacy-trust">Privacy &amp; Trust</div>
+    <div class="panel">
+      <h3>Is SLEEPO safe for children?</h3>
+      <p>SLEEPO is designed as a parent-guided program. A parent or legal guardian enrolls the child, decides what information to share, and can provide feedback. We aim for age-appropriate, respectful, encouraging stories.</p>
+
+      <h3>Does my child communicate directly with SLEEPO?</h3>
+      <p>Never. Only parents or guardians interact with the SLEEPO team. We will never, ever talk to or reach out to your kid, even if you would like us to.</p>
+
+      <h3>Is my child's information private?</h3>
+      <p>Information is used to personalize and deliver your child's stories. SLEEPO does not sell children's or families' personal information. For details about collection, storage, sharing, correction, and deletion, please read our <a href="/privacy">Privacy Page</a>.</p>
+
+      <h3>Will my child's story be shared publicly?</h3>
+      <p>A personalized story is accessible only to the parent or guardian of your child. Your child's story will not be used publicly as a sample, testimonial, promotion, or social-media post.</p>
+
+      <h3>Does SLEEPO use artificial intelligence?</h3>
+      <p>SLEEPO may use technology, including AI-assisted tools, in story development, narration, or program operations. Technology supports the creative process; it does not replace parent involvement, privacy safeguards, content standards, or responsible review.</p>
+
+      <h3>Are stories reviewed before children receive them?</h3>
+      <p>SLEEPO applies quality and safety standards to personalized content. Parents are also encouraged to listen with their children, particularly when a story addresses a sensitive or family-specific situation.</p>
+
+      <h3>Is SLEEPO really a nonprofit?</h3>
+      <p>Yes — SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity, EIN 39-4188744.</p>
+
+      <h3>Is SLEEPO therapy or medical treatment?</h3>
+      <p>No. SLEEPO is an educational and family storytelling program. It does not diagnose, prevent, or treat medical, developmental, behavioral, mental-health, or sleep conditions. Parents with concerns about a child's well-being should consult an appropriately qualified professional.</p>
+
+      <h3>Can SLEEPO guarantee a particular result or make my child fall asleep?</h3>
+      <p>No. Stories can support a calm routine, reflection, connection, imagination, and positive family conversations, but SLEEPO cannot guarantee sleep or a specific behavioral, educational, emotional, or health outcome.</p>
+    </div>
+
+    <!-- LISTENING AND PARENT SUPPORT -->
+    <div class="section-label" id="listening-support">Listening &amp; Parent Support</div>
+    <div class="highlight-panel">
+      <h3>Does my child need to use a screen?</h3>
+      <p>SLEEPO is designed around listening. A parent can start the story and place the device aside or turn off the display when the delivery method allows. Many parents use Bluetooth speakers.</p>
+
+      <h3>Should a parent listen with the child?</h3>
+      <p>Shared listening is encouraged whenever possible. It can create opportunities for connection, reassurance, and simple conversations about the story. Older children may also listen independently based on the parent's judgment.</p>
+
+      <h3>What can we talk about after a story?</h3>
+      <p>Try one relaxed question: &ldquo;What was your favorite part?&rdquo;, &ldquo;How did the character feel?&rdquo;, &ldquo;What would you have done?&rdquo;, or &ldquo;What should happen next?&rdquo; A warm, brief conversation is enough.</p>
+
+      <h3>What happens after enrollment?</h3>
+      <p>Parents receive information about next steps, expected timing, story access, participation fees, profile updates, and how to provide feedback.</p>
+
+      <h3>Can schools or community organizations work with SLEEPO?</h3>
+      <p>Yes. SLEEPO welcomes conversations with schools, libraries, cultural organizations, community groups, and family associations. Feel free to reach out to us to discuss a partnership.</p>
+
+      <h3>Can I donate without enrolling a child?</h3>
+      <p>Yes. Donations help expand access, strengthen the program, and bring personalized stories to more children.</p>
+
+      <h3>How can I contact SLEEPO?</h3>
+      <p>Use our <a href="/contact">Contact page</a>. Please do not include highly sensitive personal, medical, financial, or identifying information in a general message.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-block">
+      <h2>Still Have a Question?</h2>
+      <p class="contact-subtext">
+        We're a small, founder-led nonprofit — reach out any time and you'll hear directly from us.
+      </p>
+      <div class="contact-details">
+        <strong>SLEEPO Foundation</strong>
+        Email: <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a><br>
+        Phone: <a href="tel:+14252231361">425-223-1361</a><br>
+        SLEEPO Foundation, 7241 185th Ave NE #2814, Redmond, WA 98073
+      </div>
+
+      <div class="footer">
+        <div class="footer-links">
+  <a href="/">Home</a>
+  <span class="sep">•</span>
+  <a href="/about">About</a>
+  <span class="sep">•</span>
+  <a href="/faq">FAQ</a>
+  <span class="sep">•</span>
+  <a href="/privacy">Privacy Policy</a>
+  <span class="sep">•</span>
+  <a href="/terms">Terms of Use</a>
+  <span class="sep">•</span>
+  <a href="/contact">Contact</a>
+</div>
+        <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity.<br>
+          Donations may be tax deductible as permitted by law.<br>
+          © 2026 SLEEPO Foundation. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
