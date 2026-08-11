@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexa Skill Privacy Policy | SLEEPO Foundation</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Alexa Skill Privacy Policy | SLEEPO Foundation" />
+  <meta property="og:description" content="Supplemental privacy information for the Sleepo Kids Alexa skill." />
+  <meta property="og:url" content="https://sleepofoundation.org/alexa-privacy-policy" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.88rem;
+      color: #667eea;
+      text-decoration: none;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 0.88rem;
+      color: #a0aec0;
+      margin-top: 6px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #718096;
+      line-height: 1.75;
+      margin-top: 14px;
+    }
+
+    .intro-text a {
+      color: #667eea;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .intro-text a:hover { text-decoration: underline; }
+
+    .divider-line {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    .panel {
+      background: #f7fafc;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    .panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 14px;
+      margin-top: 2px;
+    }
+
+    .panel p {
+      line-height: 1.9;
+      color: #4a5568;
+      font-size: 0.97rem;
+      margin-bottom: 10px;
+    }
+
+    .panel p:last-child { margin-bottom: 0; }
+
+    .panel ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .panel ul li {
+      color: #4a5568;
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+
+    .panel ul li strong {
+      color: #2d3748;
+    }
+
+    .note-callout {
+      background: linear-gradient(135deg, #fffbf2 0%, #fff5e0 100%);
+      border: 1px solid #f0e0bc;
+      border-left: 4px solid #e8a84a;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-top: 14px;
+    }
+
+    .note-callout p {
+      color: #6b4f1e !important;
+      font-size: 0.95rem !important;
+      line-height: 1.75 !important;
+      margin: 0 !important;
+    }
+
+    .note-callout strong {
+      color: #5a3e10;
+    }
+
+    .contact-block {
+      text-align: center;
+      margin-top: 32px;
+      padding: 44px 20px;
+      background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+      border-radius: 18px;
+    }
+
+    .contact-block h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtext {
+      color: #CFCBEA;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-details {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: #CFCBEA;
+    }
+
+    .contact-details a {
+      color: #EFB46A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.83rem;
+      color: #a8a4c8;
+      line-height: 1.65;
+    }
+
+    .not-linked-note {
+      text-align: center;
+      font-size: 0.76rem;
+      color: #8a84b8;
+      letter-spacing: 0.02em;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 36px 20px; }
+      h1 { font-size: 1.7rem; }
+      .panel { padding: 20px 18px; }
+      .contact-block { padding: 36px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
+      <h1>Sleepo Kids — Alexa Skill Privacy Policy</h1>
+      <p class="last-updated">Last Updated: August 2026</p>
+      <p class="intro-text">
+        This page describes the additional information SLEEPO collects when a parent links their SLEEPO account
+        to the "Sleepo Kids" Alexa skill. It supplements our main
+        <a href="https://sleepofoundation.org/privacy">Privacy Policy</a>, which covers the SLEEPO app and
+        website generally.
+      </p>
+    </div>
+
+    <hr class="divider-line">
+
+    <div class="panel">
+      <h2>What We Collect Through the Alexa Skill</h2>
+      <ul>
+        <li>
+          <strong>Confirmation of your account email address</strong> via Amazon's account-linking process
+          (through Clerk, our authentication provider) — this is the same email you already provided when you
+          registered with SLEEPO; Alexa's linking flow uses it to match voice requests to your existing account
+          and find your child's stories.
+        </li>
+        <li>
+          <strong>Story playback information</strong> — which story was played and your playback position (so
+          you can resume where you left off) — this is new data generated each time you use the skill.
+        </li>
+      </ul>
+      <div class="note-callout">
+        <p>
+          <strong>We do not collect your child's voice recordings</strong>, and Amazon does not share any Alexa
+          voice-request data with us beyond what's needed to fulfill the request. We do not use this data for
+          advertising, and we do not sell or share it with third parties.
+        </p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Data Retention</h2>
+      <p>
+        Playback events recorded via the Sleepo Kids Alexa skill (story ID, title, and playback position) are
+        stored in the same database and under the same retention policy as story-activity data generated through
+        the SLEEPO web app — retained indefinitely as part of your child's account history, not subject to a
+        separate or shorter retention period for Alexa specifically.
+      </p>
+    </div>
+
+    <div class="contact-block">
+      <h2>Request Deletion</h2>
+      <p class="contact-subtext">
+        To request deletion of your Alexa-linked data, contact us at the email below.
+      </p>
+      <div class="contact-details">
+        Email: <a href="mailto:dipti@sleepofoundation.org">dipti@sleepofoundation.org</a>
+      </div>
+
+      <div class="footer">
+        <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity.<br>
+          7241 185th Ave NE #2814, Redmond, WA 98073.<br>
+          © 2026 SLEEPO Foundation. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
