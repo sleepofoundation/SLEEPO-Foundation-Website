@@ -99,10 +99,10 @@
 
     /* Sub-headings inside panels */
     .panel h3 {
-      font-size: 0.93rem;
-      font-weight: 600;
-      color: #2d3748;
-      margin: 16px 0 6px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin: 24px 0 8px;
     }
 
     /* Bullet lists inside panels */
@@ -325,6 +325,11 @@
       letter-spacing: 0.01em;
       flex-shrink: 0;
     }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
     .top-nav-links {
       display: flex;
       align-items: center;
@@ -339,21 +344,6 @@
     }
     .top-nav-links a:hover {
       color: #667eea;
-    }
-    .top-nav-signup {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 9px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .top-nav-signup:hover {
-      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
     }
     .top-nav-toggle {
       display: none;
@@ -391,10 +381,6 @@
         padding: 13px 24px;
         border-top: 1px solid #f0f0f0;
       }
-      .top-nav-links .top-nav-signup {
-        margin: 10px 24px 14px;
-        text-align: center;
-      }
       .top-nav-toggle {
         display: block;
       }
@@ -405,7 +391,7 @@
 
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <a href="/" class="top-nav-logo">🌙 SLEEPO</a>
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
       <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
       <div class="top-nav-links" id="topNavLinks">
         <a href="/">Home</a>
@@ -414,7 +400,7 @@
         <a href="/sample-stories">Sample Stories</a>
         <a href="/participation-fee">Participation Fee</a>
         <a href="/faq">FAQ</a>
-        <a href="https://register.sleepo.org" class="top-nav-signup">Sign Up</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
       </div>
     </div>
   </nav>
@@ -614,7 +600,7 @@
   <span class="sep">•</span>
   <a href="/terms">Terms of Use</a>
   <span class="sep">•</span>
-  <a href="/contact">Contact</a>
+  <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
   <span class="sep">•</span>
   <a href="https://register.sleepo.org">Sign Up</a>
 </div>

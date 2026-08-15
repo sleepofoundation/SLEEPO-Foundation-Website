@@ -360,6 +360,11 @@
       letter-spacing: 0.01em;
       flex-shrink: 0;
     }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
     .top-nav-links {
       display: flex;
       align-items: center;
@@ -374,21 +379,6 @@
     }
     .top-nav-links a:hover {
       color: #667eea;
-    }
-    .top-nav-signup {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 9px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .top-nav-signup:hover {
-      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
     }
     .top-nav-toggle {
       display: none;
@@ -426,10 +416,6 @@
         padding: 13px 24px;
         border-top: 1px solid #f0f0f0;
       }
-      .top-nav-links .top-nav-signup {
-        margin: 10px 24px 14px;
-        text-align: center;
-      }
       .top-nav-toggle {
         display: block;
       }
@@ -440,7 +426,7 @@
 
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <a href="/" class="top-nav-logo">🌙 SLEEPO</a>
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
       <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
       <div class="top-nav-links" id="topNavLinks">
         <a href="/">Home</a>
@@ -449,7 +435,7 @@
         <a href="/sample-stories">Sample Stories</a>
         <a href="/participation-fee">Participation Fee</a>
         <a href="/faq">FAQ</a>
-        <a href="https://register.sleepo.org" class="top-nav-signup">Sign Up</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
       </div>
     </div>
   </nav>
@@ -466,20 +452,49 @@
       <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
       <h1>About Us</h1>
       <p class="intro-text">
-        SLEEPO Foundation is a parent-founded nonprofit built on a simple belief — that the quiet moments before sleep are the most powerful moments in a child's day.
+        SLEEPO Foundation is a parent-founded nonprofit built on a simple belief—that the quiet moments before sleep can be some of the most meaningful moments in a child's day.
       </p>
     </div>
 
     <hr class="divider-line">
 
+    <!-- How SLEEPO Started -->
+    <div class="panel">
+      <h2>How SLEEPO Started</h2>
+      <p>
+        For nearly three decades, <strong>our founder, Amit</strong>, worked in technology and sales—but writing had always been a quiet passion. About eight years ago, he began thinking seriously about creating something that could help families beyond any one community or country.
+      </p>
+      <p>
+        Years of travel across the United States and Europe, together with ongoing research into sleep, childhood routines, and personal development, gradually shaped that idea. One theme kept returning: bedtime is one of the few moments in a child's day when things naturally slow down. It creates space for stories, reflection, connection, and meaningful conversations.
+      </p>
+      <p>
+        <strong>That insight became the foundation for SLEEPO.</strong>
+      </p>
+      <p>
+        Three years ago, Amit stepped away from his corporate career of nearly 30 years to focus on building SLEEPO full-time, beginning with personalized bedtime stories for children ages 2–12.
+      </p>
+      <p>
+        His wife, Dipti, then a Principal Engineering Manager at Microsoft, supported the early work alongside her full-time career—helping review stories, record narration, test ideas, and shape the technology behind the program.
+      </p>
+      <p>
+        A year ago, after more than 20 years at Microsoft, <strong>Dipti</strong> also left her corporate career to join SLEEPO full-time as <strong>co-founder</strong>. Today, she leads SLEEPO's technology and plays an active role in community outreach, program development, and growth.
+      </p>
+      <p>
+        What began as an idea explored over many years has become a shared family mission: <strong>to help make bedtime more personal, meaningful, and connected for children and families.</strong>
+      </p>
+      <p>
+        <strong>SLEEPO has become, in every sense, Amit and Dipti's third child</strong>—something they have poured their time, energy, and hearts into building. For them, the journey doesn't feel like a sacrifice; <strong>it feels like they've finally found their calling.</strong>
+      </p>
+    </div>
+
     <!-- Mission -->
     <div class="panel">
       <h2>Our Mission</h2>
       <p>
-        We create personalized bedtime audio stories designed to support confidence, positive values and cultural connection in children ages 2–12. Every story is thoughtfully created using information parents choose to share, including their child's interests, personality, and family values.
+        We create personalized bedtime audio stories designed to support confidence, positive values, and cultural connection in children ages 2–12. Every story is thoughtfully created using information parents choose to share, including their child's interests, personality, and family values.
       </p>
       <p>
-        We believe bedtime is one of the few moments in the day when families can slow down, connect, and create lasting memories together.
+        We believe bedtime is one of the few moments in a child's day when things naturally slow down—creating space for stories, connection, and meaningful moments together.
       </p>
       <p>
         SLEEPO Foundation is an IRS-recognized 501(c)(3) nonprofit organization based in Redmond, Washington, USA.
@@ -522,8 +537,7 @@
         <div class="team-avatar">DG</div>
         <div class="team-card-text">
           <h3>Dipti Goyal</h3>
-          <p class="role">Founding Head of Engineering</p>
-          <span class="volunteer-badge">Volunteer Team</span>
+          <p class="role">Co-Founder & Head of Engineering</p>
         </div>
       </div>
     </div>
@@ -579,7 +593,7 @@
           <span class="sep">•</span>
           <a href="/terms">Terms of Use</a>
           <span class="sep">•</span>
-          <a href="/contact">Contact</a>
+          <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
           <span class="sep">•</span>
           <a href="https://register.sleepo.org">Sign Up</a>
         </div>

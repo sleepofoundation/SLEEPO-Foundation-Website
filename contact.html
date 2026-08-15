@@ -158,6 +158,96 @@
       margin: 0;
     }
 
+    /* Contact form */
+    .contact-form-panel {
+      background: #f7fafc;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    .contact-form-panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 6px;
+    }
+
+    .contact-form-note {
+      font-size: 0.88rem;
+      color: #718096;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 6px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #2d3748;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-submit {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 13px 34px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      margin-top: 6px;
+    }
+
+    .form-submit:hover {
+      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
+    }
+
     /* WhatsApp CTA — matches homepage premium-contact */
     .whatsapp-block {
       text-align: center;
@@ -307,6 +397,11 @@
       letter-spacing: 0.01em;
       flex-shrink: 0;
     }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
     .top-nav-links {
       display: flex;
       align-items: center;
@@ -321,21 +416,6 @@
     }
     .top-nav-links a:hover {
       color: #667eea;
-    }
-    .top-nav-signup {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 9px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .top-nav-signup:hover {
-      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
     }
     .top-nav-toggle {
       display: none;
@@ -373,10 +453,6 @@
         padding: 13px 24px;
         border-top: 1px solid #f0f0f0;
       }
-      .top-nav-links .top-nav-signup {
-        margin: 10px 24px 14px;
-        text-align: center;
-      }
       .top-nav-toggle {
         display: block;
       }
@@ -387,7 +463,7 @@
 
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <a href="/" class="top-nav-logo">🌙 SLEEPO</a>
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
       <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
       <div class="top-nav-links" id="topNavLinks">
         <a href="/">Home</a>
@@ -396,7 +472,7 @@
         <a href="/sample-stories">Sample Stories</a>
         <a href="/participation-fee">Participation Fee</a>
         <a href="/faq">FAQ</a>
-        <a href="https://register.sleepo.org" class="top-nav-signup">Sign Up</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
       </div>
     </div>
   </nav>
@@ -447,6 +523,71 @@
         💬 &nbsp;We typically respond within <strong>1–2 business days.</strong> SLEEPO is a small, founder-led nonprofit — when you reach out, you will hear directly from our founder.
       </p>
     </div>
+
+    <!-- Contact form -->
+    <div class="contact-form-panel">
+      <h2>Send Us a Message</h2>
+      <p class="contact-form-note">
+        Fill this out and it will open a pre-filled email in your mail app, addressed directly to our founder.
+      </p>
+
+      <form id="sleepoContactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Your Email</label>
+            <input type="email" id="cf-email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field" style="grid-column: 1 / -1;">
+            <label for="cf-reason">Reason for Contact</label>
+            <select id="cf-reason">
+              <option value="Learn about the program or enroll">Learn about the program or enroll</option>
+              <option value="Question about my child's stories">Question about my child's stories</option>
+              <option value="Privacy Request">Privacy request</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field" style="grid-column: 1 / -1;">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">✉️ Send Message</button>
+      </form>
+    </div>
+
+    <script>
+      document.getElementById('sleepoContactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('cf-name').value;
+        var email = document.getElementById('cf-email').value;
+        var reason = document.getElementById('cf-reason').value;
+        var message = document.getElementById('cf-message').value;
+
+        var subject = 'SLEEPO Contact: ' + reason;
+        var body =
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          'Reason: ' + reason + '\n\n' +
+          'Message:\n' + message;
+
+        var mailtoLink = 'mailto:amit@sleepofoundation.org' +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+
+        window.location.href = mailtoLink;
+      });
+    </script>
 
     <!-- Email & address panel -->
     <div class="panel">
@@ -515,7 +656,7 @@
   <span class="sep">•</span>
   <a href="/terms">Terms of Use</a>
   <span class="sep">•</span>
-  <a href="/contact">Contact</a>
+  <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
   <span class="sep">•</span>
   <a href="https://register.sleepo.org">Sign Up</a>
 </div>

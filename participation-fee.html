@@ -116,13 +116,13 @@
     }
 
     .panel h3, .highlight-panel h3 {
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: #2d3748;
-      margin: 18px 0 6px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin: 26px 0 8px;
     }
 
-    .highlight-panel h3 { color: #3b2f6e; }
+    .highlight-panel h3 { color: #2d1f5c; }
 
     .panel h3:first-child, .highlight-panel h3:first-child { margin-top: 2px; }
 
@@ -180,6 +180,20 @@
     }
 
     .fee-table th:last-child, .fee-table td:last-child { text-align: right; }
+
+    .fee-old-price {
+      text-decoration: line-through;
+      text-decoration-color: #d97706;
+      text-decoration-thickness: 1.5px;
+      color: #6b7280;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+    .fee-new-price {
+      color: #2d1f5c;
+      font-weight: 700;
+      font-size: 1.05em;
+    }
 
     /* Contact block — matches other pages */
     .contact-block {
@@ -289,6 +303,11 @@
       letter-spacing: 0.01em;
       flex-shrink: 0;
     }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
     .top-nav-links {
       display: flex;
       align-items: center;
@@ -303,21 +322,6 @@
     }
     .top-nav-links a:hover {
       color: #667eea;
-    }
-    .top-nav-signup {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 9px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .top-nav-signup:hover {
-      background: linear-gradient(135deg, #5a6fd8 0%, #6a4291 100%);
     }
     .hero-cta {
       display: inline-block;
@@ -370,10 +374,6 @@
         padding: 13px 24px;
         border-top: 1px solid #f0f0f0;
       }
-      .top-nav-links .top-nav-signup {
-        margin: 10px 24px 14px;
-        text-align: center;
-      }
       .top-nav-toggle {
         display: block;
       }
@@ -384,7 +384,7 @@
 
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <a href="/" class="top-nav-logo">🌙 SLEEPO</a>
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
       <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
       <div class="top-nav-links" id="topNavLinks">
         <a href="/">Home</a>
@@ -393,7 +393,7 @@
         <a href="/sample-stories">Sample Stories</a>
         <a href="/participation-fee">Participation Fee</a>
         <a href="/faq">FAQ</a>
-        <a href="https://register.sleepo.org" class="top-nav-signup">Sign Up</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
       </div>
     </div>
   </nav>
@@ -417,24 +417,29 @@
     <hr class="divider-line">
 
     <div class="highlight-panel">
+      <h3>Why is it called a participation fee?</h3>
+      <p>SLEEPO is a <strong>nonprofit</strong> family program, not a commercial story subscription. The <strong>heavily subsidized price</strong> is for families' ongoing involvement &amp; commitment to the program.</p>
+
+      <h3>Founding Family Pricing</h3>
+      <p>As an early nonprofit still building our community, we're currently offering <strong>50% off the participation fee</strong> for families who join now as Founding Families. This discount applies to our full pricing — including the sibling rate — and stays with you for as long as you remain an active, continuously enrolled family in the SLEEPO program. For one child, that brings the rate down to <strong>$25 per month</strong>.</p>
+      <p><strong><u>You start with your first month free (no credit card required).</u></strong></p>
+
       <h3>How much does SLEEPO cost?</h3>
       <p>Your first month is free, with no credit card required. After that, the monthly participation fee is <strong>$50 for the first child</strong> and <strong>$40 for each additional sibling from the same family</strong>.</p>
       <table class="fee-table">
         <thead><tr><th>Children enrolled</th><th>Monthly fee</th></tr></thead>
         <tbody>
-          <tr><td>One child</td><td>$50</td></tr>
-          <tr><td>Two children</td><td>$90</td></tr>
-          <tr><td>Three children</td><td>$130</td></tr>
-          <tr><td>Four children</td><td>$170</td></tr>
+          <tr><td>One child</td><td><span class="fee-old-price">$50</span><span class="fee-new-price">$25</span></td></tr>
+          <tr><td>Two children</td><td><span class="fee-old-price">$90</span><span class="fee-new-price">$45</span></td></tr>
+          <tr><td>Three children</td><td><span class="fee-old-price">$130</span><span class="fee-new-price">$65</span></td></tr>
+          <tr><td>Four children</td><td><span class="fee-old-price">$170</span><span class="fee-new-price">$85</span></td></tr>
         </tbody>
       </table>
+      <p style="font-size: 0.88rem; color: #718096; margin-top: -8px;">Prices shown reflect the current 50% Founding Family discount off our standard rate.</p>
       <p>Each enrolled child has an individual profile and personalized story experience.</p>
 
-      <h3>Why is it called a participation fee?</h3>
-      <p>SLEEPO is a nonprofit family program, not a commercial story subscription. The heavily subsidized price is for families' ongoing involvement &amp; commitment to the program.</p>
-
       <h3>Who qualifies for the additional-sibling rate?</h3>
-      <p>The $40 rate applies to each additional sibling enrolled as part of the same family. Contact us if you have questions about a particular family arrangement.</p>
+      <p>The sibling rate applies to each additional sibling enrolled as part of the same family. Contact us if you have questions about a particular family arrangement.</p>
 
       <h3>Can I cancel anytime?</h3>
       <p>Yes. There's no long-term contract — you can cancel whenever it makes sense for your family, with no notice required. Your subscription stays active through the end of your current paid month, so you'll have full access until then.</p>
@@ -490,7 +495,7 @@
   <span class="sep">•</span>
   <a href="/terms">Terms of Use</a>
   <span class="sep">•</span>
-  <a href="/contact">Contact</a>
+  <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
   <span class="sep">•</span>
   <a href="https://register.sleepo.org">Sign Up</a>
 </div>
