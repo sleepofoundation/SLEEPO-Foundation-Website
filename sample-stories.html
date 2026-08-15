@@ -46,6 +46,32 @@
       line-height: 1.7;
     }
 
+    .music-note-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: linear-gradient(135deg, #eef1ff 0%, #f5f0fb 100%);
+      border: 1px solid #d9dcf7;
+      border-left: 4px solid #667eea;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 0 0 40px;
+      text-align: left;
+    }
+    .music-note-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .music-note-text {
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    .music-note-text strong {
+      color: #2d3748;
+    }
+
     /* Age group sections */
     .age-group-section {
       margin: 0 0 44px;
@@ -81,6 +107,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
+      align-items: stretch;
     }
     @media (max-width: 640px) {
       .story-grid { grid-template-columns: 1fr; }
@@ -92,6 +119,8 @@
       padding: 20px 22px;
       text-align: left;
       background: #fff;
+      display: flex;
+      flex-direction: column;
     }
     .age-group-1 .story-card { background: #f3faef; }
     .age-group-2 .story-card { background: #fdf1f7; }
@@ -117,13 +146,15 @@
 
     .story-card audio {
       width: 100%;
-      margin-top: 2px;
+      margin-top: auto;
+      padding-top: 12px;
     }
     .story-coming-soon {
       font-size: 0.85rem;
       color: #a0aec0;
       font-style: italic;
       padding: 10px 0 2px;
+      margin-top: auto;
     }
 
     /* Reuse contact section + footer styling from homepage */
@@ -331,6 +362,13 @@
       Every SLEEPO story is personalized to your child — but these samples give you a feel for the tone, themes, and focus areas we craft stories around at each age.
     </p>
 
+    <div class="music-note-banner">
+      <div class="music-note-icon">🎵</div>
+      <div class="music-note-text">
+        <strong>A note on story length:</strong> each story ends with about 4 minutes of soft, soothing instrumental music that gradually fades out — no narration, just calming music to help your child drift off to sleep. The story itself is shorter than the full running time you'll see on the player.
+      </div>
+    </div>
+
     <!-- Ages 2–5 -->
     <div class="age-group-section age-group-1">
       <div class="age-group-header">
@@ -339,14 +377,18 @@
       </div>
       <div class="story-grid">
         <div class="story-card">
-          <div class="story-name">Bella and the Brave Blanket</div>
-          <div class="story-focus">Focus: Comfort &amp; Emotional Security</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">The Day Sam met Bluey</div>
+          <div class="story-focus">Focus Area: Confidence</div>
+          <audio controls src="assets/sample-story-sam-bluey.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
         <div class="story-card">
-          <div class="story-name">Rohan's First Sleepover</div>
-          <div class="story-focus">Focus: Confidence &amp; Independence</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">Minnie Mouse &amp; the Magical Water Adventure</div>
+          <div class="story-focus">Focus Area: Drinking Water</div>
+          <audio controls src="assets/sample-story-minnie-water.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     </div>
@@ -360,15 +402,17 @@
       <div class="story-grid">
         <div class="story-card">
           <div class="story-name">The Magical Socks of Priya</div>
-          <div class="story-focus">Focus: Focus &amp; Attention</div>
-          <audio controls src="assets/sample-story.mp3">
+          <div class="story-focus">Focus Area: Focus &amp; Attention</div>
+          <audio controls src="assets/sample-story-priya-socks.mp3">
             Your browser does not support the audio element.
           </audio>
         </div>
         <div class="story-card">
-          <div class="story-name">Max and the Kindness Tree</div>
-          <div class="story-focus">Focus: Kindness &amp; Empathy</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">Arjun &amp; the Magical Lunchtime Adventure</div>
+          <div class="story-focus">Focus Area: Picky Eating</div>
+          <audio controls src="assets/sample-story-arjun-lunchtime.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     </div>
@@ -381,14 +425,18 @@
       </div>
       <div class="story-grid">
         <div class="story-card">
-          <div class="story-name">Aanya's Science Fair Surprise</div>
-          <div class="story-focus">Focus: Resilience &amp; Problem-Solving</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">The Secret Mission of Captain Fin</div>
+          <div class="story-focus">Focus Area: Screen Time</div>
+          <audio controls src="assets/sample-story-captain-fin.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
         <div class="story-card">
-          <div class="story-name">The Lantern Festival Mystery</div>
-          <div class="story-focus">Focus: Cultural Roots &amp; Curiosity</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">The Great Pencil Cup Mystery</div>
+          <div class="story-focus">Focus Area: Focus</div>
+          <audio controls src="assets/sample-story-pencil-cup.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     </div>
@@ -401,14 +449,18 @@
       </div>
       <div class="story-grid">
         <div class="story-card">
-          <div class="story-name">Standing Tall at Basketball Tryouts</div>
-          <div class="story-focus">Focus: Confidence &amp; Self-Belief</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">The Case of the Vanishing Lunchbox</div>
+          <div class="story-focus">Focus Area: Owning Mistakes</div>
+          <audio controls src="assets/sample-story-vanishing-lunchbox.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
         <div class="story-card">
-          <div class="story-name">The Diwali Letter to Grandma</div>
-          <div class="story-focus">Focus: Family Connection &amp; Gratitude</div>
-          <div class="story-coming-soon">🔊 Sample coming soon</div>
+          <div class="story-name">The Secret of the Wobbly Desk</div>
+          <div class="story-focus">Focus Area: Confidence</div>
+          <audio controls src="assets/sample-story-wobbly-desk.mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     </div>
