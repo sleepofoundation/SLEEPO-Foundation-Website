@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | SLEEPO Foundation</title>
+  <meta property="og:title" content="Get Involved | SLEEPO Foundation" />
+  <meta property="og:description" content="SLEEPO Foundation is looking for volunteers and advisors in marketing, social media, nonprofit strategy, legal, fundraising, technology, and community outreach." />
+  <meta property="og:url" content="https://sleepofoundation.org/get-involved" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #718096;
+      line-height: 1.75;
+      margin-top: 14px;
+    }
+
+    .divider-line {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+
+    /* Quick jump nav */
+    .jump-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .jump-nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #667eea;
+      background: #eef2ff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    .jump-nav a:hover { background: #e0e7ff; }
+
+    /* Section label — matches homepage/about.html */
+    .section-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #a0aec0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 14px;
+      scroll-margin-top: 20px;
+    }
+
+    /* Standard panel — matches other pages */
+    .panel {
+      background: #f7fafc;
+      padding: 24px;
+      border-radius: 14px;
+      margin: 16px 0;
+      border-left: 4px solid #667eea;
+      text-align: left;
+    }
+
+    .panel h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+
+    /* Purple highlight panel — matches other pages */
+    .highlight-panel {
+      background: linear-gradient(135deg, #f0ecff 0%, #e8e4f8 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #9f8fd6;
+      padding: 28px 28px;
+      border-radius: 14px;
+      margin: 16px 0;
+      text-align: left;
+    }
+
+    .panel h3, .highlight-panel h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin: 26px 0 8px;
+    }
+
+    .highlight-panel h3 { color: #2d1f5c; }
+
+    .panel h3:first-child, .highlight-panel h3:first-child { margin-top: 2px; }
+
+    .panel p, .highlight-panel p {
+      line-height: 1.85;
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .highlight-panel p { color: #4a4070; }
+
+    .panel p:last-child, .highlight-panel p:last-child { margin-bottom: 0; }
+
+    .panel ul, .panel ol, .highlight-panel ul, .highlight-panel ol {
+      padding-left: 20px;
+      margin: 6px 0 14px;
+    }
+
+    .panel ul li, .panel ol li, .highlight-panel ul li, .highlight-panel ol li {
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 4px;
+    }
+
+    .highlight-panel ul li, .highlight-panel ol li { color: #4a4070; }
+
+    .panel a, .highlight-panel a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .panel a:hover, .highlight-panel a:hover { text-decoration: underline; }
+
+    /* Fee table */
+    .fee-table {
+      width: 100%;
+      margin: 10px 0 14px;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+
+    .fee-table th, .fee-table td {
+      padding: 9px 10px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      color: #4a5568;
+    }
+
+    .fee-table th {
+      color: #2d3748;
+      font-weight: 600;
+    }
+
+    .fee-table th:last-child, .fee-table td:last-child { text-align: right; }
+
+    .fee-old-price {
+      text-decoration: line-through;
+      text-decoration-color: #d97706;
+      text-decoration-thickness: 1.5px;
+      color: #6b7280;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+    .fee-new-price {
+      color: #2d1f5c;
+      font-weight: 700;
+      font-size: 1.05em;
+    }
+
+    /* Contact block — matches other pages */
+    .contact-block {
+      text-align: center;
+      margin-top: 32px;
+      padding: 44px 20px;
+      background: linear-gradient(180deg, #1F1A3A 0%, #2C2560 100%);
+      border-radius: 18px;
+    }
+
+    .contact-block h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtext {
+      color: #CFCBEA;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-details {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: #CFCBEA;
+    }
+
+    .contact-details strong {
+      color: #fff;
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .contact-details a {
+      color: #EFB46A;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.83rem;
+      color: #a8a4c8;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #CFCBEA;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-links .sep { color: #6b5ea8; }
+
+    @media (max-width: 480px) {
+      .container { padding: 36px 20px; }
+      h1 { font-size: 1.7rem; }
+      .panel, .highlight-panel { padding: 20px 18px; }
+      .contact-block { padding: 36px 16px; }
+    }
+
+    /* Top navigation bar */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .top-nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+    .top-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #2d3748;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+    }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+    .top-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .top-nav-links a {
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .top-nav-links a:hover {
+      color: #667eea;
+    }
+    .hero-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(102,126,234,0.4);
+      letter-spacing: 0.01em;
+    }
+    .hero-cta:hover {
+      box-shadow: 0 12px 28px rgba(102,126,234,0.5);
+    }
+    .top-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #2d3748;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    /* Push page content below the fixed nav */
+    body {
+      padding-top: 58px;
+    }
+
+    @media (max-width: 760px) {
+      .top-nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        border-bottom: 1px solid #e6e6e6;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      }
+      .top-nav-links.open {
+        display: flex;
+      }
+      .top-nav-links a {
+        width: 100%;
+        padding: 13px 24px;
+        border-top: 1px solid #f0f0f0;
+      }
+      .top-nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
+      <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
+      <div class="top-nav-links" id="topNavLinks">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/sample-stories">Sample Stories</a>
+        <a href="/participation-fee">Participation Fee</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleTopNav() {
+      document.getElementById('topNavLinks').classList.toggle('open');
+    }
+  </script>
+
+  <div class="container">
+
+    <div class="page-header">
+      <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
+      <h1>Get Involved</h1>
+      <p class="intro-text">
+        SLEEPO is a growing, all-volunteer nonprofit—and we welcome people who believe in our mission and want to help us reach more children and families.
+      </p>
+    </div>
+
+    <hr class="divider-line">
+
+    <div class="highlight-panel">
+      <h3>Interested in Helping SLEEPO Grow?</h3>
+      <p>As a growing nonprofit, we welcome experienced volunteers and advisors who would like to contribute their time, skills, and perspective.</p>
+      <p><strong>We're especially interested in people with experience in:</strong></p>
+      <ul>
+        <li>Marketing &amp; Communications</li>
+        <li>Social Media &amp; Digital Outreach</li>
+        <li>Nonprofit Strategy</li>
+        <li>Legal Guidance</li>
+        <li>Fundraising &amp; Partnerships</li>
+        <li>Technology</li>
+        <li>Community Outreach</li>
+      </ul>
+      <p><strong>You don't need to make a large time commitment. Even a few hours of your time or occasional guidance can make a meaningful difference as SLEEPO grows.</strong></p>
+    </div>
+
+    <div class="panel">
+      <h2>Ways to Get Involved</h2>
+      <h3>Volunteer Your Skills</h3>
+      <p>Help with a specific project or area where your experience can make a difference.</p>
+
+      <h3>Become an Advisor</h3>
+      <p>Share your professional perspective and help SLEEPO think thoughtfully about its growth and future.</p>
+
+      <h3>Help Us Reach More Families</h3>
+      <p>Introduce SLEEPO to families, schools, community organizations, or others who may connect with our mission.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-block">
+      <h2>We'd Love to Hear From You</h2>
+      <p class="contact-subtext">
+        <strong>If SLEEPO's mission speaks to you and you think your experience could help, we'd love to start a conversation. There's no formal commitment required to reach out.</strong>
+      </p>
+      <p class="contact-subtext">
+        Reach out anytime—you'll hear directly from the SLEEPO team.
+      </p>
+      <div class="contact-details">
+        <strong>SLEEPO Foundation</strong>
+        Email: <a href="mailto:amit@sleepofoundation.org">amit@sleepofoundation.org</a><br>
+        Phone: <a href="tel:+14252231361">425-223-1361</a><br>
+        SLEEPO Foundation, 7241 185th Ave NE #2814, Redmond, WA 98073
+      </div>
+
+      <div class="footer">
+        <div class="footer-links">
+  <a href="/" target="_blank">Home</a>
+  <span class="sep">•</span>
+  <a href="/about" target="_blank">About</a>
+  <span class="sep">•</span>
+  <a href="/#how-it-works" target="_blank">How It Works</a>
+  <span class="sep">•</span>
+  <a href="/sample-stories" target="_blank">Sample Stories</a>
+  <span class="sep">•</span>
+  <a href="/participation-fee" target="_blank">Participation Fee</a>
+  <span class="sep">•</span>
+  <a href="/faq" target="_blank">FAQ</a>
+  <span class="sep">•</span>
+  <a href="/get-involved" target="_blank">Get Involved</a>
+  <span class="sep">•</span>
+  <a href="/privacy" target="_blank">Privacy Policy</a>
+  <span class="sep">•</span>
+  <a href="/terms" target="_blank">Terms of Use</a>
+  <span class="sep">•</span>
+  <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
+  <span class="sep">•</span>
+  <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
+</div>
+                <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity. EIN: 39-4188744.<br>
+          7241 185th Ave NE #2814, Redmond, WA 98073<br>
+          Donations may be tax deductible as permitted by law.<br>
+          Redmond, Washington, USA · © 2026 SLEEPO Foundation. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

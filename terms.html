@@ -43,17 +43,6 @@
       display: block;
     }
 
-    .back-link {
-      display: inline-block;
-      font-size: 0.88rem;
-      color: #667eea;
-      text-decoration: none;
-      margin-bottom: 20px;
-      letter-spacing: 0.01em;
-    }
-
-    .back-link:hover { text-decoration: underline; }
-
     h1 {
       font-size: 2.1rem;
       color: #2d3748;
@@ -246,13 +235,126 @@
       .panel, .highlight-panel { padding: 20px 18px; }
       .contact-block { padding: 36px 16px; }
     }
+
+    /* Top navigation bar */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .top-nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+    .top-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #2d3748;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+    }
+    .top-nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+    .top-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .top-nav-links a {
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .top-nav-links a:hover {
+      color: #667eea;
+    }
+    .top-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #2d3748;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    /* Push page content below the fixed nav */
+    body {
+      padding-top: 58px;
+    }
+
+    @media (max-width: 760px) {
+      .top-nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        border-bottom: 1px solid #e6e6e6;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      }
+      .top-nav-links.open {
+        display: flex;
+      }
+      .top-nav-links a {
+        width: 100%;
+        padding: 13px 24px;
+        border-top: 1px solid #f0f0f0;
+      }
+      .top-nav-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
+      <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
+      <div class="top-nav-links" id="topNavLinks">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/sample-stories">Sample Stories</a>
+        <a href="/participation-fee">Participation Fee</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleTopNav() {
+      document.getElementById('topNavLinks').classList.toggle('open');
+    }
+  </script>
+
   <div class="container">
 
     <div class="page-header">
-      <a href="/" class="back-link">← Back to SLEEPO Foundation</a>
       <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation">
       <h1>Terms of Use</h1>
       <p class="last-updated">Last Updated: May 2026</p>
@@ -402,22 +504,33 @@
 
       <div class="footer">
         <div class="footer-links">
-  <a href="/">Home</a>
+  <a href="/" target="_blank">Home</a>
   <span class="sep">•</span>
-  <a href="/about">About</a>
+  <a href="/about" target="_blank">About</a>
   <span class="sep">•</span>
-  <a href="/faq">FAQ</a>
+  <a href="/#how-it-works" target="_blank">How It Works</a>
   <span class="sep">•</span>
-  <a href="/privacy">Privacy Policy</a>
+  <a href="/sample-stories" target="_blank">Sample Stories</a>
   <span class="sep">•</span>
-  <a href="/terms">Terms of Use</a>
+  <a href="/participation-fee" target="_blank">Participation Fee</a>
   <span class="sep">•</span>
-  <a href="/contact">Contact</a>
+  <a href="/faq" target="_blank">FAQ</a>
+  <span class="sep">•</span>
+  <a href="/get-involved" target="_blank">Get Involved</a>
+  <span class="sep">•</span>
+  <a href="/privacy" target="_blank">Privacy Policy</a>
+  <span class="sep">•</span>
+  <a href="/terms" target="_blank">Terms of Use</a>
+  <span class="sep">•</span>
+  <a href="https://app.sleepokids.org/contact" target="_blank">Contact</a>
+  <span class="sep">•</span>
+  <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
 </div>
-        <p style="margin-top: 14px;">
-          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity.<br>
+                <p style="margin-top: 14px;">
+          SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity. EIN: 39-4188744.<br>
+          7241 185th Ave NE #2814, Redmond, WA 98073<br>
           Donations may be tax deductible as permitted by law.<br>
-          © 2026 SLEEPO Foundation. All rights reserved.
+          Redmond, Washington, USA · © 2026 SLEEPO Foundation. All rights reserved.
         </p>
       </div>
     </div>
