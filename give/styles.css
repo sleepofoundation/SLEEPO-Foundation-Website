@@ -34,10 +34,10 @@ a { color: inherit; }
 }
 .brand-lockup { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
 .brand-card { background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 6px; }
-.brand-card.sleepo { width: 52px; height: 52px; }
+.brand-card.sleepo { width: 68px; height: 68px; }
 .brand-card.sleepo img { max-height: 100%; width: auto; }
-.brand-card.microsoft { height: 46px; padding: 0 12px; }
-.brand-card.microsoft img { height: 24px; width: auto; }
+.brand-card.microsoft { width: 68px; height: 68px; padding: 6px; }
+.brand-card.microsoft img { width: 100%; height: 100%; object-fit: contain; }
 .brand-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.2); }
 .campaign-mini { color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: 22px; }
