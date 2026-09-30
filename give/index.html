@@ -37,6 +37,17 @@
     .volunteer-terms-note { margin: 5px 0 0; text-align: center; font-size: 0.56rem; line-height: 1.25; color: rgba(255,255,255,0.68); white-space: nowrap; }
     .volunteer-terms-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
     .actions > .btn.btn-hero { width: 290px; max-width: 100%; }
+    .actions { align-items: flex-start; }
+    .hero-cta-button {
+      width: 290px !important;
+      height: 80px !important;
+      min-height: 80px !important;
+      padding: 0 28px !important;
+      box-sizing: border-box;
+      line-height: 1.1;
+      white-space: nowrap;
+      flex: 0 0 290px;
+    }
 
     /* Mobile layout: keep the desktop look, but make the hero flow naturally on phones. */
     @media (max-width: 700px) {
@@ -87,6 +98,13 @@
         padding: 15px 18px;
         font-size: 1.05rem;
         white-space: nowrap;
+      }
+      .hero-cta-button {
+        width: 100% !important;
+        height: 56px !important;
+        min-height: 56px !important;
+        padding: 0 18px !important;
+        flex: 0 0 auto;
       }
       .cta-group { width: 100%; max-width: 100%; }
       .volunteer-terms-note { margin: 5px 0 0; text-align: center; font-size: 0.52rem; line-height: 1.25; color: rgba(255,255,255,0.68); white-space: nowrap; }
@@ -145,7 +163,7 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#how-it-works">How it works</a>
         <a class="nav-pill" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate</a>
-        <a class="nav-pill" href="volunteer-terms.html">Volunteer</a>
+        <a class="nav-pill" href="https://www.sleepofoundation.org">Volunteer</a>
       </nav>
     </div>
   </header>
@@ -161,10 +179,10 @@
           <p class="hero-copy hero-copy-followup">This Microsoft GIVE season, give a few minutes to review a story, record one, answer a short survey, or share your skills, and be part of a child’s bedtime story.</p>
           <div class="actions">
             <div class="cta-group">
-              <a class="btn btn-primary btn-hero start-volunteering-nowrap" href="volunteer-terms.html">Start volunteering</a>
-              <p class="volunteer-terms-note">By continuing, you agree to <a href="volunteer-terms.html">SLEEPO Volunteer Terms</a>.</p>
+              <a class="btn btn-primary btn-hero start-volunteering-nowrap hero-cta-button" href="https://www.sleepofoundation.org">Start volunteering</a>
+              <p class="volunteer-terms-note">By continuing, you agree to <a href="https://www.sleepofoundation.org">SLEEPO Volunteer Terms</a>.</p>
             </div>
-            <a class="btn btn-secondary btn-hero" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
+            <a class="btn btn-secondary btn-hero hero-cta-button" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
           </div>
         </div>
 
