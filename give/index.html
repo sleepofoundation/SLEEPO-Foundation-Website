@@ -22,6 +22,9 @@
     .cards { grid-template-columns: repeat(2, 1fr); }
     @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
     @media (max-width: 560px) { .quick-facts { grid-template-columns: 1fr; } }
+    .brand-card.microsoft { width: 68px; height: 68px; padding: 6px; }
+    .cta-group { display: inline-flex; flex-direction: column; align-items: stretch; }
+    .volunteer-terms-note { margin: 6px 0 0; text-align: center; font-size: 0.68rem; line-height: 1.3; color: rgba(255,255,255,0.72); }
 
     /* Mobile layout: keep the desktop look, but make the hero flow naturally on phones. */
     @media (max-width: 700px) {
@@ -32,7 +35,7 @@
       }
       .brand-lockup { gap: 10px; min-width: 0; }
       .brand-card.sleepo { width: 56px; height: 56px; flex: 0 0 56px; }
-      .brand-card.microsoft { width: 42px; height: 42px; padding: 5px; flex: 0 0 42px; }
+      .brand-card.microsoft { width: 56px; height: 56px; padding: 5px; flex: 0 0 56px; }
       .brand-card.microsoft img { width: 100%; height: 100%; object-fit: contain; }
       .brand-divider { height: 30px; }
       .campaign-mini { display: none; }
@@ -72,6 +75,8 @@
         padding: 15px 18px;
         font-size: 1.05rem;
       }
+      .cta-group { width: 100%; }
+      .volunteer-terms-note { margin: 7px 0 0; text-align: center; font-size: 0.66rem; line-height: 1.35; color: rgba(255,255,255,0.72); }
 
       /* This block now sits directly below the two CTA buttons on mobile. */
       .hero-side {
@@ -109,7 +114,6 @@
     }
 
     @media (max-width: 380px) {
-      .brand-card.microsoft { display: none; }
       .brand-divider { display: none; }
       .quick-facts { grid-template-columns: 1fr; }
     }
@@ -138,11 +142,14 @@
         <div>
           <div class="eyebrow">Microsoft GIVE 2026 × SLEEPO Foundation</div>
           <h1>Your time can help a child <span>grow with confidence, courage, and kindness.</span></h1>
-          <p class="hero-copy">Bedtime is where children often feel safest, and where the stories they hear help shape who they become. SLEEPO Foundation is a 501(c)(3) nonprofit that creates personalized bedtime stories for children ages 2–12.</p>
+          <p class="hero-copy">Bedtime is where children often feel safest, and where stories they hear help shape who they become. SLEEPO Foundation is a 501(c)(3) nonprofit that creates personalized bedtime stories for children ages 2–12.</p>
           <p class="hero-tagline">Stories That Shape</p>
           <p class="hero-copy hero-copy-followup">This Microsoft GIVE season, give a few minutes to review a story, record one, answer a short survey, or share your skills, and be part of a child’s bedtime story.</p>
           <div class="actions">
-            <a class="btn btn-primary btn-hero" href="volunteer-terms.html">Start volunteering</a>
+            <div class="cta-group">
+              <a class="btn btn-primary btn-hero" href="volunteer-terms.html">Start volunteering</a>
+              <p class="volunteer-terms-note">By continuing, you agree to SLEEPO Volunteer Terms.</p>
+            </div>
             <a class="btn btn-secondary btn-hero" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
           </div>
         </div>
