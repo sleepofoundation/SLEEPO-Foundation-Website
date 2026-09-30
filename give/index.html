@@ -22,6 +22,98 @@
     .cards { grid-template-columns: repeat(2, 1fr); }
     @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
     @media (max-width: 560px) { .quick-facts { grid-template-columns: 1fr; } }
+
+    /* Mobile layout: keep the desktop look, but make the hero flow naturally on phones. */
+    @media (max-width: 700px) {
+      .header-inner {
+        padding: 10px 16px;
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+      .brand-lockup { gap: 10px; min-width: 0; }
+      .brand-card.sleepo { width: 44px; height: 44px; flex: 0 0 44px; }
+      .brand-card.microsoft { height: 40px; padding: 0 9px; flex: 0 0 auto; }
+      .brand-card.microsoft img { height: 21px; }
+      .brand-divider { height: 30px; }
+      .campaign-mini { display: none; }
+
+      .nav-links { margin-left: auto; gap: 8px; }
+      .nav-links a[href="#how-it-works"],
+      .nav-links a[href^="https://microsoft.benevity.org"] { display: none; }
+      .nav-pill {
+        white-space: nowrap;
+        padding: 9px 13px;
+        font-size: 0.82rem !important;
+      }
+
+      .hero { padding: 42px 0 54px; }
+      .hero-inner {
+        padding: 0 18px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .eyebrow { margin-bottom: 14px; font-size: 0.72rem; }
+      .hero h1 {
+        font-size: clamp(2.25rem, 11vw, 3.15rem);
+        line-height: 1.02;
+        margin-bottom: 22px;
+      }
+      .hero-copy { font-size: 1rem; line-height: 1.65; }
+      .hero-tagline { font-size: 1.08rem; margin-top: 2px; }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .actions .btn.btn-hero {
+        width: 100%;
+        min-height: 56px;
+        padding: 15px 18px;
+        font-size: 1.05rem;
+      }
+
+      /* This block now sits directly below the two CTA buttons on mobile. */
+      .hero-side {
+        width: 100%;
+        margin-top: 0;
+      }
+      .hero-panel {
+        padding: 16px;
+        border-radius: 20px;
+        box-shadow: 0 18px 42px rgba(10, 6, 30, 0.28);
+      }
+      .quick-facts {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .fact {
+        min-height: 0;
+        padding: 13px 12px;
+      }
+      .fact strong { font-size: 0.96rem; }
+      .fact span, .fact li { font-size: 0.78rem; }
+      .hero-site-link { margin-top: 12px; font-size: 0.9rem; }
+
+      .section { padding: 54px 0; }
+      .section-inner { padding: 0 18px; }
+      .section-heading { margin-bottom: 24px; }
+      .section h2 { font-size: 1.75rem; }
+      .card { padding: 20px; }
+
+      .footer-inner {
+        padding: 20px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand-card.microsoft { display: none; }
+      .brand-divider { display: none; }
+      .quick-facts { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -35,6 +127,7 @@
       </div>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#how-it-works">How it works</a>
+        <a href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
         <a class="nav-pill" href="volunteer-terms.html">Start volunteering</a>
       </nav>
     </div>
@@ -51,6 +144,7 @@
           <p class="hero-copy hero-copy-followup">This Microsoft GIVE season, give a few minutes to review a story, record one, answer a short survey, or share your skills, and be part of a child’s bedtime story.</p>
           <div class="actions">
             <a class="btn btn-primary btn-hero" href="volunteer-terms.html">Start volunteering</a>
+            <a class="btn btn-secondary btn-hero" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
           </div>
         </div>
 
