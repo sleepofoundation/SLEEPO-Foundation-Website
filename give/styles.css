@@ -1,0 +1,111 @@
+/* SLEEPO × Microsoft GIVE 2026 — home page styles (matched to the original look) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --ink: #2a2247;
+  --bg-top: #291f55;
+  --bg-bottom: #2f2463;
+  --gold: #ffc45e;
+  --orange: #ff9f1c;
+  --light-text: #e9e5f7;
+  --line: #d6c8bb;
+  --cream: #f7f2eb;
+  --max: 1240px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+/* Header */
+.site-header { background: var(--bg-top); border-bottom: 1px solid rgba(255,255,255,0.12); }
+.header-inner {
+  max-width: var(--max); margin: 0 auto; padding: 10px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+.brand-lockup { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
+.brand-card { background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 6px; }
+.brand-card.sleepo { width: 52px; height: 52px; }
+.brand-card.sleepo img { max-height: 100%; width: auto; }
+.brand-card.microsoft { height: 46px; padding: 0 12px; }
+.brand-card.microsoft img { height: 24px; width: auto; }
+.brand-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.2); }
+.campaign-mini { color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 22px; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--gold); }
+.nav-pill { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); padding: 10px 20px; border-radius: 999px; }
+
+/* Hero */
+.hero {
+  padding: 64px 0 80px; color: #fff;
+  background:
+    radial-gradient(ellipse at 88% 22%, rgba(214, 110, 90, 0.28), transparent 45%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+}
+.hero-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center;
+}
+.eyebrow { color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px; }
+.hero h1 { color: #fff; font-size: clamp(2.6rem, 5vw, 4.1rem); line-height: 1.05; font-weight: 800; letter-spacing: -0.04em; margin: 0 0 28px; }
+.hero h1 span { display: block; color: var(--gold); }
+.hero-copy { font-size: 1.12rem; color: var(--light-text); max-width: 36em; margin: 0 0 16px; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; border: 1px solid transparent; }
+.btn-primary { background: linear-gradient(180deg, #ffb52e, #f7931e); color: #24193f; box-shadow: 0 8px 22px rgba(247,147,30,0.35); }
+.btn-secondary { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.35); color: #fff; }
+
+/* Right panel */
+.hero-panel {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 28px; padding: 28px; box-shadow: 0 24px 60px rgba(10, 6, 30, 0.35);
+  backdrop-filter: blur(6px);
+}
+.logo-pair { background: #fff; border-radius: 20px; padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: center; margin-bottom: 14px; }
+.logo-tile { display: flex; align-items: center; justify-content: center; height: 150px; }
+.logo-tile img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
+a.logo-tile { text-decoration: none; }
+.quick-facts { display: grid; grid-template-columns: 0.9fr 0.95fr 1.25fr; gap: 10px; }
+.fact { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); border-radius: 14px; padding: 14px 12px; min-height: 130px; }
+.fact strong { display: block; color: var(--gold); font-size: 1.05rem; line-height: 1.25; margin-bottom: 6px; }
+.fact span { color: var(--light-text); font-size: 0.8rem; line-height: 1.5; }
+.fact li { line-height: 1.5; }
+
+/* Lower sections (light) */
+.section { padding: 80px 0; background: var(--cream); }
+.section.alt { background: #fff; border-top: 1px solid var(--line); }
+.section-inner { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.section-heading { max-width: 720px; margin-bottom: 32px; }
+.kicker { color: #b3660a; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+.section h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.15; margin: 0 0 12px; color: var(--ink); letter-spacing: -0.02em; }
+.section-heading p { color: #5b5474; margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.card h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--ink); }
+.card p { margin: 0; color: #5b5474; }
+.step-number { width: 38px; height: 38px; border-radius: 50%; background: #fff1d9; color: #b3660a; border: 2px solid var(--orange); display: grid; place-items: center; font-weight: 800; margin-bottom: 14px; }
+
+/* Footer */
+.footer { background: var(--bg-top); color: var(--light-text); }
+.footer-inner { max-width: var(--max); margin: 0 auto; padding: 22px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.9rem; }
+.footer a { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .campaign-mini { display: none; }
+  .quick-facts { grid-template-columns: 1fr; }
+  .fact { min-height: 0; }
+}
