@@ -32,11 +32,11 @@
     @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
     @media (max-width: 560px) { .quick-facts { grid-template-columns: 1fr; } }
     .brand-card.microsoft { width: 68px; height: 68px; padding: 6px; }
-    .cta-group { display: inline-flex; flex-direction: column; align-items: stretch; width: 290px; max-width: 100%; }
+    .cta-group { display: inline-flex; flex-direction: column; align-items: stretch; width: 290px; max-width: 100%; flex: 0 0 290px; }
     .cta-group > .btn.btn-hero { width: 100%; }
     .volunteer-terms-note { margin: 5px 0 0; text-align: center; font-size: 0.56rem; line-height: 1.25; color: rgba(255,255,255,0.68); white-space: nowrap; }
     .volunteer-terms-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-    .actions > .btn.btn-hero { width: 290px; max-width: 100%; }
+    .actions > .btn.btn-hero { width: 290px; max-width: 100%; flex: 0 0 290px; }
     .actions { align-items: flex-start; }
     .hero-cta-button {
       width: 290px !important;
@@ -46,7 +46,7 @@
       box-sizing: border-box;
       line-height: 1.1;
       white-space: nowrap;
-      flex: 0 0 290px;
+      flex: none;
     }
 
     /* Mobile layout: keep the desktop look, but make the hero flow naturally on phones. */
@@ -99,6 +99,7 @@
         font-size: 1.05rem;
         white-space: nowrap;
       }
+      .actions > .btn.btn-hero { flex: none; }
       .hero-cta-button {
         width: 100% !important;
         height: 56px !important;
@@ -106,7 +107,7 @@
         padding: 0 18px !important;
         flex: 0 0 auto;
       }
-      .cta-group { width: 100%; max-width: 100%; }
+      .cta-group { width: 100%; max-width: 100%; flex: none; }
       .volunteer-terms-note { margin: 5px 0 0; text-align: center; font-size: 0.52rem; line-height: 1.25; color: rgba(255,255,255,0.68); white-space: nowrap; }
 
       /* This block now sits directly below the two CTA buttons on mobile. */
