@@ -49,6 +49,14 @@
       flex: none;
     }
 
+    .nav-links .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 112px;
+      text-align: center;
+    }
+
     /* Mobile layout: keep the desktop look, but make the hero flow naturally on phones. */
     @media (max-width: 700px) {
       .header-inner {
@@ -70,6 +78,7 @@
         padding: 9px 13px;
         font-size: 0.82rem !important;
       }
+      .nav-links .nav-pill { min-width: 96px; }
 
       .hero { padding: 42px 0 54px; }
       .hero-inner {
