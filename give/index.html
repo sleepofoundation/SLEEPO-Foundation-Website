@@ -181,13 +181,15 @@
       position: relative;
       z-index: 1;
       width: min(760px, 100%);
-      max-height: min(82vh, 760px);
-      overflow: auto;
+      max-height: min(86vh, 780px);
+      overflow: hidden;
       background: #fff;
       color: #342c3f;
       border-radius: 22px;
       box-shadow: 0 26px 70px rgba(15, 8, 28, 0.36);
-      padding: 30px 30px 26px;
+      padding: 28px 30px 22px;
+      display: flex;
+      flex-direction: column;
     }
     .terms-modal-dialog h2 {
       margin: 0 42px 8px 0;
@@ -195,20 +197,24 @@
       line-height: 1.15;
       color: #2f2241;
     }
-    .terms-modal-intro { margin: 0 0 18px; color: #655b70; line-height: 1.55; }
-    .terms-modal-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 12px; }
-    .terms-modal-list li { color: #51475d; line-height: 1.5; padding-left: 4px; }
+    .terms-modal-intro { margin: 0 0 14px; color: #655b70; line-height: 1.55; }
+    .terms-modal-frame {
+      width: 100%;
+      min-height: 420px;
+      height: min(58vh, 560px);
+      border: 0;
+      background: #fff;
+    }
     .terms-modal-actions {
       margin-top: 24px;
       padding-top: 18px;
       border-top: 1px solid #eee8f2;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
-    .terms-modal-full-link { font-weight: 750; color: #5c3d84; text-decoration: underline; text-underline-offset: 3px; }
     .terms-modal-close {
       border: 0;
       border-radius: 999px;
@@ -236,7 +242,8 @@
     body.modal-open { overflow: hidden; }
     @media (max-width: 560px) {
       .terms-modal { padding: 12px; }
-      .terms-modal-dialog { padding: 24px 20px 20px; border-radius: 18px; max-height: 88vh; }
+      .terms-modal-dialog { padding: 22px 18px 18px; border-radius: 18px; max-height: 90vh; }
+      .terms-modal-frame { min-height: 440px; height: 62vh; }
       .terms-modal-actions { align-items: stretch; flex-direction: column; }
       .terms-modal-close { width: 100%; }
     }
@@ -347,18 +354,9 @@
     <section class="terms-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle" tabindex="-1">
       <button class="terms-modal-x" type="button" aria-label="Close volunteer terms" data-terms-close>&times;</button>
       <h2 id="termsModalTitle">SLEEPO Volunteer Participation Terms</h2>
-      <p class="terms-modal-intro">Thank you for volunteering with SLEEPO Foundation. By participating, you agree that:</p>
-      <ul class="terms-modal-list">
-        <li>You are volunteering in your personal capacity. Your participation is voluntary and unpaid and does not create an employment relationship with SLEEPO.</li>
-        <li>Any non-public information you see about SLEEPO, children, or families will be kept confidential and used only for your volunteer activity.</li>
-        <li>You will follow the activity instructions and will not submit confidential, proprietary, copyrighted, or other material that you do not have the right to share, or content that is inappropriate for children.</li>
-        <li>You confirm that you have the right to submit your contribution and allow SLEEPO to use it. Stories, reviews, ideas, designs, or other materials you submit may be used, reproduced, and shared by SLEEPO for its nonprofit programs without compensation to you.</li>
-        <li>If you submit a voice recording, you give SLEEPO permission to store, process, and provide the recording to the family for whom it was recorded. SLEEPO may make minor technical adjustments such as trimming, volume balancing, or noise reduction.</li>
-        <li>You will not directly contact any SLEEPO child or family based on information you see while volunteering.</li>
-        <li>You may stop volunteering at any time, and SLEEPO may decline a submission or end participation at any time.</li>
-      </ul>
+      <p class="terms-modal-intro">Please review the volunteer terms below.</p>
+      <iframe class="terms-modal-frame" id="termsFrame" title="SLEEPO Volunteer Participation Terms" loading="lazy" data-src="volunteer-terms.html?embed=1"></iframe>
       <div class="terms-modal-actions">
-        <a class="terms-modal-full-link" href="volunteer-terms.html" target="_blank" rel="noopener noreferrer">Open full terms in a new tab &#8599;</a>
         <button class="terms-modal-close" type="button" data-terms-close>Close</button>
       </div>
     </section>
@@ -369,6 +367,7 @@
       const modal = document.getElementById('termsModal');
       const dialog = modal?.querySelector('.terms-modal-dialog');
       const opener = document.querySelector('[data-terms-modal]');
+      const frame = document.getElementById('termsFrame');
       const closeButtons = modal?.querySelectorAll('[data-terms-close]') || [];
       let lastFocused = null;
 
@@ -376,6 +375,7 @@
         if (!modal || !dialog) return;
         event?.preventDefault();
         lastFocused = document.activeElement;
+        if (frame && !frame.src) frame.src = frame.dataset.src;
         modal.hidden = false;
         document.body.classList.add('modal-open');
         requestAnimationFrame(() => dialog.focus());
