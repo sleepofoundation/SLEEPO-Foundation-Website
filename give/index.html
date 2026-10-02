@@ -159,6 +159,88 @@
       .quick-facts { grid-template-columns: 1fr; }
     }
   .start-volunteering-nowrap{white-space:nowrap;}
+
+
+    /* Volunteer terms modal */
+    .terms-modal[hidden] { display: none; }
+    .terms-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .terms-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 13, 35, 0.72);
+      backdrop-filter: blur(3px);
+    }
+    .terms-modal-dialog {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+      max-height: min(82vh, 760px);
+      overflow: auto;
+      background: #fff;
+      color: #342c3f;
+      border-radius: 22px;
+      box-shadow: 0 26px 70px rgba(15, 8, 28, 0.36);
+      padding: 30px 30px 26px;
+    }
+    .terms-modal-dialog h2 {
+      margin: 0 42px 8px 0;
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      line-height: 1.15;
+      color: #2f2241;
+    }
+    .terms-modal-intro { margin: 0 0 18px; color: #655b70; line-height: 1.55; }
+    .terms-modal-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 12px; }
+    .terms-modal-list li { color: #51475d; line-height: 1.5; padding-left: 4px; }
+    .terms-modal-actions {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #eee8f2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .terms-modal-full-link { font-weight: 750; color: #5c3d84; text-decoration: underline; text-underline-offset: 3px; }
+    .terms-modal-close {
+      border: 0;
+      border-radius: 999px;
+      background: #5c3d84;
+      color: #fff;
+      font: inherit;
+      font-weight: 800;
+      padding: 11px 22px;
+      cursor: pointer;
+    }
+    .terms-modal-x {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: #f3eef7;
+      color: #4c3f59;
+      font-size: 1.25rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    body.modal-open { overflow: hidden; }
+    @media (max-width: 560px) {
+      .terms-modal { padding: 12px; }
+      .terms-modal-dialog { padding: 24px 20px 20px; border-radius: 18px; max-height: 88vh; }
+      .terms-modal-actions { align-items: stretch; flex-direction: column; }
+      .terms-modal-close { width: 100%; }
+    }
+
 </style>
 </head>
 <body>
@@ -190,7 +272,7 @@
           <div class="actions">
             <div class="cta-group">
               <a class="btn btn-primary btn-hero start-volunteering-nowrap hero-cta-button" href="https://s.sleepokids.org/ceai">Start volunteering</a>
-              <p class="volunteer-terms-note">By continuing, you agree to <a href="https://www.sleepofoundation.org">SLEEPO Volunteer Terms</a>.</p>
+              <p class="volunteer-terms-note">By continuing, you agree to <a href="volunteer-terms.html" data-terms-modal>SLEEPO Volunteer Terms</a>.</p>
             </div>
             <a class="btn btn-secondary btn-hero hero-cta-button" href="https://microsoft.benevity.org/cause/840-394188744" target="_blank" rel="noopener noreferrer">Donate to SLEEPO</a>
           </div>
@@ -258,5 +340,61 @@
       <span>Microsoft GIVE 2026 Volunteering</span>
     </div>
   </footer>
+
+
+  <div class="terms-modal" id="termsModal" hidden>
+    <div class="terms-modal-backdrop" data-terms-close></div>
+    <section class="terms-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle" tabindex="-1">
+      <button class="terms-modal-x" type="button" aria-label="Close volunteer terms" data-terms-close>&times;</button>
+      <h2 id="termsModalTitle">SLEEPO Volunteer Participation Terms</h2>
+      <p class="terms-modal-intro">Thank you for volunteering with SLEEPO Foundation. By participating, you agree that:</p>
+      <ul class="terms-modal-list">
+        <li>You are volunteering in your personal capacity. Your participation is voluntary and unpaid and does not create an employment relationship with SLEEPO.</li>
+        <li>Any non-public information you see about SLEEPO, children, or families will be kept confidential and used only for your volunteer activity.</li>
+        <li>You will follow the activity instructions and will not submit confidential, proprietary, copyrighted, or other material that you do not have the right to share, or content that is inappropriate for children.</li>
+        <li>You confirm that you have the right to submit your contribution and allow SLEEPO to use it. Stories, reviews, ideas, designs, or other materials you submit may be used, reproduced, and shared by SLEEPO for its nonprofit programs without compensation to you.</li>
+        <li>If you submit a voice recording, you give SLEEPO permission to store, process, and provide the recording to the family for whom it was recorded. SLEEPO may make minor technical adjustments such as trimming, volume balancing, or noise reduction.</li>
+        <li>You will not directly contact any SLEEPO child or family based on information you see while volunteering.</li>
+        <li>You may stop volunteering at any time, and SLEEPO may decline a submission or end participation at any time.</li>
+      </ul>
+      <div class="terms-modal-actions">
+        <a class="terms-modal-full-link" href="volunteer-terms.html" target="_blank" rel="noopener noreferrer">Open full terms in a new tab &#8599;</a>
+        <button class="terms-modal-close" type="button" data-terms-close>Close</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const modal = document.getElementById('termsModal');
+      const dialog = modal?.querySelector('.terms-modal-dialog');
+      const opener = document.querySelector('[data-terms-modal]');
+      const closeButtons = modal?.querySelectorAll('[data-terms-close]') || [];
+      let lastFocused = null;
+
+      function openTerms(event) {
+        if (!modal || !dialog) return;
+        event?.preventDefault();
+        lastFocused = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
+        requestAnimationFrame(() => dialog.focus());
+      }
+
+      function closeTerms() {
+        if (!modal) return;
+        modal.hidden = true;
+        document.body.classList.remove('modal-open');
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      }
+
+      opener?.addEventListener('click', openTerms);
+      closeButtons.forEach((button) => button.addEventListener('click', closeTerms));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal && !modal.hidden) closeTerms();
+      });
+    })();
+  </script>
+
 </body>
 </html>
