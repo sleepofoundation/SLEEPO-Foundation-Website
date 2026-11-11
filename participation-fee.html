@@ -387,8 +387,8 @@
       border: 1px solid #d6cef5;
       border-radius: 16px;
       text-align: center;
-      padding: 30px 24px;
-      margin: 0 0 22px;
+      padding: 34px 30px 30px;
+      margin: 0 0 16px;
     }
     .offer-summary .eyebrow {
       color: #5e50b7;
@@ -396,43 +396,119 @@
       font-weight: 750;
       letter-spacing: 0.10em;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     .offer-summary h2 {
       color: #2d1f5c;
-      font-size: 2.3rem;
-      margin: 0 0 8px;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      font-size: 3.1rem;
+      font-weight: 800;
+      margin: 0 0 10px;
+      letter-spacing: -0.045em;
+      line-height: 1.1;
     }
-    .offer-summary .offer-lead {
-      color: #4a4070;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin: 0 auto 14px;
-      max-width: 550px;
+    .offer-summary .price-unit {
+      font-size: 0.71em;
+      letter-spacing: -0.035em;
+      white-space: nowrap;
     }
-    .offer-summary .offer-checks {
-      text-align: left;
-      display: inline-block;
-      max-width: 510px;
-      padding-left: 21px;
-      margin: 4px auto 14px;
-      color: #4a4070;
-      line-height: 1.8;
+    .offer-summary .trial-heading {
+      color: #3c316a;
+      font-size: 1.16rem;
+      font-weight: 750;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+    .offer-summary .trial-support {
+      color: #554b78;
       font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 auto 20px;
+      max-width: 510px;
+    }
+    .offer-benefits {
+      list-style: none;
+      text-align: left;
+      max-width: 560px;
+      margin: 0 auto 22px;
+      padding: 11px 20px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid #e7e0f5;
+      border-radius: 13px;
+    }
+    .offer-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #453a70;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      padding: 8px 0;
+    }
+    .offer-benefits li + li { border-top: 1px solid #eeeaf6; }
+    .offer-benefits strong { color: #31235d; font-weight: 750; }
+    .offer-benefits .benefit-icon {
+      width: 21px;
+      height: 21px;
+      display: inline-flex;
+      flex: 0 0 21px;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.77rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-top: 2px;
+      border-radius: 50%;
+      background: #e8e3fb;
+      color: #6554b9;
+    }
+    .offer-benefits .benefit-primary .benefit-icon {
+      background: #6554b9;
+      color: #fff;
+    }
+    .offer-benefits .benefit-secondary { color: #635c78; }
+    .offer-benefits .benefit-secondary .benefit-icon {
+      background: #f1eff7;
+      color: #827b9c;
+    }
+    .offer-benefits .benefit-detail {
+      display: block;
+      margin-top: 2px;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      color: #6b6380;
+    }
+    .offer-summary .offer-extras {
+      color: #645b82;
+      font-size: 0.87rem;
+      line-height: 1.6;
+      margin: 14px auto 0;
     }
     .offer-summary .offer-note {
       color: #615b7a;
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       line-height: 1.55;
-      margin-top: 10px;
+      margin: 13px auto 0;
+      max-width: 510px;
     }
     .offer-summary .hero-cta {
-      margin-top: 6px;
-      font-size: 0.98rem;
-      padding: 13px 29px;
+      margin-top: 2px;
+      font-size: 1rem;
+      padding: 14px 29px;
     }
+    .donor-intro {
+      background: #f8fafc;
+      border-left: 3px solid #9f8fd6;
+      border-radius: 10px;
+      padding: 15px 18px;
+      margin: 0 0 26px;
+      font-size: 0.9rem;
+      color: #555b70;
+      line-height: 1.6;
+    }
+    .donor-intro strong { color: #393153; font-weight: 700; }
+    .donor-intro a { color: #6152b2; font-weight: 600; text-decoration: none; }
+    .donor-intro a:hover { text-decoration: underline; }
+    .donor-intro a:focus-visible, .hero-cta:focus-visible { outline: 3px solid #4d6bea; outline-offset: 3px; }
     .panel strong, .highlight-panel strong { font-weight: 700; }
     .policy-steps {
       background: #fff;
@@ -456,9 +532,13 @@
     }
     .fee-new-price { color: #2d1f5c; font-weight: 750; font-size: 1.05em; }
     @media (max-width: 480px) {
-      .offer-summary { padding: 25px 16px; }
-      .offer-summary h2 { font-size: 1.95rem; }
-      .offer-summary .offer-checks { padding-left: 18px; }
+      .offer-summary { padding: 27px 16px 23px; }
+      .offer-summary h2 { font-size: 2.4rem; }
+      .offer-summary .price-unit { font-size: 0.48em; }
+      .offer-benefits { padding: 12px 14px; }
+      .offer-benefits li { font-size: 0.91rem; gap: 9px; }
+      .offer-summary .hero-cta { font-size: 0.94rem; padding: 14px 21px; }
+      .donor-intro { padding: 14px 15px; }
       .policy-steps { padding: 14px 13px 8px; }
     }
 </style>
@@ -493,23 +573,29 @@
 <hr class="divider-line"/>
 <div aria-label="Current SLEEPO participation fee" class="offer-summary">
 <div class="eyebrow">Personalized stories, made more accessible</div>
-<h2>$15/month per child</h2>
-<p class="offer-lead">Start with 2 weeks free. Your child's first 6 personalized stories are free, and no credit card is needed to begin.</p>
-<ul class="offer-checks">
-<li>3 new personalized bedtime stories every week</li>
-<li>Choose SLEEPO Narrator or record stories in a family voice</li>
-<li>Receive a bonus personalized story when a family member records at least one story that week</li>
-<li>Review and approve stories before narration</li>
-<li>Cancel anytime</li>
+<h2><span class="price-amount">$15</span><span class="price-unit">/month per child</span></h2>
+<p class="trial-heading">Start with 2 weeks free</p>
+<p class="trial-support">Your child's first 6 personalized stories are free.<br/>No credit card required.</p>
+<ul class="offer-benefits">
+<li class="benefit-primary"><span aria-hidden="true" class="benefit-icon">✓</span><span><strong>3 new personalized bedtime stories every week</strong></span></li>
+<li><span aria-hidden="true" class="benefit-icon">✓</span><span><strong>Your choice of narration</strong> — AI-generated SLEEPO Narrator or a family member's voice<span class="benefit-detail">No recording required unless you'd like to.</span></span></li>
+<li><span aria-hidden="true" class="benefit-icon">✦</span><span><strong>Family Voice Bonus</strong> — Receive an extra personalized story when a family member records at least one story that week</span></li>
+<li class="benefit-secondary"><span aria-hidden="true" class="benefit-icon">✓</span><span>Review and approve stories before narration</span></li>
+<li class="benefit-secondary"><span aria-hidden="true" class="benefit-icon">✓</span><span>Cancel anytime</span></li>
 </ul>
-<div><a class="hero-cta" href="https://register.sleepo.org" rel="noopener noreferrer" target="_blank">Start Your Free Trial</a></div>
-<p class="offer-note">After the trial, you can choose to continue for $15/month per child. No automatic charge when you begin the free trial.</p>
+<div><a class="hero-cta" href="https://register.sleepo.org" rel="noopener noreferrer" target="_blank">Start Your 2-Week Free Trial</a></div>
+
+<p class="offer-note">After the trial, choose whether to continue for $15/month per child.</p>
 </div>
+<div class="donor-intro"><strong>More affordable, thanks to our supporters.</strong> Contributions from donors and volunteers, including support received through Microsoft Give, helped reduce the participation fee from $25 to $15 per child. <a href="#our-fee">Learn more</a>.</div>
 <div class="section-label" id="what-is-included">What's Included</div>
 <div class="panel">
 <h3>What does my child receive?</h3>
 <p>Each enrolled child receives 3 new personalized bedtime stories every week, created around their age, interests, experiences, and the areas you want to nurture. You review and approve each story before narration.</p>
-<p>For audio, you can choose SLEEPO Narrator, our AI-generated narration option, or have a parent or another family member record the story. You can listen to existing stories again whenever you wish while you have access.</p>
+<h3>Who narrates my child's stories?</h3>
+<p>SLEEPO Narrator, our AI-generated narration option, can narrate all your child's stories, so you don't need to record anything yourself.</p>
+<p>You or another family member can also record stories in your own voices, adding a familiar, personal touch to bedtime.</p>
+<p>Both options are included in your monthly participation fee. You can choose the narration option that works best for your family. Once the audio is ready, your child can listen and replay the story while you have access.</p>
 <h3>Family Voice Bonus</h3>
 <p>When you or another family member records at least one of your child's stories during the week, we'll add one bonus personalized story for your child that week, at no additional cost. Recording is optional; you can choose SLEEPO Narrator for all your child's stories.</p>
 <h3>What happens during the free trial?</h3>
@@ -557,7 +643,7 @@
 
 
 </div>
-<div class="hero-cta-wrap" style="text-align:center; margin: 28px 0 8px;"><a class="hero-cta" href="https://register.sleepo.org" rel="noopener noreferrer" target="_blank">Start Your Free Trial</a><p class="page-cta-note">2 weeks free · No credit card required · Then $15/month per child</p></div>
+<div class="hero-cta-wrap" style="text-align:center; margin: 28px 0 8px;"><a class="hero-cta" href="https://register.sleepo.org" rel="noopener noreferrer" target="_blank">Start Your 2-Week Free Trial</a><p class="page-cta-note">2 weeks free · No credit card required · Then $15/month per child</p></div>
 <!-- Contact -->
 <div class="contact-block">
 <h2>Still Have a Question?</h2>
