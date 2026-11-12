@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personalized Bedtime Audio Stories for Kids Ages 2-12 | SLEEPO Foundation</title>
-  <meta name="description" content="SLEEPO Foundation helps children ages 2-12 build confidence, positive values, and cultural connection through personalized bedtime audio stories." />
-  <meta property="og:title" content="Personalized Bedtime Audio Stories for Kids Ages 2-12 | SLEEPO" />
-  <meta property="og:description" content="SLEEPO Foundation helps children ages 2-12 build confidence, positive values, and cultural connection through personalized bedtime audio stories." />
+  <title>Personalized Bedtime Audio Stories for Kids Ages 2–12 | SLEEPO Foundation</title>
+  <meta name="description" content="SLEEPO Foundation offers personalized bedtime audio stories for children ages 2–12. Start with 6 free stories over 2 weeks, then choose whether to continue for $15/month per child." />
+  <meta property="og:title" content="Personalized Bedtime Audio Stories for Kids Ages 2–12 | SLEEPO" />
+  <meta property="og:description" content="Personalized bedtime stories made for your child. Try 6 stories free over 2 weeks, no credit card required. Continue for $15/month per child." />
   <meta property="og:image" content="https://sleepofoundation.org/assets/preview.jpeg" />
   <meta property="og:url" content="https://sleepofoundation.org" />
   <meta property="og:type" content="website" />
@@ -488,7 +488,7 @@
       border: 1px solid #d9d0f5;
     }
 
-    /* Free story CTA — between hero photo and Mission */
+    /* Standalone free story CTA — immediately after the family offer */
     .free-story-block {
       text-align: center;
       margin: 30px 0;
@@ -908,7 +908,7 @@
       padding-top: 58px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 880px) {
       .top-nav-links {
         display: none;
         position: absolute;
@@ -934,6 +934,55 @@
         display: block;
       }
     }
+
+    /* Trial CTA and family offering — consistent with fee and FAQ pages */
+    .container { width: 100%; min-width: 0; }
+    .hero-main-cta { margin: 12px 0 17px; }
+    .hero-offer-note { font-size: 0.91rem; color: #4a5568; margin-top: 13px; line-height: 1.5; }
+    .home-offer-section {
+      background: linear-gradient(135deg, #f4f0ff 0%, #edf0ff 100%);
+      border: 1px solid #d6cef5;
+      border-left: 4px solid #8e79d0;
+      border-radius: 16px;
+      padding: 36px 34px;
+      margin: 22px 0 12px;
+      text-align: center;
+      scroll-margin-top: 82px;
+    }
+    .home-offer-eyebrow { color: #6557ad; font-size: 0.77rem; letter-spacing: 0.09em; font-weight: 700; line-height: 1.5; margin-bottom: 11px; }
+    .home-offer-section h2 { color: #2d275d; font-size: 1.4rem; line-height: 1.35; margin-bottom: 16px; }
+    .home-offer-price { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 8px; color: #342b70; margin-bottom: 8px; }
+    .home-offer-amount { font-size: 3.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.045em; }
+    .home-offer-unit { font-size: 1.11rem; font-weight: 600; }
+    .home-offer-trial { color: #342b70; font-size: 1.18rem; font-weight: 700; line-height: 1.4; }
+    .home-offer-free { color: #675f85; font-size: 0.94rem; line-height: 1.6; margin: 6px 0 18px; }
+    .home-offer-points { list-style: none; padding: 0; margin: 0 auto 24px; max-width: 540px; display: flex; flex-direction: column; gap: 9px; text-align: left; }
+    .home-offer-points li { display: flex; align-items: flex-start; gap: 11px; padding: 10px 12px; border: 1px solid rgba(116,96,186,0.15); border-radius: 10px; background: rgba(255,255,255,0.72); color: #3e3b55; font-size: 0.94rem; line-height: 1.55; }
+    .home-offer-points strong { font-weight: 700; color: #312a67; }
+    .home-benefit-marker { flex: none; font-size: 1.05rem; color: #6854ba; font-weight: 700; line-height: 1.5; }
+    .home-offer-points small { display: block; margin-top: 3px; font-size: 0.87rem; color: #645c80; line-height: 1.45; }
+    .home-offer-smallprint { color: #645c80; font-size: 0.85rem; margin-top: 14px; line-height: 1.6; }
+    .home-offer-more { font-size: 0.9rem; margin-top: 14px; line-height: 1.6; }
+    .home-offer-more a { color: #5645a6; text-underline-offset: 3px; font-weight: 600; }
+    .home-support-line { color: #6b6582; font-size: 0.85rem; line-height: 1.7; margin: 0 auto 27px; max-width: 645px; text-align: center; }
+    .how-panel { scroll-margin-top: 82px; }
+    .hero-cta:focus-visible, .free-story-btn:focus-visible, .hero-secondary-cta:focus-visible,
+    .home-offer-more a:focus-visible, .top-nav a:focus-visible, .top-nav-toggle:focus-visible {
+      outline: 3px solid #4d6bea; outline-offset: 3px;
+    }
+    @media (max-width: 480px) {
+      .home-offer-section { padding: 28px 18px; }
+      .home-offer-section h2 { font-size: 1.2rem; }
+      .home-offer-amount { font-size: 3rem; }
+      .home-offer-unit { font-size: 1rem; }
+      .home-offer-points li { font-size: 0.91rem; padding: 10px; }
+      .hero-cta { width: 100%; max-width: 100%; padding: 14px 12px; line-height: 1.35; font-size: 0.96rem; text-align: center; }
+      .home-offer-section .hero-cta { max-width: 340px; }
+    }
+    @media (max-width: 350px) {
+      .home-offer-amount { font-size: 2.85rem; }
+      .home-offer-unit { font-size: 0.95rem; }
+    }
   </style>
 </head>
 <body>
@@ -941,7 +990,7 @@
   <nav class="top-nav">
     <div class="top-nav-inner">
       <a href="/" class="top-nav-logo"><img src="assets/sleepo-icon.png" alt="SLEEPO"> SLEEPO</a>
-      <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation">☰</button>
+      <button type="button" class="top-nav-toggle" onclick="toggleTopNav()" aria-label="Toggle navigation" aria-controls="topNavLinks" aria-expanded="false">☰</button>
       <div class="top-nav-links" id="topNavLinks">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -949,20 +998,23 @@
         <a href="/sample-stories">Sample Stories</a>
         <a href="/participation-fee">Participation Fee</a>
         <a href="/faq">FAQ</a>
-        <a href="https://register.sleepo.org" target="_blank">Sign Up</a>
+        <a href="https://register.sleepo.org" target="_blank" rel="noopener noreferrer">Sign Up</a>
       </div>
     </div>
   </nav>
 
   <script>
     function toggleTopNav() {
-      document.getElementById('topNavLinks').classList.toggle('open');
+      var links = document.getElementById('topNavLinks');
+      var toggle = document.querySelector('.top-nav-toggle');
+      var isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     }
   </script>
 
   <div class="container">
 
-    <img src="assets/sleepo-logo.png" class="logo">
+    <img src="assets/sleepo-logo.png" class="logo" alt="SLEEPO Foundation logo">
 
     <h1>SLEEPO</h1>
 
@@ -973,15 +1025,20 @@
     </p>
 
     <div class="hero-cta-wrap">
-      <span class="age-badge">✨ For Kids Ages 2-12</span>
+      <span class="age-badge">✨ For Kids Ages 2–12</span>
     </div>
 
     <div class="mini-line">
       Personalized bedtime audio stories • Crafted around your child
     </div>
 
+    <div class="hero-cta-wrap hero-main-cta">
+      <a href="https://register.sleepo.org" target="_blank" rel="noopener noreferrer" class="hero-cta">Start Your 2-Week Free Trial</a>
+      <p class="hero-offer-note">6 personalized stories free · No credit card required</p>
+    </div>
+
     <div class="hero-cta-wrap" style="margin-top: 2px;">
-      <button type="button" class="hero-secondary-cta" onclick="toggleHeroSample()">▶ Listen to a Sample Story</button>
+      <button type="button" class="hero-secondary-cta" onclick="toggleHeroSample()" aria-controls="heroSamplePlayer" aria-expanded="false">▶ Listen to a Sample Story</button>
     </div>
 
     <div id="heroSamplePlayer" class="sample-player" style="display:none; max-width:420px; margin: 16px auto 0;">
@@ -999,7 +1056,10 @@
     <script>
       function toggleHeroSample() {
         var el = document.getElementById('heroSamplePlayer');
-        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+        var button = document.querySelector('.hero-secondary-cta');
+        var isOpening = el.style.display === 'none';
+        el.style.display = isOpening ? 'block' : 'none';
+        button.setAttribute('aria-expanded', String(isOpening));
       }
     </script>
 
@@ -1010,11 +1070,6 @@
       </figure>
     </div>
 
-    <div class="free-story-block">
-      <h3>Want to try SLEEPO before signing up?</h3>
-      <a href="https://app.sleepokids.org/freeStory" target="_blank" class="free-story-btn">✨ Get a Free Personalized Story</a>
-      <p class="free-story-subtext">No signup or credit card required.</p>
-    </div>
 
     <div class="panel">
       <h2>Our Mission</h2>
@@ -1082,7 +1137,7 @@
           <div class="how-step-icon">2️⃣</div>
           <div class="how-step-text">
             <div class="how-step-title">We Create Stories Just for Them</div>
-            <div class="how-step-desc">SLEEPO thoughtfully crafts personalized stories around your child's world, with themes and values meaningful to your family.</div>
+            <div class="how-step-desc">Your child receives 3 new personalized stories each week, shaped around their interests and your family's values. You review and approve every story before narration.</div>
           </div>
         </div>
         <div class="how-arrow">↓</div>
@@ -1090,7 +1145,7 @@
           <div class="how-step-icon">3️⃣</div>
           <div class="how-step-text">
             <div class="how-step-title">Choose the Voice That Works for You</div>
-            <div class="how-step-desc">Stories can be heard in the voice of a parent or loved one, or narrated by a SLEEPO voice artist for a simple, hands-off option.</div>
+            <div class="how-step-desc">Choose SLEEPO Narrator (AI voice) to narrate every story, or record it yourself or with another adult family member. Recording is optional.</div>
           </div>
         </div>
         <div class="how-arrow">↓</div>
@@ -1103,6 +1158,32 @@
         </div>
       </div>
     </div>
+
+    <section class="home-offer-section" id="family-offer" aria-labelledby="family-offer-heading">
+      <p class="home-offer-eyebrow">PERSONALIZED STORIES, MADE MORE ACCESSIBLE</p>
+      <h2 id="family-offer-heading">A bedtime experience made just for your child</h2>
+      <p class="home-offer-price"><span class="home-offer-amount">$15</span><span class="home-offer-unit">/month per child</span></p>
+      <p class="home-offer-trial">Start with 2 weeks free</p>
+      <p class="home-offer-free">Your child's first 6 personalized stories are free. No credit card required.</p>
+
+      <ul class="home-offer-points">
+        <li><span class="home-benefit-marker" aria-hidden="true">✓</span><span><strong>3 new personalized bedtime stories every week</strong></span></li>
+        <li><span class="home-benefit-marker" aria-hidden="true">✓</span><span><strong>Your choice of narration</strong> — SLEEPO Narrator (AI voice) or a family member's voice.<small>No recording required unless you'd like to.</small></span></li>
+        <li><span class="home-benefit-marker" aria-hidden="true">✦</span><span><strong>Family Voice Bonus</strong> — One extra personalized story when a family member records at least one story during the week.</span></li>
+        <li><span class="home-benefit-marker" aria-hidden="true">✓</span><span>Review and approve each story before narration.</span></li>
+        <li><span class="home-benefit-marker" aria-hidden="true">✓</span><span>Cancel anytime.</span></li>
+      </ul>
+
+      <a href="https://register.sleepo.org" target="_blank" rel="noopener noreferrer" class="hero-cta">Start Your 2-Week Free Trial</a>
+      <p class="home-offer-smallprint">After the trial, you can decide whether to continue.</p>
+      <p class="home-offer-more"><a href="/participation-fee">Learn about our participation fee and story access</a></p>
+    </section>
+    <div class="free-story-block" aria-labelledby="one-story-heading">
+      <h3 id="one-story-heading">Not ready for the trial yet? Start with one story.</h3>
+      <a href="https://app.sleepokids.org/freeStory" target="_blank" rel="noopener noreferrer" class="free-story-btn">✨ Get a Free Personalized Story</a>
+      <p class="free-story-subtext">One free personalized story, with no enrollment or credit card required.</p>
+    </div>
+    <p class="home-support-line">Support from donors and volunteers helps SLEEPO keep personalized stories more affordable for families.</p>
 
     <div class="panel">
       <h2>Why SLEEPO Feels Different</h2>
@@ -1167,21 +1248,13 @@
         &ldquo;Bedtime is now our favorite tradition! My kids get so excited for their SLEEPO story every night.&rdquo;
       </p>
       <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Esha, Duvall (mom of 4 &amp; 7-year-olds)</p>
-      <p style="margin-top:14px; font-style:italic; color:#4a5568;">
-        &ldquo;I've been using SLEEPO Stories for my kids, and the difference has been incredible. One unexpected but wonderful change I noticed is in my daughter's daily habits. She used to bring her lunchbox home unfinished, but ever since we started listening to SLEEPO Stories, she finishes it every day. The positive behavioral shift has been amazing.&rdquo;
-      </p>
-      <p style="font-size:0.92rem; color:#718096; margin-top:6px;">— Niti, Sammamish (mom of 10 &amp; 14-year-olds)</p>
     </div>
 
     <p style="text-align: center; font-size: 13px; color: #888888; margin: 16px auto 24px auto; max-width: 600px; line-height: 1.6;">
-  SLEEPO stories are designed for bedtime enrichment and family connection. They are not a substitute for professional medical, psychological, or therapeutic services.
+  Individual experiences vary. SLEEPO stories are designed for bedtime enrichment and family connection. They are not a substitute for professional medical, psychological, or therapeutic services.
 </p>
 
     <div class="stats">
-      <div>
-        <div class="stat-number">188</div>
-        <div class="stat-label">Families</div>
-      </div>
       <div>
         <div class="stat-number">2–12</div>
         <div class="stat-label">Ages Served</div>
@@ -1197,19 +1270,19 @@
   <h2>Ready to Begin Your Child's SLEEPO Story?</h2>
 
   <p class="contact-subtext">
-    You've heard a sample and seen how SLEEPO works. Now imagine stories thoughtfully created around your child.
+    Give your child the first 6 personalized stories over 2 weeks, free. No credit card required.
   </p>
 
   <p class="contact-subtext">
-    Let's see if SLEEPO feels right for your family.
+    After the trial, choose whether to continue. Cancel anytime.
   </p>
 
   <div class="hero-cta-wrap">
-    <a href="https://register.sleepo.org" target="_blank" class="hero-cta">✨ Sign Up Your Child</a>
+    <a href="https://register.sleepo.org" target="_blank" rel="noopener noreferrer" class="hero-cta">Start Your 2-Week Free Trial</a>
   </div>
 
   <div class="contact-actions">
-  <a href="https://wa.me/14252231361?text=Hi%20Amit%2C%20I%20wanted%20to%20know%20more%20about%20SLEEPO" target="_blank">
+  <a href="https://wa.me/14252231361?text=Hi%20Amit%2C%20I%20wanted%20to%20know%20more%20about%20SLEEPO" target="_blank" rel="noopener noreferrer">
     💬 WhatsApp
   </a>
   <span class="divider">|</span>
@@ -1228,25 +1301,25 @@
 
   <div class="footer">
   <p style="margin-bottom: 10px;">
-    <a href="/about" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">About</a>
+    <a href="/about" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">About</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/#how-it-works" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">How It Works</a>
+    <a href="/#how-it-works" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">How It Works</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/sample-stories" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Sample Stories</a>
+    <a href="/sample-stories" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Sample Stories</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/participation-fee" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Participation Fee</a>
+    <a href="/participation-fee" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Participation Fee</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/faq" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">FAQ</a>
+    <a href="/faq" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">FAQ</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/get-involved" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Get Involved</a>
+    <a href="/get-involved" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Get Involved</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/privacy" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Privacy Policy</a>
+    <a href="/privacy" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Privacy Policy</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="/terms" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Terms of Use</a>
+    <a href="/terms" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Terms of Use</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="https://app.sleepokids.org/contact" target="_blank" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Contact</a>
+    <a href="https://app.sleepokids.org/contact" target="_blank" rel="noopener noreferrer" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;">Contact</a>
     <span style="color:#8b7fc0;">•</span>
-    <a href="https://register.sleepo.org" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank">Sign Up</a>
+    <a href="https://register.sleepo.org" style="color:#f0edff; text-decoration:underline; text-underline-offset:3px; margin: 0 8px; font-weight:500;" target="_blank" rel="noopener noreferrer">Sign Up</a>
   </p>
   <p>
     SLEEPO Foundation is an IRS-recognized 501(c)(3) public charity. EIN: 39-4188744. <br>
